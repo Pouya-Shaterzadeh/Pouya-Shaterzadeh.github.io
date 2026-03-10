@@ -5,7 +5,7 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Migration Guide
+  - name: ROS 2 Humble to Jazzy Migration Guide for IsaacLab UR Reach
     url: blog/ros2-jazzy-migration/
     weight: 20
   - name: Docs
