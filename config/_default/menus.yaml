@@ -5,12 +5,9 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: ROS 2 Humble to Jazzy Migration Guide for IsaacLab UR Reach
-    url: blog/ros2-jazzy-migration/
-    weight: 20
   - name: Docs
     url: docs/
-    weight: 30
+    weight: 20
   - name: LinkedIn
     url: https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/
     weight: 40

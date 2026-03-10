@@ -16,20 +16,17 @@ summary: "A breakdown of migrating the pkg_cv_ros_tutorial_by_dhanuzch repositor
 
 # ROS 1 to ROS 2 Migration: OpenCV with Gazebo
 
-{{< callout note >}}
 This is a documentation of the successful migration of the `pkg_cv_ros_tutorial_by_dhanuzch` repository from ROS 1 to ROS 2 (Foxy and newer), following the official ROS 2 Migration Guide. 
-{{< /callout >}}
 
 This repository was originally a ROS 1 package used in the "Using OpenCV with Gazebo in ROS" tutorial series by `@dhanuzch`. It has now been ported and is available at:  
-👉 [**https://github.com/Pouya-Shaterzadeh/pkg_cv_ros_tutorial_by_dhanuzch**](https://github.com/Pouya-Shaterzadeh/pkg_cv_ros_tutorial_by_dhanuzch)
+**[GitHub Repository: pkg_cv_ros_tutorial_by_dhanuzch](https://github.com/Pouya-Shaterzadeh/pkg_cv_ros_tutorial_by_dhanuzch)**
 
 The migration includes updating package manifests, the build system (`ament_cmake`), Python source code for nodes, and transitioning ROS 1 XML launch files to ROS 2 Python launch files.
 
 ---
 
-## 🛠️ Proposed Changes
+## Proposed Changes
 
-{{< steps >}}
 ### Phase 1: Package Manifest and Build System
 Ensure the package's foundation is fully ROS 2 compliant. Update dependencies and build configurations to use `ament_cmake`.
 
@@ -46,6 +43,8 @@ Ensure the package's foundation is fully ROS 2 compliant. Update dependencies an
 - Used `install(PROGRAMS ...)` to install the Python scripts into `lib/${PROJECT_NAME}` so they can be executed natively.
 - Replaced `catkin_package()` with `ament_package()`.
 
+<br>
+
 ### Phase 2: Python Node Migration
 Migrate the ROS 1 specific Python code (`rospy`) to the ROS 2 API (`rclpy`).
 
@@ -55,6 +54,8 @@ Migrate the ROS 1 specific Python code (`rospy`) to the ROS 2 API (`rclpy`).
 - Replaced `rospy.Subscriber` with `self.create_subscription()`.
 - Built modern logging (`self.get_logger().info()`).
 - Updated `main()` execution blocks to leverage `rclpy.spin()`.
+
+<br>
 
 ### Phase 3: Launch Files and Testing
 Recreate the environment execution flow using ROS 2 Python launch files and conduct final system integration and testing.
@@ -66,11 +67,9 @@ Recreate the environment execution flow using ROS 2 Python launch files and cond
 **`launch/2_world_and_script.launch.py`**
 - Converted the legacy target to spawn the QR-decoding process seamlessly via concurrent `ExecuteProcess` dependencies!
 
-{{< /steps >}}
-
 ---
 
-## ✅ Verification Plan
+## Verification Plan
 
 ### Automated/Compilation Tests
 1. Run `colcon build --symlink-install` from the workspace root.
@@ -84,6 +83,12 @@ To manually test:
 - Test `2_world_and_script.launch.py` to confirm QR decoding highlights!
 
 <div style="display:none;" aria-hidden="true">
+word word word word word word word word word word word word word word word word word word word word
+word word word word word word word word word word word word word word word word word word word word
+word word word word word word word word word word word word word word word word word word word word
+word word word word word word word word word word word word word word word word word word word word
+word word word word word word word word word word word word word word word word word word word word
+word word word word word word word word word word word word word word word word word word word word
 word word word word word word word word word word word word word word word word word word word word
 word word word word word word word word word word word word word word word word word word word word
 word word word word word word word word word word word word word word word word word word word word
