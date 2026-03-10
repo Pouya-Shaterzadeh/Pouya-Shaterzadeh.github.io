@@ -11,7 +11,7 @@ sections:
     content:
       title: Pouya Shaterzadeh
       text: |
-        **AI Engineering · Robotics · Infrastructure**
+        **AI Developer · Robotics · Linux Administration**
 
         A showcase of my professional projects spanning secure system infrastructure, robotics software, and AI-driven solutions.
       primary_action:
