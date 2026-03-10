@@ -5,7 +5,7 @@
 
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: ''
-baseURL: 'https://example.com/' # Website URL
+baseURL: 'https://pouya-shaterzadeh.github.io/' # Website URL
 
 ############################
 ## PAGE OPTIONS
@@ -21,6 +21,7 @@ cascade:
     show_date: false
     # Show date modified at end of content
     show_date_updated: true
+    share: true
   # Blog post options
   - _target:
       path: /blog/**

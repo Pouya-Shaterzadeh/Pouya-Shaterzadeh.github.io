@@ -227,6 +227,17 @@ hugoblox:
     naver: ""
 
   # ────────────────────────────────────────────────────────────────────────────
+  # SHARING
+  # Social sharing buttons on pages
+  # ────────────────────────────────────────────────────────────────────────────
+  sharing:
+    twitter: true
+    facebook: true
+    linkedin: true
+    whatsapp: true
+    email: true
+
+  # ────────────────────────────────────────────────────────────────────────────
   # REPOSITORY
   # Source code repository for "Edit this page" links
   # ────────────────────────────────────────────────────────────────────────────

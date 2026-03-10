@@ -6,6 +6,7 @@ type: book
 weight: 10
 authors:
   - Pouya
+share: true
 summary: "A guide on migrating the IsaacLab UR Reach Sim2Real codebase from ROS 2 Humble to ROS 2 Jazzy, and configuring task scripts to run properly from external terminals. Includes visual guides for URSim setup."
 ---
 
