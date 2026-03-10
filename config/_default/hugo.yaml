@@ -21,6 +21,7 @@ cascade:
     show_date: false
     # Show date modified at end of content
     show_date_updated: true
+    show_author: false
     share: true
   # Blog post options
   - _target:
