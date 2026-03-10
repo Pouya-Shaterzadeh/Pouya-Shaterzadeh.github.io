@@ -53,7 +53,7 @@ sections:
   - block: markdown
     id: testimonials
     content:
-      title: Kind Words
+      title: Trusted By
       subtitle: What collaborators say
       text: |
         <div style="max-width: 520px; margin: 2rem auto; background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.08)); border-left: 4px solid #6366f1; border-radius: 12px; padding: 2rem 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.06);">
