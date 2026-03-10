@@ -8,6 +8,6 @@ summary: "A central hub for my contributions and modifications to various open-s
 
 Welcome to my central documentation repository! 
 
-This hub serves as a comprehensive log of my contributions, modifications, and guides for various open-source projects and repositories. While I have a strong focus on robotics—specifically involving ROS 2 migrations, Sim2Real deployments, and IsaacLab—this space covers a wide range of documentation from different technical areas and domains.
+This hub serves as a comprehensive log of my contributions, modifications, and guides for various open-source projects and repositories. From low-level system migrations to high-level architectural designs, this documentation reflects my journey through diverse technical landscapes and serves as a record of my evolving contributions to the open-source ecosystem.
 
 Feel free to explore the guides below!
