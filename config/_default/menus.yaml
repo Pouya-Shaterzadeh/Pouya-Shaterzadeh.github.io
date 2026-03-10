@@ -5,17 +5,17 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Documentation
-    url: docs/
+  - name: Migration Guide
+    url: blog/ros2-jazzy-migration/
     weight: 20
-  - name: Blog
-    url: blog/
+  - name: Docs
+    url: docs/
     weight: 30
-  - name: Showcase
-    url: showcase/
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/
     weight: 40
-  - name: Community
-    url: community/
+  - name: GitHub
+    url: https://github.com/Pouya-Shaterzadeh/
     weight: 50
 
 sidebar:

@@ -109,3 +109,12 @@ Press **Exit**, and then switch over to the **Move** tab in the interface:
 ### 5. Connect to Computer
 Press the play button in the bottom and select the generated connection profile to effectively prepare for accepting commands!
 ![Connect Interface](play_selection_image.png)
+
+---
+
+## About the Author
+I am **Pouya Shaterzadeh**. My work involves using open-source tools to build end-to-end robotics and deep learning software! 
+
+Let's connect:
+- **[LinkedIn](https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/)**
+- **[GitHub](https://github.com/Pouya-Shaterzadeh/)**
