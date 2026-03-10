@@ -2,9 +2,9 @@
 title: "Style Finder AI v2.0"
 summary: "An AI-powered visual fashion search tool that uses Llama 4 Maverick for multimodal outfit analysis and Fashion-CLIP for re-ranking, delivering matching Trendyol products from a single photo upload in ~5 seconds."
 tags:
+  - Fashion-CLIP
   - AI
   - Multimodal
-  - Fashion-CLIP
   - Llama 4
   - HuggingFace
 date: 2026-03-10
