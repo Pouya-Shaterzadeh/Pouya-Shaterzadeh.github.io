@@ -47,8 +47,8 @@ sections:
       sort_by: 'Weight'
       sort_ascending: true
     design:
-      view: card
-      columns: 2
+      view: showcase
+      columns: 1
 
   - block: markdown
     id: testimonials
