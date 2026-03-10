@@ -1,5 +1,5 @@
 ---
-title: "Pouya's Documentation Hub"
+title: "Documentation Hub"
 linkTitle: "Docs"
 type: book
 date: 2026-03-10
