@@ -2,6 +2,8 @@
 title: "Self-Hosted Communication Infrastructure"
 summary: "Designed and deployed a secure, self-hosted communication platform featuring multi-region Rocket.Chat with Federation and a dedicated VoIP stack powered by Asterisk PBX."
 tags:
+  - Linux SysAdmin
+  - Server Manager
   - Infrastructure
   - Linux
   - Security
