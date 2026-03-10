@@ -5,6 +5,7 @@ date: 2026-02-28
 type: book
 weight: 20
 show_date: false
+profile: false
 share: true
 summary: "A breakdown of migrating the pkg_cv_ros_tutorial_by_dhanuzch repository from ROS 1 to ROS 2, focusing on Python nodes, launch files, and CMake changes."
 ---
