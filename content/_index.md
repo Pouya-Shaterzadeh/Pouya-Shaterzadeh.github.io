@@ -53,7 +53,7 @@ sections:
   - block: markdown
     id: testimonials
     content:
-      title: Testimonials
+      title: Kind Words
       subtitle: What collaborators say
       text: |
         <div style="max-width: 520px; margin: 2rem auto; background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.08)); border-left: 4px solid #6366f1; border-radius: 12px; padding: 2rem 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.06);">
@@ -65,7 +65,7 @@ sections:
           <div style="margin-top: 1.25rem; display: flex; align-items: center; gap: 0.75rem;">
             <div style="width: 3px; height: 32px; background: #6366f1; border-radius: 2px;"></div>
             <div>
-              <div style="font-weight: 600; font-size: 0.95rem;">Founder</div>
+              <div style="font-weight: 600; font-size: 0.95rem;">Anil B., Founder</div>
               <a href="https://catalpinar.solutions/" target="_blank" rel="noopener" style="font-size: 0.85rem; color: #6366f1; text-decoration: none;">Catalpinar IT Solutions</a>
             </div>
           </div>
