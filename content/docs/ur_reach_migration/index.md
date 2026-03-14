@@ -12,7 +12,7 @@ summary: "A guide on migrating the IsaacLab UR Reach Sim2Real codebase from ROS 
 
 ## Overview
 
-This guide details the modifications made to the `isaaclab_ur_reach_sim2real` codebase to make it compatible with **ROS 2 Jazzy Jalisco** running on **Ubuntu 24.04**. 
+This guide details the modifications suggested for the [isaaclab_ur_reach_sim2real](https://github.com/Pouya-Shaterzadeh/isaaclab_ur_reach_sim2real_docs) codebase to migrate from **ROS 2 Humble** (Ubuntu 22.04) to **ROS 2 Jazzy Jalisco** (Ubuntu 24.04). 
 
 In addition to syntax and API changes, it covers the environmental configuration tweaks needed to successfully run the task scripts from a separate terminal containing virtual environments (e.g., PyTorch or IsaacLab).
 
