@@ -50,6 +50,23 @@ sections:
       view: showcase
       columns: 1
 
+  - block: collection
+    id: recent-docs
+    content:
+      title: Recent Documentations
+      subtitle: ""
+      text: ""
+      page_type: docs
+      count: 5
+      filters:
+        folders:
+          - docs
+      sort_by: 'Date'
+      sort_ascending: false
+    design:
+      view: card
+      columns: 2
+
   - block: markdown
     id: testimonials
     content:
