@@ -2,12 +2,18 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Portfolio
+  - name: Home
     url: /
     weight: 10
+  - name: Projects
+    url: /#projects
+    weight: 20
   - name: Docs
     url: docs/
-    weight: 20
+    weight: 30
+  - name: Blog
+    url: /blog/
+    weight: 35
   - name: LinkedIn
     url: https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/
     weight: 40

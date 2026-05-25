@@ -19,9 +19,9 @@ hugoblox:
     # Schema.org type for structured data
     type: person                        # person | organization | local_business
     # Short tagline displayed on your site
-    tagline: ""
+    tagline: "AI Developer · Robotics · Linux Admin"
     # Site meta description for search engines and social sharing
-    description: "The highly-customizable Hugo Academic theme powered by HugoBlox Kit. Easily create your personal academic website."
+    description: "Pouya Shaterzadeh — AI Engineering student at Bahçeşehir University. Building intelligent systems in robotics, computer vision, and self-hosted infrastructure."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "MakeOwnable"              # Twitter/X handle for Twitter Cards (without @)
@@ -37,9 +37,9 @@ hugoblox:
     pack: "default"
     # Optional: Override theme pack colors
     colors:
-      primary: ""                       # Tailwind palette name or hex (e.g., "indigo" or "#6366f1")
-      secondary: ""
-      neutral: ""                       # Affects gray utilities (text-gray-*, bg-gray-*)
+      primary: "indigo"                 # Tailwind palette name or hex (e.g., "indigo" or "#6366f1")
+      secondary: "violet"
+      neutral: "zinc"
     # Optional: Mode-specific color overrides
     colors_light: {}
     colors_dark: {}

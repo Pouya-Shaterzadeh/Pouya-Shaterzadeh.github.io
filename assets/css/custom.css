@@ -1,0 +1,154 @@
+/* ============================================
+   Custom styles for Pouya Shaterzadeh
+   Dark academia / tech vibe
+   ============================================ */
+
+/* --- Hero Section --- */
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(99, 102, 241, 0.03),
+    transparent,
+    rgba(168, 85, 247, 0.03),
+    transparent
+  );
+  animation: hero-rotate 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes hero-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hero-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Typography tweaks --- */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* --- Project cards --- */
+.project-card-wrapper {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.project-card-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.project-card-wrapper .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.project-card-wrapper:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* --- Tech tags on cards --- */
+.tech-tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  margin: 0.15rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+  color: inherit;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* --- Gradient accent borders --- */
+.gradient-border {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gradient-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* --- Glow effects --- */
+.glow-indigo {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+}
+
+/* --- Button enhancements --- */
+.btn-cta {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
+.btn-cta:active {
+  transform: translateY(0);
+}
+
+/* --- Subtle divider --- */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
+  margin: 2rem 0;
+}
+
+/* --- Smooth scrollbar --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5);
+}
+
+/* --- Responsive grid improvements --- */
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+  }
+}

@@ -9,23 +9,31 @@ design:
 sections:
   - block: hero
     content:
-      title: Pouya Shaterzadeh
+      title: |
+        Pouya **Shaterzadeh**
       text: |
-        **AI Developer · Robotics · Linux Administration**
-
-        A showcase of my professional projects spanning secure system infrastructure, robotics software, and AI-driven solutions.
+        <div class="hero-bg" style="position:relative; padding: 0.5rem 0;">
+          <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            AI Engineering Student · Builder of Intelligent Systems
+          </p>
+          <p style="font-size: 0.95rem; color: var(--text-light); max-width: 560px; line-height: 1.6;">
+            Deep learning, computer vision, NLP, and self-hosted infrastructure.
+            I build things that <strong>actually work</strong> — from robot fleets to AI fashion search.
+          </p>
+        </div>
       primary_action:
+        text: Explore Projects
+        url: /#projects
+        icon: code-bracket
+      secondary_action:
         text: View Docs
         url: /docs/
         icon: document-text
-      secondary_action:
-        text: LinkedIn
-        url: https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/
     design:
       spacing:
-        padding: ["3rem", 0, "3rem", 0]
+        padding: ["4rem", 0, "4rem", 0]
         margin: [0, 0, 0, 0]
-      css_class: ""
+      css_class: "hero-bg"
       background:
         color: ""
         image:
@@ -51,9 +59,36 @@ sections:
       columns: 1
 
   - block: markdown
+    id: skills
+    content:
+      title: Tech Stack
+      subtitle: What I work with
+      text: |
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 1.5rem 0 0.5rem;">
+          <span class="tech-tag">🐍 Python</span>
+          <span class="tech-tag">📘 TypeScript</span>
+          <span class="tech-tag">🧠 PyTorch</span>
+          <span class="tech-tag">👁️ OpenCV</span>
+          <span class="tech-tag">🤖 ROS</span>
+          <span class="tech-tag">📊 Jupyter</span>
+          <span class="tech-tag">🐳 Docker</span>
+          <span class="tech-tag">🔧 Linux</span>
+          <span class="tech-tag">☁️ Self-Hosted</span>
+          <span class="tech-tag">🗄️ MongoDB</span>
+          <span class="tech-tag">⚡ FastAPI</span>
+          <span class="tech-tag">🎯 CLIP</span>
+          <span class="tech-tag">📡 VoIP</span>
+          <span class="tech-tag">🏗️ Go</span>
+        </div>
+    design:
+      css_class: ""
+      spacing:
+        padding: ["2rem", 0, "2rem", 0]
+
+  - block: markdown
     id: testimonials
     content:
-      title: Trusted By
+      title: Kind Words
       subtitle: What collaborators say
       text: |
         <div style="max-width: 520px; margin: 2rem auto; background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.08)); border-left: 4px solid #6366f1; border-radius: 12px; padding: 2rem 2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.06);">
