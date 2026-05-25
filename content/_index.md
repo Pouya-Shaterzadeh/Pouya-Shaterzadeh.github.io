@@ -113,7 +113,6 @@ sections:
           <span class="tag-cyber cyan">selenium</span>
           <span class="tag-cyber">c++</span>
           <span class="tag-cyber purple">ffmpeg</span>
-          <span class="tag-cyber cyan">go</span>
           <span class="tag-cyber">scikit-learn</span>
           <span class="tag-cyber purple">huggingface</span>
           <span class="tag-cyber cyan">prometheus</span>
