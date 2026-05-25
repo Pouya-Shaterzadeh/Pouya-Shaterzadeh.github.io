@@ -201,19 +201,21 @@ sections:
             controls.innerHTML='<button class="project-slider-btn" type="button" aria-label="Previous project">‹</button><div class="project-slider-status" aria-hidden="true">slides</div><button class="project-slider-btn" type="button" aria-label="Next project">›</button>';
             shell.appendChild(controls);
             var buttons=controls.querySelectorAll('button');
+            var current=0;
+            function show(index){
+              current=(index+cards.length)%cards.length;
+              cards[current].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+            }
             function step(direction){
-              var card=cards[0];
-              var gap=parseFloat(getComputedStyle(track).columnGap||getComputedStyle(track).gap)||24;
-              track.scrollBy({left:direction*(card.getBoundingClientRect().width+gap),behavior:'smooth'});
+              show(current+direction);
             }
             buttons[0].addEventListener('click',function(){step(-1);});
             buttons[1].addEventListener('click',function(){step(1);});
             var timer=window.setInterval(function(){
               if(section.matches(':hover'))return;
-              var max=track.scrollWidth-track.clientWidth-4;
-              if(track.scrollLeft>=max){track.scrollTo({left:0,behavior:'smooth'});}
-              else{step(1);}
+              step(1);
             },5200);
+            window.setTimeout(function(){show(0);},50);
             window.addEventListener('pagehide',function(){window.clearInterval(timer);},{once:true});
           }
           if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initProjectSlider);
