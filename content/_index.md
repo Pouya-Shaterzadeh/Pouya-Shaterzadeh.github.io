@@ -121,6 +121,7 @@ sections:
     design:
       spacing:
         padding: ["2rem", 0, "1rem", 0]
+      css_class: "cyber-section cyber-section-armory"
 
   - block: markdown
     id: timeline
@@ -136,8 +137,6 @@ sections:
             <span>Deployed <strong>Self-Hosted Infrastructure</strong> — multi-region Rocket.Chat + Asterisk</span>
             <span style="color: #00ff41;">2026-02</span>
             <span>Began <strong>Sky Warriors ROS</strong> workspace — Gazebo robotics</span>
-            <span style="color: #00ff41;">2025-12</span>
-            <span>Wrote <strong>Linux & Life</strong> guidebook in Persian</span>
             <span style="color: #00ff41;">2025-11</span>
             <span>Built open-source <strong>Robot Fleet Dashboard</strong> with TypeScript</span>
             <span style="color: #00ff41;">2025-10</span>
@@ -153,6 +152,7 @@ sections:
     design:
       spacing:
         padding: ["1rem", 0, "2rem", 0]
+      css_class: "cyber-section cyber-section-timeline"
 
   - block: collection
     id: projects
@@ -170,6 +170,7 @@ sections:
     design:
       view: showcase
       columns: 1
+      css_class: "cyber-section cyber-section-projects"
 
   - block: markdown
     id: testimonials
@@ -180,6 +181,7 @@ sections:
     design:
       spacing:
         padding: ["2rem", 0, "3rem", 0]
+      css_class: "cyber-section cyber-section-endorsements"
 
   - block: markdown
     id: matrix-rain
