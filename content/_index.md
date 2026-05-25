@@ -215,7 +215,7 @@ sections:
               if(section.matches(':hover'))return;
               step(1);
             },5200);
-            window.setTimeout(function(){show(0);},50);
+            // Removed: auto-scroll to first project card on load
             window.addEventListener('pagehide',function(){window.clearInterval(timer);},{once:true});
           }
           if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initProjectSlider);
