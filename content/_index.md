@@ -10,6 +10,11 @@ sections:
   - block: hero
     content:
       title: |
+        <div class="floating-orb"></div>
+        <div class="floating-orb"></div>
+        <div class="floating-orb"></div>
+        <div class="glitch-bar"></div>
+        <div class="glitch-bar"></div>
         <span class="glitch">Pouya Shaterzadeh</span>
       text: |
         <div class="hero-cyber" style="padding: 2rem 0; text-align: center;">
