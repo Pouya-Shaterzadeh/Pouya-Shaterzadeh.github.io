@@ -128,11 +128,6 @@ body::after {
   text-shadow: 0 0 8px rgba(0, 255, 65, 0.28);
 }
 
-html.is-scrolling .page-body::before,
-html.is-scrolling .page-body::after {
-  animation-play-state: paused;
-}
-
 @keyframes scroll-text {
   0% { transform: translateY(0); }
   100% { transform: translateY(-50%); }

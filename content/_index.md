@@ -194,7 +194,7 @@ sections:
         (function(){
           var c=document.getElementById('matrix-canvas');
           if(!c)return;
-          var x=c.getContext('2d'),w,h,f=16,cols,drops,last=0,scrolling=false,scrollTimer;
+          var x=c.getContext('2d'),w,h,f=16,cols,drops;
           function r(){
             w=c.width=window.innerWidth;
             h=c.height=window.innerHeight;
@@ -204,18 +204,7 @@ sections:
           }
           r();window.addEventListener('resize',r);
           var ch='アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789<>/[]{}=+-_*&^%$#@!~';
-          window.addEventListener('scroll',function(){
-            scrolling=true;
-            document.documentElement.classList.add('is-scrolling');
-            clearTimeout(scrollTimer);
-            scrollTimer=setTimeout(function(){
-              scrolling=false;
-              document.documentElement.classList.remove('is-scrolling');
-            },160);
-          },{passive:true});
-          function d(t){
-            if(scrolling||t-last<50){requestAnimationFrame(d);return;}
-            last=t;
+          function d(){
             x.fillStyle='rgba(10,10,15,0.04)';
             x.fillRect(0,0,w,h);
             x.font=f+'px monospace';
@@ -228,7 +217,7 @@ sections:
             }
             requestAnimationFrame(d);
           }
-          requestAnimationFrame(d);
+          d();
         })();
         </script>
     design:
