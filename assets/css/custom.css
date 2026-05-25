@@ -30,33 +30,30 @@ body {
 }
 
 /* ============================================
-   SIDE GUTTERS + ORBS (rendered via body/page-body pseudo-elements)
+   SIDE PANELS — FULL ANIMATED TERMINAL COLUMNS
    ============================================ */
 
-/* body ::before = left gutter vertical green wire */
+/* Left side panel — 60px wide column */
 body::before {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
-  width: 3px;
+  width: 60px;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(0, 255, 65, 0.8) 15%,
-    rgba(0, 255, 65, 0.4) 30%,
-    rgba(0, 255, 65, 0.8) 50%,
-    rgba(0, 255, 65, 0.4) 70%,
-    rgba(0, 255, 65, 0.8) 85%,
-    transparent 100%
-  );
+  background:
+    linear-gradient(180deg, rgba(0,255,65,0.15) 0%, rgba(0,255,65,0.6) 50%, rgba(0,255,65,0.15) 100%);
+  background-size: 2px 100%;
+  background-repeat: no-repeat;
+  background-position: 30px 0;
   z-index: 99998;
   pointer-events: none;
-  animation: pulse-wire 4s ease-in-out infinite;
+  border-right: 1px solid rgba(0, 255, 65, 0.04);
+  animation: panel-pulse 3s ease-in-out infinite;
+  box-shadow: 30px 0 20px -10px rgba(0, 255, 65, 0.03);
 }
 
-/* body ::after = CRT scanlines (keeping original look) */
+/* CRT scanlines overlay */
 body::after {
   content: '';
   position: fixed;
@@ -65,52 +62,54 @@ body::after {
   height: 100%;
   background: repeating-linear-gradient(
     0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 255, 65, 0.015) 2px,
-    rgba(0, 255, 65, 0.015) 4px
+    transparent, transparent 2px,
+    rgba(0, 255, 65, 0.015) 2px, rgba(0, 255, 65, 0.015) 4px
   );
   pointer-events: none;
   z-index: 99999;
 }
 
-/* page-body ::before = right gutter purple wire + glow orb */
+/* Left column — terminal commands */
 .page-body::before {
-  content: '';
+  content: 'ROOT\AACCESS\A> sudo\A# whoami\Apouya\A# pwd\A/home\A# ls -la\Adrwx AI\Adrwx ROB\Adrwx SEC\A# ./run\ASYSTEM: ONLINE\A>_ init\AOK\A>_ scan\AACTIVE\A>_ probe\ADETECT\A# clear\A>_ start\ABOOT SEQ\AINIT OK\A# export\APATH=/usr/bin\A# ./deploy\ADEPLOY OK\A>_ idle\AWAITING...';
   position: fixed;
-  top: 0;
-  right: 6px;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(255, 0, 255, 0.8) 15%,
-    rgba(255, 0, 255, 0.4) 30%,
-    rgba(255, 0, 255, 0.8) 50%,
-    rgba(255, 0, 255, 0.4) 70%,
-    rgba(255, 0, 255, 0.8) 85%,
-    transparent 100%
-  );
-  z-index: 99998;
-  pointer-events: none;
-  animation: pulse-wire 5s ease-in-out infinite 1s;
-}
-
-/* page-body ::after = hex data ticker on right side */
-.page-body::after {
-  content: '> 0xFF A3 7C >> 0xDE 0xAD\A0> 0xBE 0xEF 0x00\A0> INIT: OK\A0> SCANNING...\A0> 0xCA 0xFE 0xBA\A0> PORT: 8080\A0> CONN: SECURE\A0> PROXY: ACTIVE\A0> 0x1F 0x2B 0x3C\A0> LATENCY: 12ms\A0> UPLINK: EST\A0> 0x00 0xFF 0x01';
-  position: fixed;
-  right: 30px;
-  bottom: 10%;
+  left: 6px;
+  top: 10%;
   font-family: 'Courier New', monospace;
-  font-size: 0.6rem;
-  color: rgba(0, 255, 65, 0.12);
-  line-height: 1.6;
+  font-size: 0.55rem;
+  color: rgba(0, 255, 65, 0.08);
+  line-height: 1.5;
   white-space: pre;
   pointer-events: none;
-  z-index: 1;
+  z-index: 99997;
+  animation: scroll-text 12s linear infinite;
+}
+
+/* Right column — terminal output */
+.page-body::after {
+  content: 'root@box:~$ ping 8.8.8.8\A64 bytes: 12ms\A64 bytes: 11ms\A64 bytes: 14ms\A64 bytes: 10ms\A--- stats ---\Apackets: 1024\Aloss: 0.00%\Artt min/avg/max\A10/12/18 ms\A\Aroot@box:~$ netstat\AProto Recv Send\ATCP 1024 2048\AUDP 512 1024\A\Aroot@box:~$ df -h\A/dev/sda1 237G\Aused 189G\Aavail 48G\Ause% 80%\A\Aroot@box:~$ uptime\A12:34 up 69 days\A\Aroot@box:~$ ps aux\APID CPU MEM\A001 0.1 2.3\A042 0.0 1.1\A069 0.3 4.2\A420 0.0 0.8\A\Aroot@box:~$ who\Amaster pts/0\Aguest pts/1\A\Aroot@box:~$ free -m\Atotal 16384\Aused 12288\Afree 4096';
+  position: fixed;
+  right: 6px;
+  top: 8%;
+  font-family: 'Courier New', monospace;
+  font-size: 0.55rem;
+  color: rgba(0, 255, 65, 0.08);
+  line-height: 1.5;
+  white-space: pre;
+  pointer-events: none;
+  z-index: 99997;
   text-align: right;
+  animation: scroll-text 14s linear infinite reverse;
+}
+
+@keyframes scroll-text {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes panel-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
 }
 
 /* Additional orbs via extra elements — we need CSS-only approach */
