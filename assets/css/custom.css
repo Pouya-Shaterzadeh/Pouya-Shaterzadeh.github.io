@@ -14,6 +14,23 @@ body {
   --cyber-dim: #888;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.page-body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+  .page-body {
+    overflow-x: hidden;
+  }
+}
+
 /* ============================================
    MATRIX RAIN — CANVAS BACKGROUND
    ============================================ */
@@ -33,24 +50,27 @@ body {
    SIDE PANELS — FULL ANIMATED TERMINAL COLUMNS
    ============================================ */
 
-/* Left side panel — 60px wide column */
+/* Left side panel */
 body::before {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
-  width: 60px;
+  width: clamp(120px, 14vw, 190px);
   height: 100%;
   background:
-    linear-gradient(180deg, rgba(0,255,65,0.15) 0%, rgba(0,255,65,0.6) 50%, rgba(0,255,65,0.15) 100%);
-  background-size: 2px 100%;
+    linear-gradient(90deg, rgba(0, 255, 65, 0.09) 0%, rgba(0, 255, 65, 0.035) 42%, transparent 100%),
+    linear-gradient(180deg, rgba(0,255,65,0.18) 0%, rgba(0,255,65,0.55) 50%, rgba(0,255,65,0.18) 100%);
+  background-size: 100% 100%, 2px 100%;
   background-repeat: no-repeat;
-  background-position: 30px 0;
+  background-position: 0 0, clamp(88px, 10vw, 140px) 0;
   z-index: 99998;
   pointer-events: none;
-  border-right: 1px solid rgba(0, 255, 65, 0.04);
+  border-right: 1px solid rgba(0, 255, 65, 0.12);
   animation: panel-pulse 3s ease-in-out infinite;
-  box-shadow: 30px 0 20px -10px rgba(0, 255, 65, 0.03);
+  box-shadow:
+    inset -20px 0 35px -30px rgba(0, 255, 65, 0.4),
+    35px 0 45px -28px rgba(0, 255, 65, 0.18);
 }
 
 /* CRT scanlines overlay */
@@ -73,33 +93,39 @@ body::after {
 .page-body::before {
   content: 'ROOT\AACCESS\A> sudo\A# whoami\Apouya\A# pwd\A/home\A# ls -la\Adrwx AI\Adrwx ROB\Adrwx SEC\A# ./run\ASYSTEM: ONLINE\A>_ init\AOK\A>_ scan\AACTIVE\A>_ probe\ADETECT\A# clear\A>_ start\ABOOT SEQ\AINIT OK\A# export\APATH=/usr/bin\A# ./deploy\ADEPLOY OK\A>_ idle\AWAITING...';
   position: fixed;
-  left: 6px;
-  top: 10%;
+  left: clamp(12px, 2vw, 28px);
+  top: 7%;
+  width: clamp(112px, 13vw, 180px);
   font-family: 'Courier New', monospace;
-  font-size: 0.55rem;
-  color: rgba(0, 255, 65, 0.08);
-  line-height: 1.5;
+  font-size: clamp(0.72rem, 0.8vw, 0.95rem);
+  color: rgba(0, 255, 65, 0.28);
+  line-height: 1.38;
   white-space: pre;
+  overflow: hidden;
   pointer-events: none;
   z-index: 99997;
   animation: scroll-text 12s linear infinite;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.28);
 }
 
 /* Right column — terminal output */
 .page-body::after {
   content: 'root@box:~$ ping 8.8.8.8\A64 bytes: 12ms\A64 bytes: 11ms\A64 bytes: 14ms\A64 bytes: 10ms\A--- stats ---\Apackets: 1024\Aloss: 0.00%\Artt min/avg/max\A10/12/18 ms\A\Aroot@box:~$ netstat\AProto Recv Send\ATCP 1024 2048\AUDP 512 1024\A\Aroot@box:~$ df -h\A/dev/sda1 237G\Aused 189G\Aavail 48G\Ause% 80%\A\Aroot@box:~$ uptime\A12:34 up 69 days\A\Aroot@box:~$ ps aux\APID CPU MEM\A001 0.1 2.3\A042 0.0 1.1\A069 0.3 4.2\A420 0.0 0.8\A\Aroot@box:~$ who\Amaster pts/0\Aguest pts/1\A\Aroot@box:~$ free -m\Atotal 16384\Aused 12288\Afree 4096';
   position: fixed;
-  right: 6px;
-  top: 8%;
+  right: clamp(12px, 2vw, 28px);
+  top: 6%;
+  width: clamp(140px, 16vw, 230px);
   font-family: 'Courier New', monospace;
-  font-size: 0.55rem;
-  color: rgba(0, 255, 65, 0.08);
-  line-height: 1.5;
+  font-size: clamp(0.72rem, 0.85vw, 1rem);
+  color: rgba(0, 255, 65, 0.26);
+  line-height: 1.38;
   white-space: pre;
+  overflow: hidden;
   pointer-events: none;
   z-index: 99997;
   text-align: right;
   animation: scroll-text 14s linear infinite reverse;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.28);
 }
 
 @keyframes scroll-text {
