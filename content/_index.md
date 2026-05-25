@@ -12,21 +12,23 @@ sections:
       title: |
         <span class="glitch">Pouya Shaterzadeh</span>
       text: |
-        <div class="hero-cyber" style="padding: 2rem 0; text-align: center;">
-          <div style="font-family: 'Courier New', monospace; font-size: 1rem; color: #00ff41; margin-bottom: 0.75rem; opacity: 0.8;">
-            ── SYSTEM: ACTIVE ──
+        <div class="hero-cyber">
+          <div class="hero-cyber-copy">
+            <div class="hero-cyber-status">-- SYSTEM: ACTIVE --</div>
+            <p class="hero-cyber-role">
+              <strong>AI Developer</strong>
+              <span>Cybersecurity</span>
+              <em>Robotics</em>
+            </p>
+            <p class="hero-cyber-terminal">
+              $ cat /home/pouya/README.md<br>
+              <span>&gt;</span> AI Engineering @ Bahçeşehir University<br>
+              <span>&gt;</span> Deep learning · Computer vision · NLP<br>
+              <span>&gt;</span> Self-hosted infrastructure · Secure systems<br>
+              <span>&gt;</span> 20+ repos · 46+ stars · Open source advocate
+            </p>
           </div>
-          <p style="font-family: 'Courier New', monospace; font-size: 1.2rem; color: #e0e0e0; font-weight: 400; margin-bottom: 0.5rem;">
-            ⚡ <strong style="color: #fff;">AI Developer</strong> · <strong style="color: #ff00ff;">Cybersecurity</strong> · <strong style="color: #0ff;">Robotics</strong>
-          </p>
-          <p style="font-family: 'Courier New', monospace; font-size: 0.9rem; color: #888; max-width: 600px; margin: 0.5rem auto 1.5rem auto; line-height: 1.6;">
-            $ cat /home/pouya/README.md<br>
-            <span style="color: #0ff;">></span> AI Engineering @ Bahçeşehir University<br>
-            <span style="color: #0ff;">></span> Deep learning · Computer vision · NLP<br>
-            <span style="color: #0ff;">></span> Self-hosted infrastructure · Secure systems<br>
-            <span style="color: #0ff;">></span> 20+ repos · 46+ stars · Open source advocate
-          </p>
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <div class="hero-cyber-actions">
             <a href="/#projects" class="btn-cyber">
               ■ &nbsp;./explore_projects
             </a>
@@ -192,7 +194,7 @@ sections:
         (function(){
           var c=document.getElementById('matrix-canvas');
           if(!c)return;
-          var x=c.getContext('2d'),w,h,f=14,cols,drops;
+          var x=c.getContext('2d'),w,h,f=16,cols,drops,last=0,scrolling=false,scrollTimer;
           function r(){
             w=c.width=window.innerWidth;
             h=c.height=window.innerHeight;
@@ -202,7 +204,18 @@ sections:
           }
           r();window.addEventListener('resize',r);
           var ch='アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789<>/[]{}=+-_*&^%$#@!~';
-          function d(){
+          window.addEventListener('scroll',function(){
+            scrolling=true;
+            document.documentElement.classList.add('is-scrolling');
+            clearTimeout(scrollTimer);
+            scrollTimer=setTimeout(function(){
+              scrolling=false;
+              document.documentElement.classList.remove('is-scrolling');
+            },160);
+          },{passive:true});
+          function d(t){
+            if(scrolling||t-last<50){requestAnimationFrame(d);return;}
+            last=t;
             x.fillStyle='rgba(10,10,15,0.04)';
             x.fillRect(0,0,w,h);
             x.font=f+'px monospace';
@@ -215,7 +228,7 @@ sections:
             }
             requestAnimationFrame(d);
           }
-          d();
+          requestAnimationFrame(d);
         })();
         </script>
     design:
