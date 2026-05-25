@@ -80,8 +80,7 @@ sections:
     content:
       title: |
         <span class="section-title-cyber">Skills & Tools</span>
-      subtitle: |
-        <span style="font-family: 'Courier New', monospace; font-size: 0.85rem; color: #888;">$ cat /home/pouya/.toolkit</span>
+      subtitle: '<span style="font-family: Courier New, monospace; font-size: 0.85rem; color: #888;">$ cat /home/pouya/.toolkit</span>'
       text: |
         <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; margin: 1.5rem 0;">
           <span class="tag-cyber">python</span>
@@ -117,8 +116,7 @@ sections:
     content:
       title: |
         <span class="section-title-cyber">Active Projects</span>
-      subtitle: |
-        <span style="font-family: 'Courier New', monospace; font-size: 0.85rem; color: #888;">$ ls -la /home/pouya/projects/</span>
+      subtitle: '<span style="font-family: Courier New, monospace; font-size: 0.85rem; color: #888;">$ ls -la /home/pouya/projects/</span>'
       text: ""
       page_type: project
       count: 10
@@ -134,18 +132,13 @@ sections:
   - block: markdown
     id: testimonials
     content:
-      title: |
-        <span class="section-title-cyber">Endorsements</span>
-      subtitle: |
-        <span style="font-family: 'Courier New', monospace; font-size: 0.85rem; color: #888;">$ cat /var/log/feedback.log</span>
-      text: |
-        <pre style="background: rgba(0,255,65,0.04); border: 1px solid rgba(0,255,65,0.12); border-radius: 8px; padding: 1.5rem; font-family: 'Courier New', monospace; font-size: 0.85rem; color: #e0e0e0; max-width: 560px; margin: 1.5rem auto; white-space: pre-wrap;">
-<span style="color: #00ff41;">[2025-12-15 14:32]</span> <span style="color: #888;">&lt;anil_b&gt;</span> Thank you Pouya, you are valuable fellow!
-<span style="color: #888;">                                    Thanks for your efforts in ML and AI.</span>
+      title: '<span class="section-title-cyber">Endorsements</span>'
+      subtitle: '<span style="font-family: Courier New, monospace; font-size: 0.85rem; color: #888;">$ cat /var/log/feedback.log</span>'
+      text: '<pre style="background:rgba(0,255,65,0.04);border:1px solid rgba(0,255,65,0.12);border-radius:8px;padding:1.5rem;font-family:Courier New,monospace;font-size:0.85rem;color:#e0e0e0;max-width:560px;margin:1.5rem auto;white-space:pre-wrap;"><span style="color:#00ff41;">[2025-12-15 14:32]</span> <span style="color:#888;">&lt;anil_b&gt;</span> Thank you Pouya, you are valuable fellow!
+<span style="color:#888;">                                    Thanks for your efforts in ML and AI.</span>
 
-<span style="color: #0ff;">──</span> Anil B., Founder @ Catalpinar IT Solutions
-<span style="color: #0ff;">──</span> <a href="https://catalpinar.solutions/" target="_blank" style="color: #0ff; text-decoration: underline;">https://catalpinar.solutions</a>
-        </pre>
+<span style="color:#0ff;">──</span> Anil B., Founder @ Catalpinar IT Solutions
+<span style="color:#0ff;">──</span> <a href="https://catalpinar.solutions/" target="_blank" style="color:#0ff;text-decoration:underline;">https://catalpinar.solutions</a></pre>'
     design:
       spacing:
         padding: ["2rem", 0, "3rem", 0]
