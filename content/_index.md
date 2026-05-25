@@ -182,8 +182,7 @@ sections:
           function initProjectSlider(){
             var section=document.querySelector('.cyber-section-projects');
             if(!section||section.dataset.sliderReady==='true')return;
-            var cards=Array.prototype.slice.call(section.querySelectorAll('.project-card'));
-            if(cards.length<2)cards=Array.prototype.slice.call(section.querySelectorAll('article'));
+            var cards=Array.prototype.slice.call(section.querySelectorAll('.project-card, [role="article"], article'));
             if(cards.length<2)return;
             var track=cards[0].parentElement;
             while(track&&track!==section&&!cards.every(function(card){return track.contains(card);})){
