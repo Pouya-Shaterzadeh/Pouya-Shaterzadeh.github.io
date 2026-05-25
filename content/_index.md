@@ -52,7 +52,7 @@ sections:
   - block: markdown
     id: status
     content:
-      title: ""
+      title: '<span class="section-title-cyber section-01">Status</span>'
       text: |
         <hr class="cyber">
         <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; padding: 1rem 0;">
@@ -81,7 +81,7 @@ sections:
   - block: markdown
     id: skills
     content:
-      title: '<span class="section-title-cyber">Armory</span>'
+      title: '<span class="section-title-cyber section-02">Armory</span>'
       subtitle: '<span style="font-family: Courier New, monospace; font-size: 0.85rem; color: #888;">$ cat /home/pouya/.toolkit</span>'
       text: |
         <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; margin: 1.5rem 0;">
@@ -123,7 +123,7 @@ sections:
   - block: markdown
     id: timeline
     content:
-      title: '<span class="section-title-cyber">Timeline</span>'
+      title: '<span class="section-title-cyber section-03">Timeline</span>'
       subtitle: '<span style="font-family: Courier New, monospace; font-size: 0.85rem; color: #888;">$ cat /var/log/progress.log | tail -20</span>'
       text: |
         <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 1.5rem auto;">
@@ -155,7 +155,7 @@ sections:
   - block: collection
     id: projects
     content:
-      title: '<span class="section-title-cyber">Projects</span>'
+      title: '<span class="section-title-cyber section-04">Projects</span>'
       subtitle: '<span style="font-family: Courier New, monospace; font-size: 0.85rem; color: #888;">$ ls -la /home/pouya/projects/</span>'
       text: ""
       page_type: project
@@ -172,7 +172,7 @@ sections:
   - block: markdown
     id: testimonials
     content:
-      title: '<span class="section-title-cyber">Endorsements</span>'
+      title: '<span class="section-title-cyber section-05">Endorsements</span>'
       subtitle: '<span style="font-family: Courier New, monospace; font-size: 0.85rem; color: #888;">$ cat /var/log/feedback.log</span>'
       text: '<pre style="background:rgba(0,255,65,0.04);border:1px solid rgba(0,255,65,0.12);border-radius:8px;padding:1.5rem;font-family:Courier New,monospace;font-size:0.85rem;color:#e0e0e0;max-width:560px;margin:1.5rem auto;white-space:pre-wrap;"><span style="color:#00ff41;">[2025-12-15 14:32]</span> <span style="color:#888;">&lt;anil_b&gt;</span> Thank you Pouya, you are valuable fellow!\n<span style="color:#888;">                                    Thanks for your efforts in ML and AI.</span>\n\n<span style="color:#0ff;">──</span> Anil B., Founder @ Catalpinar IT Solutions\n<span style="color:#0ff;">──</span> <a href="https://catalpinar.solutions/" target="_blank" style="color:#0ff;text-decoration:underline;">https://catalpinar.solutions</a></pre>'
     design:
