@@ -185,41 +185,7 @@ sections:
     id: matrix-rain
     content:
       title: ""
-      text: |
-        <div style="position:fixed;top:15%;left:-120px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(0,255,65,0.07),transparent 70%);filter:blur(80px);pointer-events:none;z-index:0;animation:10s ease-in-out infinite float-orb;"></div>
-        <div style="position:fixed;bottom:20%;right:-100px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,0,255,0.05),transparent 70%);filter:blur(80px);pointer-events:none;z-index:0;animation:12s ease-in-out -3s infinite float-orb;"></div>
-        <div style="position:fixed;top:50%;left:50%;width:250px;height:250px;margin-left:-125px;margin-top:-125px;border-radius:50%;background:radial-gradient(circle,rgba(0,255,255,0.04),transparent 70%);filter:blur(80px);pointer-events:none;z-index:0;animation:14s ease-in-out -7s infinite float-orb;"></div>
-        <canvas id="matrix-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.12;"></canvas>
-        <script>
-        (function(){
-          var c=document.getElementById('matrix-canvas');
-          if(!c)return;
-          var x=c.getContext('2d'),w,h,f=16,cols,drops;
-          function r(){
-            w=c.width=window.innerWidth;
-            h=c.height=window.innerHeight;
-            cols=Math.floor(w/f);
-            drops=[];
-            for(var i=0;i<cols;i++)drops[i]=Math.floor(Math.random()*-120);
-          }
-          r();window.addEventListener('resize',r);
-          var ch='アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789<>/[]{}=+-_*&^%$#@!~';
-          function d(){
-            x.fillStyle='rgba(10,10,15,0.04)';
-            x.fillRect(0,0,w,h);
-            x.font=f+'px monospace';
-            for(var i=0;i<drops.length;i++){
-              var ch2=ch[Math.floor(Math.random()*ch.length)],xi=i*f,yi=drops[i]*f;
-              if(drops[i]>0){x.fillStyle='rgba(0,255,65,0.8)';x.fillText(ch2,xi,yi);}
-              else{x.fillStyle='rgba(0,255,65,0.3)';x.fillText(ch2,xi,yi);}
-              drops[i]++;
-              if(yi>h&&Math.random()>0.975)drops[i]=0;
-            }
-            requestAnimationFrame(d);
-          }
-          d();
-        })();
-        </script>
+      text: ""
     design:
       spacing:
         padding: ["0", 0, "0", 0]

@@ -33,19 +33,8 @@ body {
   overflow-x: hidden;
 }
 
-/* ============================================
-   MATRIX RAIN — CANVAS BACKGROUND
-   ============================================ */
-
-#matrix-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.15;
+.page-body {
+  position: relative;
 }
 
 /* ============================================
@@ -55,11 +44,11 @@ body {
 /* Left side panel */
 body::before {
   content: '';
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: clamp(120px, 14vw, 190px);
-  height: 100%;
+  height: min(100%, 1200px);
   background:
     linear-gradient(90deg, rgba(0, 255, 65, 0.07) 0%, rgba(0, 255, 65, 0.03) 48%, transparent 100%);
   background-size: 100% 100%;
@@ -71,26 +60,10 @@ body::before {
   box-shadow: 28px 0 36px -32px rgba(0, 255, 65, 0.16);
 }
 
-/* CRT scanlines overlay */
-body::after {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent, transparent 2px,
-    rgba(0, 255, 65, 0.015) 2px, rgba(0, 255, 65, 0.015) 4px
-  );
-  pointer-events: none;
-  z-index: 99999;
-}
-
 /* Left column — terminal commands */
 .page-body::before {
   content: 'ROOT\AACCESS\A> sudo\A# whoami\Apouya\A# pwd\A/home\A# ls -la\Adrwx AI\Adrwx ROB\Adrwx SEC\A# ./run\ASYSTEM: ONLINE\A>_ init\AOK\A>_ scan\AACTIVE\A>_ probe\ADETECT\A# clear\A>_ start\ABOOT SEQ\AINIT OK\A# export\APATH=/usr/bin\A# ./deploy\ADEPLOY OK\A>_ idle\AWAITING...';
-  position: fixed;
+  position: absolute;
   left: clamp(12px, 2vw, 28px);
   top: 7%;
   width: clamp(112px, 13vw, 180px);
@@ -102,15 +75,13 @@ body::after {
   overflow: hidden;
   pointer-events: none;
   z-index: 99997;
-  animation: scroll-text 24s linear infinite;
-  will-change: transform;
   text-shadow: 0 0 8px rgba(0, 255, 65, 0.28);
 }
 
 /* Right column — terminal output */
 .page-body::after {
   content: 'root@box:~$ ping 8.8.8.8\A64 bytes: 12ms\A64 bytes: 11ms\A64 bytes: 14ms\A64 bytes: 10ms\A--- stats ---\Apackets: 1024\Aloss: 0.00%\Artt min/avg/max\A10/12/18 ms\A\Aroot@box:~$ netstat\AProto Recv Send\ATCP 1024 2048\AUDP 512 1024\A\Aroot@box:~$ df -h\A/dev/sda1 237G\Aused 189G\Aavail 48G\Ause% 80%\A\Aroot@box:~$ uptime\A12:34 up 69 days\A\Aroot@box:~$ ps aux\APID CPU MEM\A001 0.1 2.3\A042 0.0 1.1\A069 0.3 4.2\A420 0.0 0.8\A\Aroot@box:~$ who\Amaster pts/0\Aguest pts/1\A\Aroot@box:~$ free -m\Atotal 16384\Aused 12288\Afree 4096';
-  position: fixed;
+  position: absolute;
   right: clamp(12px, 2vw, 28px);
   top: 6%;
   width: clamp(140px, 16vw, 230px);
@@ -123,33 +94,7 @@ body::after {
   pointer-events: none;
   z-index: 99997;
   text-align: right;
-  animation: scroll-text 28s linear infinite reverse;
-  will-change: transform;
   text-shadow: 0 0 8px rgba(0, 255, 65, 0.28);
-}
-
-@keyframes scroll-text {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-50%); }
-}
-
-@keyframes panel-pulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
-}
-
-/* Additional orbs via extra elements — we need CSS-only approach */
-/* Using the raw HTML canvas approach for orbs in the script */
-
-@keyframes pulse-wire {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
-}
-
-@keyframes float-orb {
-  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
-  33% { transform: translateY(-50px) translateX(20px); opacity: 0.7; }
-  66% { transform: translateY(-20px) translateX(-15px); opacity: 0.5; }
 }
 
 /* ============================================
@@ -176,40 +121,12 @@ body.dark {
   background: var(--cyber-bg) !important;
 }
 
-/* --- Crt scanline effect --- */
-body::after {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 255, 65, 0.015) 2px,
-    rgba(0, 255, 65, 0.015) 4px
-  );
-  pointer-events: none;
-  z-index: 99999;
-}
-
 /* --- Glitch text utility --- */
 .glitch {
   position: relative;
   text-shadow:
     0.05em 0 0 var(--cyber-secondary),
     -0.05em -0.025em 0 var(--cyber-accent);
-  animation: glitch-skew 4s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-skew {
-  0% { transform: skew(0deg); }
-  20% { transform: skew(-0.5deg); }
-  40% { transform: skew(0.5deg); }
-  60% { transform: skew(-0.3deg); }
-  80% { transform: skew(0.3deg); }
-  100% { transform: skew(0deg); }
 }
 
 /* --- Hero section: full cyberpunk --- */
@@ -349,15 +266,9 @@ body::after {
 /* --- Terminal-style typing cursor --- */
 .typing-cursor::after {
   content: '█';
-  animation: blink 1s step-end infinite;
   color: var(--cyber-primary);
   font-size: 0.9em;
   margin-left: 2px;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
 }
 
 /* --- Pill/badge tags --- */
