@@ -239,6 +239,11 @@ hr.cyber {
 ::-webkit-scrollbar-thumb { background: rgba(0, 255, 65, 0.3); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(0, 255, 65, 0.5); }
 
+/* --- Hero section: full width --- */
+.hero-block-container {
+  max-width: 100% !important;
+}
+
 /* --- Navbar adjustments --- */
 .dark .navbar {
   background: rgba(10, 10, 15, 0.95) !important;
