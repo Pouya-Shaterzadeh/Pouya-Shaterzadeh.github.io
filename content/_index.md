@@ -114,6 +114,7 @@ sections:
           <span class="tag-cyber">c++</span>
           <span class="tag-cyber purple">ffmpeg</span>
           <span class="tag-cyber">scikit-learn</span>
+          <span class="tag-cyber cyan">PX4-Autopilot</span>
           <span class="tag-cyber purple">huggingface</span>
           <span class="tag-cyber cyan">prometheus</span>
         </div>
