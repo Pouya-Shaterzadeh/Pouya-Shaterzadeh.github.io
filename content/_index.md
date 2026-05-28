@@ -240,6 +240,33 @@ sections:
       css_class: "cyber-section cyber-section-endorsements"
 
   - block: markdown
+    id: contact
+    content:
+      title: '<span class="section-title-cyber">Contact</span>'
+      subtitle: '<span style="font-family: Courier New, monospace; font-size: 0.85rem; color: #888;">$ echo "Let\'s connect"</span>'
+      text: |
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 1rem 0;">
+          <div style="font-family: Courier New, monospace; font-size: 0.9rem; color: #e0e0e0; text-align: center; max-width: 480px;">
+            <span style="color: #00ff41;">$</span> echo "Let's build something together."
+          </div>
+          <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
+            <a href="https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/" target="_blank" class="btn-cyber" style="border-color:#0ff;color:#0ff;">
+              ◇ &nbsp;./linkedin
+            </a>
+            <a href="https://github.com/Pouya-Shaterzadeh" target="_blank" class="btn-cyber" style="border-color:#ff00ff;color:#ff00ff;">
+              ◇ &nbsp;./github
+            </a>
+            <a href="mailto:pouya.shaterzadeh@bahcesehir.edu.tr" class="btn-cyber">
+              ◇ &nbsp;./email
+            </a>
+          </div>
+        </div>
+    design:
+      spacing:
+        padding: ["2rem", 0, "3rem", 0]
+      css_class: "cyber-section"
+
+  - block: markdown
     id: matrix-rain
     content:
       title: ""
