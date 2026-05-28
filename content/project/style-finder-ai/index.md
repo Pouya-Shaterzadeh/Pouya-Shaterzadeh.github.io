@@ -11,7 +11,7 @@ tags:
   - Computer Vision
 date: 2026-03-10
 weight: 20
-external_link: "https://www.linkedin.com/posts/pouya-shaterzadeh-b88426284_fashionai-multimodal-llama4-activity-7435549730430099456-wer2"
+external_link: "https://pouyadeva1-style-finder-ai-v2.hf.space/"
 ---
 
 A complete AI fashion search pipeline. Takes a single outfit photo, analyzes it with Llama 4 Maverick for style/category/color understanding, then uses Fashion-CLIP embeddings to find the most visually similar products from Trendyol's catalog.
