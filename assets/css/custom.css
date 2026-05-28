@@ -638,6 +638,12 @@ hr.cyber {
   border-bottom: 1px solid rgba(0, 255, 65, 0.1);
 }
 
+/* Hide theme toggle button */
+.theme-toggle,
+button[class*="theme"] {
+  display: none !important;
+}
+
 /* --- Stats / metric display --- */
 .cyber-stat {
   text-align: center;
