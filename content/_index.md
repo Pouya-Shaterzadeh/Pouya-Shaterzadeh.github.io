@@ -243,7 +243,7 @@ sections:
     id: contact
     content:
       title: '<span class="section-title-cyber">Contact</span>'
-      subtitle: '<span style="font-family: Courier New, monospace; font-size: 0.85rem; color: #888;">$ echo "Let\'s connect"</span>'
+      subtitle: '<span style="font-family: Courier New, monospace; font-size: 0.85rem; color: #888;">$ echo &ldquo;Let&rsquo;s connect&rdquo;</span>'
       text: |
         <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 1rem 0;">
           <div style="font-family: Courier New, monospace; font-size: 0.9rem; color: #e0e0e0; text-align: center; max-width: 480px;">
