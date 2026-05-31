@@ -96,3 +96,12 @@ word word word word word word word word word word word word word word word word 
 word word word word word word word word word word word word word word word word word word word word
 word word word word word word word word word word word word word word word word word word word word
 </div>
+
+## About the Author
+
+I am **Pouya**. I develop and contribute to open-source solutions in robotics, AI, and self-hosted Linux infrastructure.
+
+Let's connect:
+
+- **[LinkedIn](https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/)**
+- **[GitHub](https://github.com/Pouya-Shaterzadeh/)**

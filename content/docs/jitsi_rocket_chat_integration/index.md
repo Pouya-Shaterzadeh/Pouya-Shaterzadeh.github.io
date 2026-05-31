@@ -216,7 +216,7 @@ Here are the docs and tutorials I used to make this work:
 
 ## About the Author
 
-I am **Pouya**. My work involves using open-source tools to build end-to-end robotics and deep learning software!
+I am **Pouya**. I develop and contribute to open-source solutions in robotics, AI, and self-hosted Linux infrastructure.
 
 Let's connect:
 
