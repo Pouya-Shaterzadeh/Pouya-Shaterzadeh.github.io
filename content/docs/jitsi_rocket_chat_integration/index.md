@@ -12,7 +12,7 @@ summary: "A step-by-step guide to integrating a self-hosted Jitsi server with Ro
 
 ## Overview
 
-![Architecture diagram showing Jitsi + Rocket.Chat integration flow](featured.png)
+![Architecture diagram showing Jitsi + Rocket.Chat integration flow](architecture.png)
 
 Rocket.Chat's Marketplace offers a Jitsi app, but it ships with a dependency on Google authentication. Every time a user joins a call, they are redirected to a Google login page — an extra step that kills spontaneity and frustrates teams who just want to click and talk.
 
