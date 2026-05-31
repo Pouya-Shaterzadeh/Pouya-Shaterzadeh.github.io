@@ -23,9 +23,8 @@ This guide walks through setting up a **self-hosted Jitsi Meet** instance and wi
 - Traefik (or your reverse proxy) handling TLS for both services
 - All workspace users able to initiate calls from any channel, team, or DM
 
-<div style="display: flex; justify-content: center; width: 100%;">
 ```mermaid
-%%{init: {'flowchart': {'useMaxWidth': false, 'htmlLabels': true}, 'themeVariables': {'fontSize': '16px'}}}%%
+%%{init: {'flowchart': {'useMaxWidth': true, 'htmlLabels': true, 'padding': 20}}}%%
 flowchart LR
     A[User in Rocket.Chat] -->|Clicks video call| B[Traefik Reverse Proxy]
     B -->|your-rocketchat-domain.com| C[Rocket.Chat Server]
@@ -33,7 +32,6 @@ flowchart LR
     C -->|Generates call URL| D
     D -->|Joins room| A
 ```
-</div>
 
 ## Prerequisites
 
