@@ -112,7 +112,7 @@ Press the play button in the bottom and select the generated connection profile 
 ---
 
 ## About the Author
-I am **Pouya Shaterzadeh**. My work involves using open-source tools to build end-to-end robotics and deep learning software! 
+I am **Pouya**. My work involves using open-source tools to build end-to-end robotics and deep learning software! 
 
 Let's connect:
 - **[LinkedIn](https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/)**

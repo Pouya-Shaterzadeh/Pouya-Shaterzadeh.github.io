@@ -216,7 +216,7 @@ Here are the docs and tutorials I used to make this work:
 
 ## About the Author
 
-I am **Pouya Shaterzadeh**. My work involves using open-source tools to build end-to-end robotics and deep learning software!
+I am **Pouya**. My work involves using open-source tools to build end-to-end robotics and deep learning software!
 
 Let's connect:
 
