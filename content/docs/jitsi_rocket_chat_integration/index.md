@@ -24,7 +24,6 @@ This guide walks through setting up a **self-hosted Jitsi Meet** instance and wi
 - All workspace users able to initiate calls from any channel, team, or DM
 
 ```mermaid
-%%{init: {'flowchart': {'useMaxWidth': true, 'htmlLabels': true, 'padding': 20}}}%%
 flowchart LR
     A[User in Rocket.Chat] -->|Clicks video call| B[Traefik Reverse Proxy]
     B -->|your-rocketchat-domain.com| C[Rocket.Chat Server]

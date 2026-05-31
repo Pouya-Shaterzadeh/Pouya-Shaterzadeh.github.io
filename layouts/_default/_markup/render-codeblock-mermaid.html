@@ -1,0 +1,5 @@
+{{- $diagram := .Inner | safeJS -}}
+{{- .Page.Store.Set "hasMermaid" true -}}
+<pre class="mermaid" style="text-align: center;">
+{{- $diagram -}}
+</pre>
