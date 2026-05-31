@@ -12,6 +12,8 @@ summary: "A step-by-step guide to integrating a self-hosted Jitsi server with Ro
 
 ## Overview
 
+![Architecture diagram showing Jitsi + Rocket.Chat integration flow](featured.png)
+
 Rocket.Chat's Marketplace offers a Jitsi app, but it ships with a dependency on Google authentication. Every time a user joins a call, they are redirected to a Google login page — an extra step that kills spontaneity and frustrates teams who just want to click and talk.
 
 This guide walks through setting up a **self-hosted Jitsi Meet** instance and wiring it directly into your Rocket.Chat workspace so that any user can start a voice or video call with a **single click** — no Google account, no extra logins, no third-party services.
@@ -22,15 +24,6 @@ This guide walks through setting up a **self-hosted Jitsi Meet** instance and wi
 - Rocket.Chat configured to generate Jitsi call URLs pointing to your server
 - Traefik (or your reverse proxy) handling TLS for both services
 - All workspace users able to initiate calls from any channel, team, or DM
-
-```mermaid
-flowchart LR
-    A[User in Rocket.Chat] -->|Clicks video call| B[Traefik Reverse Proxy]
-    B -->|your-rocketchat-domain.com| C[Rocket.Chat Server]
-    B -->|jitsi.yourdomain.com| D[Jitsi Meet Server]
-    C -->|Generates call URL| D
-    D -->|Joins room| A
-```
 
 ## Prerequisites
 
