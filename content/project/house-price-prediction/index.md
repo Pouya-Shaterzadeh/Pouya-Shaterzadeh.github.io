@@ -2,7 +2,7 @@
 title: "House Price Prediction (87% Accuracy)"
 summary: "Ensemble/stacked regression model combining Lasso, Ridge, SVR, Kernel Ridge, Elastic Net, and Bayesian Regression for predicting Ames house prices."
 tags:
-  - Machine Learning
+  - Supervised Machine Learning
   - Regression
   - Python
   - Scikit-learn
