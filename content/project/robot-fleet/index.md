@@ -1,6 +1,6 @@
 ---
 title: "Aerostack · DroneX Delivery Solutions"
-summary: "A real-time drone fleet management dashboard for DroneX Delivery Solutions — camera feeds, Jetson telemetry, warehouse ops, and fleet status monitoring."
+summary: "Drone fleet management dashboard with live camera feeds, telemetry, and warehouse ops monitoring."
 tags:
   - Smart Warehouse
   - React
@@ -13,7 +13,7 @@ weight: 60
 external_link: "https://dronex-delivery-solutions.github.io/Dronex.github.io/companies/aerostack-wms/"
 ---
 
-An open-source drone fleet management dashboard built for **DroneX Delivery Solutions** startup. Developed in collaboration with [Roboticistprogrammer](https://github.com/Roboticistprogrammer/), this Aerostack dashboard provides real-time fleet monitoring, camera feeds, and warehouse operations control.
+Open-source drone fleet management dashboard for DroneX Delivery Solutions. Real-time fleet monitoring, camera feeds, and warehouse operations.
 
 **Key Features:**
 - 📷 Live camera status & feed (Logitech C270 / Jetson)

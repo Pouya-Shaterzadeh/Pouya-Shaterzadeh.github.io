@@ -25,7 +25,7 @@ sections:
               <span>&gt;</span> AI Engineering @ Bahçeşehir University<br>
               <span>&gt;</span> Deep learning · Computer vision · NLP<br>
               <span>&gt;</span> Self-hosted infrastructure · Secure systems<br>
-              <span>&gt;</span> 20+ repos · 46+ stars · Open source advocate
+              <span>&gt;</span> 25+ repos · 58+ stars · Open source advocate
             </p>
           </div>
           <div class="hero-cyber-actions">
@@ -59,15 +59,15 @@ sections:
         <hr class="cyber">
         <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; padding: 1rem 0;">
           <div class="cyber-stat">
-            <div class="number">22</div>
+            <div class="number">25</div>
             <div class="label">Repositories</div>
           </div>
           <div class="cyber-stat">
-            <div class="number" style="color: #ff00ff;">46+</div>
+            <div class="number" style="color: #ff00ff;">58+</div>
             <div class="label">GitHub Stars</div>
           </div>
           <div class="cyber-stat">
-            <div class="number" style="color: #0ff;">7</div>
+            <div class="number" style="color: #0ff;">8</div>
             <div class="label">Languages</div>
           </div>
           <div class="cyber-stat">
@@ -105,6 +105,12 @@ sections:
           <span class="tag-cyber">clip</span>
           <span class="tag-cyber purple">whisper</span>
           <span class="tag-cyber cyan">langchain</span>
+          <span class="tag-cyber">langgraph</span>
+          <span class="tag-cyber purple">crewai</span>
+          <span class="tag-cyber cyan">faiss</span>
+          <span class="tag-cyber">chromadb</span>
+          <span class="tag-cyber purple">groq</span>
+          <span class="tag-cyber cyan">streamlit</span>
           <span class="tag-cyber">rocket.chat</span>
           <span class="tag-cyber purple">asterisk</span>
           <span class="tag-cyber cyan">traefik</span>
@@ -117,6 +123,9 @@ sections:
           <span class="tag-cyber cyan">PX4-Autopilot</span>
           <span class="tag-cyber purple">huggingface</span>
           <span class="tag-cyber cyan">prometheus</span>
+          <span class="tag-cyber">sentence-transformers</span>
+          <span class="tag-cyber purple">docling</span>
+          <span class="tag-cyber cyan">llama-3.3</span>
         </div>
     design:
       spacing:
@@ -131,6 +140,12 @@ sections:
       text: |
         <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 1.5rem auto;">
           <div style="display: grid; grid-template-columns: 100px 1fr; gap: 0.5rem; font-family: Courier New, monospace; font-size: 0.85rem;">
+            <span style="color: #00ff41;">2026-08</span>
+            <span>Obtained <strong>RAG and Agentic AI Professional Certificate</strong> — IBM</span>
+            <span style="color: #00ff41;">2026-07</span>
+            <span>Launched <strong>VeriShelf</strong> — multi-agent RAG with fact verification (LangGraph + Docling)</span>
+            <span style="color: #00ff41;">2026-06</span>
+            <span>Co-founded <strong>AP Common Projects</strong> with <a href="https://github.com/CipherDriftX" target="_blank" style="color:#0ff;">CipherDriftX</a> — built Nanograd &amp; Autonomous YouTube Niche Research Pipeline</span>
             <span style="color: #00ff41;">2026-04</span>
             <span>Launched <strong>Style Finder AI v2.0</strong> — multimodal fashion search with Llama 4</span>
             <span style="color: #00ff41;">2026-03</span>
@@ -138,9 +153,11 @@ sections:
             <span style="color: #00ff41;">2026-02</span>
             <span>Began <strong>Sky Warriors ROS</strong> workspace — Gazebo robotics</span>
             <span style="color: #00ff41;">2025-11</span>
-            <span>Built open-source <strong>Robot Fleet Dashboard</strong> with TypeScript</span>
+            <span>Built <strong>DroneX Aerostack</strong> on top of open-source fleet management — <a href="https://transitiverobotics.com/" target="_blank" style="color:#0ff;">Transitive Robotics</a></span>
             <span style="color: #00ff41;">2025-10</span>
             <span>Created <strong>AI Meeting Assistant</strong> — Whisper + Watsonx + LangChain</span>
+            <span style="color: #00ff41;">2025-02</span>
+            <span>Completed <strong>Customer Segmentation</strong> — PCA/UMAP/GMM analysis</span>
             <span style="color: #00ff41;">2024-12</span>
             <span>Completed ML Specialization by <strong>Andrew Ng</strong></span>
             <span style="color: #00ff41;">2024-11</span>
@@ -171,6 +188,9 @@ sections:
       view: showcase
       columns: 1
       css_class: "cyber-section cyber-section-projects"
+      show_date: false
+      show_read_time: false
+      show_read_more: true
 
   - block: markdown
     id: project-slider
@@ -190,38 +210,127 @@ sections:
             }
             if(!track||track===section)return;
             section.dataset.sliderReady='true';
-            track.classList.add('project-slider-track');
-            cards.forEach(function(card){card.classList.add('project-slider-card');});
-            var shell=document.createElement('div');
-            shell.className='project-slider-shell';
-            track.parentNode.insertBefore(shell,track);
-            shell.appendChild(track);
+            track.style.display='none';
+            var wrapper=document.createElement('div');
+            wrapper.className='carousel-wrapper';
+            track.parentNode.insertBefore(wrapper,track);
             var controls=document.createElement('div');
-            controls.className='project-slider-controls';
-            controls.innerHTML='<button class="project-slider-btn" type="button" aria-label="Previous project">‹</button><div class="project-slider-status" aria-hidden="true">slides</div><button class="project-slider-btn" type="button" aria-label="Next project">›</button>';
-            shell.appendChild(controls);
-            var buttons=controls.querySelectorAll('button');
+            controls.className='carousel-nav-arrows';
+            controls.innerHTML='<button class="carousel-arrow" type="button" aria-label="Previous project">&#8249;</button><span class="carousel-counter">1 / '+cards.length+'</span><button class="carousel-arrow" type="button" aria-label="Next project">&#8250;</button>';
+            wrapper.appendChild(controls);
+            var shell=document.createElement('div');
+            shell.className='carousel-3d';
+            wrapper.appendChild(shell);
+            cards.forEach(function(card){
+              card.classList.add('carousel-3d-card');
+              shell.appendChild(card);
+            });
+            var arrowBtns=controls.querySelectorAll('.carousel-arrow');
+            var counter=controls.querySelector('.carousel-counter');
             var current=0;
-            function show(index){
-              current=(index+cards.length)%cards.length;
-              cards[current].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+            var total=cards.length;
+            var autoTimer=null;
+            function updateUI(){
+              counter.textContent=(current+1)+' / '+total;
+              cards.forEach(function(card,i){
+                card.classList.remove('active','prev','next','far-prev','far-next');
+                var diff=i-current;
+                if(diff>total/2)diff-=total;
+                if(diff<-total/2)diff+=total;
+                if(diff===0)card.classList.add('active');
+                else if(diff===-1)card.classList.add('prev');
+                else if(diff===1)card.classList.add('next');
+                else if(diff<-1)card.classList.add('far-prev');
+                else card.classList.add('far-next');
+              });
             }
-            function step(direction){
-              show(current+direction);
+            function goTo(index){
+              current=((index%total)+total)%total;
+              updateUI();
             }
-            buttons[0].addEventListener('click',function(){step(-1);});
-            buttons[1].addEventListener('click',function(){step(1);});
-            var timer=window.setInterval(function(){
-              if(section.matches(':hover'))return;
-              step(1);
-            },10200);
-            // Removed: auto-scroll to first project card on load
-            window.addEventListener('pagehide',function(){window.clearInterval(timer);},{once:true});
+            function step(dir){goTo(current+dir);}
+            function startAuto(){stopAuto();autoTimer=setInterval(function(){step(1);},4000);}
+            function stopAuto(){if(autoTimer){clearInterval(autoTimer);autoTimer=null;}}
+            arrowBtns[0].addEventListener('click',function(){stopAuto();step(-1);startAuto();});
+            arrowBtns[1].addEventListener('click',function(){stopAuto();step(1);startAuto();});
+            cards.forEach(function(card,i){
+              card.style.cursor='pointer';
+              card.addEventListener('click',function(e){
+                if(card.classList.contains('prev')||card.classList.contains('next')){
+                  e.preventDefault();
+                  e.stopPropagation();
+                  stopAuto();
+                  goTo(i);
+                  startAuto();
+                }
+              });
+            });
+            wrapper.addEventListener('mouseenter',stopAuto);
+            wrapper.addEventListener('mouseleave',startAuto);
+            document.addEventListener('keydown',function(e){
+              if(e.key==='ArrowLeft'){stopAuto();step(-1);startAuto();}
+              else if(e.key==='ArrowRight'){stopAuto();step(1);startAuto();}
+            });
+            var touchStartX=0;
+            shell.addEventListener('touchstart',function(e){touchStartX=e.touches[0].clientX;stopAuto();},{passive:true});
+            shell.addEventListener('touchend',function(e){
+              var diff=e.changedTouches[0].clientX-touchStartX;
+              if(Math.abs(diff)>50){step(diff>0?-1:1);}
+              startAuto();
+            },{passive:true});
+            updateUI();
+            startAuto();
           }
           if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initProjectSlider);
           else initProjectSlider();
           window.setTimeout(initProjectSlider,250);
           window.setTimeout(initProjectSlider,1000);
+        })();
+        </script>
+        <script>
+        (function(){
+          function initScrollReveal(){
+            var targets=document.querySelectorAll('.cyber-section, .hero-block-container, .cyber-stat');
+            if(!targets.length)return;
+            targets.forEach(function(el){
+              el.style.opacity='0';
+              el.style.transform='translateY(40px)';
+              el.style.transition='opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+            });
+            var observer=new IntersectionObserver(function(entries){
+              entries.forEach(function(entry){
+                if(entry.isIntersecting){
+                  var delay=entry.target.dataset.revealDelay||0;
+                  setTimeout(function(){
+                    entry.target.style.opacity='1';
+                    entry.target.style.transform='translateY(0)';
+                  },parseInt(delay));
+                  observer.unobserve(entry.target);
+                }
+              });
+            },{threshold:0.1,rootMargin:'0px 0px -60px 0px'});
+            var sections=document.querySelectorAll('.cyber-section');
+            sections.forEach(function(s,i){s.dataset.revealDelay=i*80;});
+            var hero=document.querySelector('.hero-block-container');
+            if(hero)hero.dataset.revealDelay='0';
+            targets.forEach(function(el){observer.observe(el);});
+          }
+          if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initScrollReveal);
+          else initScrollReveal();
+        })();
+        </script>
+        <script>
+        (function(){
+          var btn=document.createElement('button');
+          btn.className='scroll-top-btn';
+          btn.innerHTML='&#8593;';
+          btn.setAttribute('aria-label','Scroll to top');
+          document.body.appendChild(btn);
+          window.addEventListener('scroll',function(){
+            if(window.scrollY>400)btn.classList.add('visible');
+            else btn.classList.remove('visible');
+          },{passive:true});
+          btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
         })();
         </script>
     design:

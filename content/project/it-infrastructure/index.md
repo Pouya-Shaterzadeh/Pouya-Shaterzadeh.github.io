@@ -1,6 +1,6 @@
 ---
 title: "Self-Hosted Communication Infrastructure"
-summary: "Designed and deployed a secure, self-hosted communication platform featuring multi-region Rocket.Chat with Federation and a dedicated VoIP stack powered by Asterisk PBX — all running on private infrastructure."
+summary: "Self-hosted communication stack: Rocket.Chat federation, Asterisk PBX VoIP, Traefik SSL, containerized with Prometheus."
 tags:
   - Linux Servers
   - SysAdmin
@@ -14,7 +14,7 @@ weight: 10
 external_link: "https://www.linkedin.com/posts/pouya-shaterzadeh-b88426284_a-few-months-ago-i-designed-and-deployed-activity-7432541984302497799-asGr"
 ---
 
-Built a fully self-owned communication stack across multiple regions. Rocket.Chat with federation for team chat, Asterisk PBX for VoIP, Traefik for reverse proxy with automatic SSL, and MongoDB for storage — all containerized and monitored.
+Built a self-owned communication stack: Rocket.Chat with federation, Asterisk PBX VoIP, Traefik with auto-SSL, all containerized with Prometheus monitoring.
 
 **Key components:**
 - 🌍 Multi-region Rocket.Chat with Federation

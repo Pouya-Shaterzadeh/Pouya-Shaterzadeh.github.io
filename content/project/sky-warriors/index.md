@@ -1,6 +1,6 @@
 ---
 title: "Sky Warriors — ROS Workspace"
-summary: "ROS-based workspace for the Sky Warriors team — robotic arm control, perception, and simulation with Gazebo integration."
+summary: "ROS workspace for robotic arm control, perception pipelines, and Gazebo simulation."
 tags:
   - ROS
   - Robotics
@@ -13,7 +13,7 @@ weight: 90
 external_link: "https://github.com/Pouya-Shaterzadeh/sky_warriors_ws"
 ---
 
-A collaborative ROS workspace for the Sky Warriors team, featuring robotic arm control systems, perception pipelines, and Gazebo simulation environments for testing and validation.
+A ROS workspace for robotic arm control, perception pipelines, and Gazebo simulation for the Sky Warriors team.
 
 **Components:**
 - 🤖 ROS package structure

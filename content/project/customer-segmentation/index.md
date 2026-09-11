@@ -1,6 +1,6 @@
 ---
 title: "Customer Segmentation (PCA/UMAP/GMM)"
-summary: "Multi-dimensional customer personality analysis using 2D/3D PCA, UMAP, and Gaussian Mixture Models for targeted business insights."
+summary: "Customer personality analysis with PCA, UMAP, and Gaussian Mixture Models for targeted profiling."
 tags:
   - Unspervised Machine Learning
   - Clustering
@@ -15,7 +15,7 @@ weight: 80
 external_link: "https://github.com/Pouya-Shaterzadeh/Customer-Segmentation-2D-3D-PCA-UMAP-GMM-Algorithms"
 ---
 
-Deep customer personality analysis using advanced dimensionality reduction and clustering techniques. Helps businesses understand ideal customer profiles for targeted product modification.
+Customer personality analysis using PCA, UMAP, and Gaussian Mixture Models for targeted audience profiling.
 
 **Techniques:**
 - 📉 2D & 3D PCA visualization
