@@ -2,7 +2,7 @@
 title: "AI Meeting Assistant"
 summary: "OpenAI Whisper + IBM Watsonx.ai + LangChain — an AI agent that transcribes, summarizes, and extracts action items from meetings automatically."
 tags:
-  - AI
+  - Speech-to-Text Technologies
   - Whisper
   - Watsonx
   - LangChain
