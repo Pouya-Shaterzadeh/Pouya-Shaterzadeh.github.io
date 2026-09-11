@@ -2,7 +2,7 @@
 title: "Customer Segmentation (PCA/UMAP/GMM)"
 summary: "Multi-dimensional customer personality analysis using 2D/3D PCA, UMAP, and Gaussian Mixture Models for targeted business insights."
 tags:
-  - Machine Learning
+  - Unspervised Machine Learning
   - Clustering
   - Python
   - PCA
