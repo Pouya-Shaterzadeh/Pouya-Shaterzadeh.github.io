@@ -2,8 +2,8 @@
 title: "PyUploadMate"
 summary: "Python automation tool for Believe.com audio uploads. Telegram bot interface with Selenium + FFmpeg — streamlines music distribution workflows."
 tags:
+  - Workflow Automation
   - Python
-  - Automation
   - Selenium
   - FFmpeg
   - Telegram Bot
