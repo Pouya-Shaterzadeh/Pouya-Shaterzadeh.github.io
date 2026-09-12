@@ -2,7 +2,7 @@
 title: "VeriShelf"
 date: 2026-07-22
 weight: 25
-featured: featured.png
+featured: featured.jpeg
 summary: "Multi-agent RAG Q&A with fact verification using LangGraph, Docling, and hybrid retrieval."
 
 tags:

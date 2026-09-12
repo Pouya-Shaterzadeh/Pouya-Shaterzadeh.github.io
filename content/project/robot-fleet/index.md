@@ -1,6 +1,7 @@
 ---
 title: "Aerostack · DroneX Delivery Solutions"
 summary: "Drone fleet management dashboard with live camera feeds, telemetry, and warehouse ops monitoring."
+featured: featured.jpeg
 tags:
   - Smart Warehouse
   - React

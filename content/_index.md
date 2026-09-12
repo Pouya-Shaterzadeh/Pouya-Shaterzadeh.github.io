@@ -127,197 +127,162 @@ sections:
        title: '<span class="section-title-premium">Featured Projects</span>'
        subtitle: ''
        text: |
-          <div id="projects-canvas"></div>
-          <div class="project-filters">
-          <button class="project-filter active" data-filter="all">ALL</button>
-          <button class="project-filter" data-filter="agentic-ai">AGENTIC AI</button>
-          <button class="project-filter" data-filter="multimodal-ai">MULTIMODAL AI</button>
-          <button class="project-filter" data-filter="robotics">ROBOTICS</button>
-          <button class="project-filter" data-filter="infrastructure">INFRASTRUCTURE</button>
-          <button class="project-filter" data-filter="automation">AUTOMATION</button>
-          <button class="project-filter" data-filter="ml-research">ML RESEARCH</button>
-          </div>
-          <div class="projects-grid">
-          <article class="project-card hero" data-category="agentic-ai">
-          <div class="project-visual">
-          <div class="project-glow"></div>
-          <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          <path d="M12 9v4l2 2"/>
-          </svg>
-          </div>
-          <div class="project-content">
-          <span class="project-category">Agentic AI</span>
-          <h3>VeriShelf</h3>
-          <p class="project-desc">AI research system with multi-agent verification pipeline for evidence-backed answers.</p>
-          <div class="project-tech">
-          <span>LangGraph</span><span>Docling</span><span>Hybrid Retrieval</span><span>Multi-Agent</span>
-          </div>
-          <div class="project-highlight">Multi-agent verification pipeline</div>
-          <a href="/project/verishelf/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-          </div>
-          </article>
-          
-          <article class="project-card" data-category="multimodal-ai">
-          <div class="project-visual">
-          <div class="project-glow"></div>
-          <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-          <circle cx="8.5" cy="8.5" r="1.5"/>
-          <path d="M21 15l-5-5L5 17"/>
-          </svg>
-          </div>
-          <div class="project-content">
-          <span class="project-category">Multimodal AI</span>
-          <h3>Style Finder AI v2.0</h3>
-          <p class="project-desc">Multimodal fashion search pipeline using Llama 4 Maverick + Fashion-CLIP.</p>
-          <div class="project-tech">
-          <span>Llama 4</span><span>Fashion-CLIP</span><span>~5s inference</span>
-          </div>
-          <div class="project-highlight">Vision-language inference</div>
-          <a href="/project/style-finder-ai/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-          </div>
-          </article>
-          
-          <article class="project-card" data-category="robotics">
-          <div class="project-visual">
-          <div class="project-glow"></div>
-          <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 2l3 8h7l-6 4 2 7-6-5-6 5 2-7-6-4h7z"/>
-          </svg>
-          </div>
-          <div class="project-content">
-          <span class="project-category">Robotics</span>
-          <h3>DroneX Aerostack</h3>
-          <p class="project-desc">Autonomous drone fleet management dashboard with live telemetry and camera feeds.</p>
-          <div class="project-tech">
-          <span>ROS</span><span>PX4</span><span>Telemetry</span><span>Computer Vision</span>
-          </div>
-          <div class="project-highlight">Real-time fleet tracking</div>
-          <a href="/project/robot-fleet/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-          </div>
-          </article>
-          
-          <article class="project-card" data-category="robotics">
-          <div class="project-visual">
-          <div class="project-glow"></div>
-          <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7.586a1 1 0 0 1 .707.293l3.707 3.707a1 1 0 0 0 .707.293H21a2 2 0 0 1 2 2v5"/>
-          <path d="M15 9h.01"/>
-          </svg>
-          </div>
-          <div class="project-content">
-          <span class="project-category">Robotics</span>
-          <h3>Sky Warriors ROS</h3>
-          <p class="project-desc">ROS 2 workspace for robotic arm control, perception pipelines, and Gazebo simulation.</p>
-          <div class="project-tech">
-          <span>ROS 2</span><span>Gazebo</span><span>PX4</span><span>Perception</span>
-          </div>
-          <div class="project-highlight">ROS 2 + PX4 autonomy</div>
-          <a href="/project/sky-warriors/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-          </div>
-          </article>
-          
-          <article class="project-card" data-category="infrastructure">
-          <div class="project-visual">
-          <div class="project-glow"></div>
-          <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <rect x="2" y="2" width="20" height="20" rx="2"/>
-          <path d="M6 9h12M6 15h8M10 3v4M14 3v4"/>
-          </svg>
-          </div>
-          <div class="project-content">
-          <span class="project-category">Infrastructure</span>
-          <h3>Self-Hosted Communication</h3>
-          <p class="project-desc">Distributed communication stack: Rocket.Chat federation, Asterisk PBX, Traefik SSL, Prometheus monitoring.</p>
-          <div class="project-tech">
-          <span>Docker</span><span>Rocket.Chat</span><span>Asterisk</span><span>Traefik</span><span>Prometheus</span>
-          </div>
-          <div class="project-highlight">Self-hosted distributed infrastructure</div>
-          <a href="/project/it-infrastructure/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-          </div>
-          </article>
-          
-          <article class="project-card" data-category="agentic-ai">
-          <div class="project-visual">
-          <div class="project-glow"></div>
-          <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 2a10 10 0 0 1 7.38 16.75M5 10a10 10 0 0 0 7.38 10.74M19 14a10 10 0 0 1-7.38 2.75M5 14a10 10 0 0 1 7.38-2.75"/>
-          <path d="M8 14h8M12 10v8"/>
-          </svg>
-          </div>
-          <div class="project-content">
-          <span class="project-category">Agentic AI</span>
-          <h3>AI Meeting Assistant</h3>
-          <p class="project-desc">Automatic meeting transcription, summaries, and action items using Whisper + Watsonx + LangChain.</p>
-          <div class="project-tech">
-          <span>Whisper</span><span>Watsonx</span><span>LangChain</span>
-          </div>
-          <div class="project-highlight">End-to-end meeting intelligence</div>
-          <a href="/project/ai-meeting-assistant/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-          </div>
-          </article>
-          
-          <article class="project-card" data-category="automation">
-          <div class="project-visual">
-          <div class="project-glow"></div>
-          <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 10l-5-5-5 5M12 15v-3"/>
-          </svg>
-          </div>
-          <div class="project-content">
-          <span class="project-category">Automation</span>
-          <h3>PyUploadMate</h3>
-          <p class="project-desc">Telegram bot for Believe.com audio uploads using Selenium automation and FFmpeg processing.</p>
-          <div class="project-tech">
-          <span>Selenium</span><span>FFmpeg</span><span>Telegram Bot API</span>
-          </div>
-          <div class="project-highlight">Automated audio distribution pipeline</div>
-          <a href="/project/pyuploadmate/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-          </div>
-          </article>
-          
-          <article class="project-card" data-category="ml-research">
-          <div class="project-visual">
-          <div class="project-glow"></div>
-          <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-          <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
-          </div>
-          <div class="project-content">
-          <span class="project-category">ML Research</span>
-          <h3>House Price Prediction</h3>
-          <p class="project-desc">Stacked ensemble of 6 regression models achieving R²=0.87 on Ames Housing dataset.</p>
-          <div class="project-tech">
-          <span>XGBoost</span><span>LightGBM</span><span>CatBoost</span><span>Stacking</span>
-          </div>
-          <div class="project-highlight">R² = 0.87 · 6-model ensemble</div>
-          <a href="/project/house-price-prediction/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-          </div>
-          </article>
-          
-          <article class="project-card" data-category="ml-research">
-          <div class="project-visual">
-          <div class="project-glow"></div>
-          <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-          <circle cx="9" cy="7" r="4"/>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-          </div>
-          <div class="project-content">
-          <span class="project-category">ML Research</span>
-          <h3>Customer Segmentation</h3>
-          <p class="project-desc">Customer personality analysis using PCA, UMAP, and Gaussian Mixture Models for targeted profiling.</p>
-          <div class="project-tech">
-          <span>PCA</span><span>UMAP</span><span>GMM</span><span>Scikit-learn</span>
-          </div>
-          <div class="project-highlight">Unsupervised customer profiling</div>
-          <a href="/project/customer-segmentation/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-          </div>
-          </article>
-          </div>
+           <div id="projects-canvas"></div>
+           <div class="project-filters">
+           <button class="project-filter active" data-filter="all">ALL</button>
+           <button class="project-filter" data-filter="agentic-ai">AGENTIC AI</button>
+           <button class="project-filter" data-filter="multimodal-ai">MULTIMODAL AI</button>
+           <button class="project-filter" data-filter="robotics">ROBOTICS</button>
+           <button class="project-filter" data-filter="infrastructure">INFRASTRUCTURE</button>
+           <button class="project-filter" data-filter="automation">AUTOMATION</button>
+           <button class="project-filter" data-filter="ml-research">ML RESEARCH</button>
+           </div>
+           <div class="projects-grid">
+           <article class="project-card hero" data-category="agentic-ai">
+           <div class="project-visual">
+           <div class="project-glow"></div>
+           <img src="/project/verishelf/featured.jpeg" alt="VeriShelf" loading="lazy" />
+           </div>
+           <div class="project-content">
+           <span class="project-category">Agentic AI</span>
+           <h3>VeriShelf</h3>
+           <p class="project-desc">AI research system with multi-agent verification pipeline for evidence-backed answers.</p>
+           <div class="project-tech">
+           <span>LangGraph</span><span>Docling</span><span>Hybrid Retrieval</span><span>Multi-Agent</span>
+           </div>
+           <div class="project-highlight">Multi-agent verification pipeline</div>
+           <a href="/project/verishelf/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           <article class="project-card" data-category="multimodal-ai">
+           <div class="project-visual">
+           <div class="project-glow"></div>
+           <img src="/project/style-finder-ai/featured.jpeg" alt="Style Finder AI" loading="lazy" />
+           </div>
+           <div class="project-content">
+           <span class="project-category">Multimodal AI</span>
+           <h3>Style Finder AI v2.0</h3>
+           <p class="project-desc">Multimodal fashion search pipeline using Llama 4 Maverick + Fashion-CLIP.</p>
+           <div class="project-tech">
+           <span>Llama 4</span><span>Fashion-CLIP</span><span>~5s inference</span>
+           </div>
+           <div class="project-highlight">Vision-language inference</div>
+           <a href="/project/style-finder-ai/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           <article class="project-card" data-category="robotics">
+           <div class="project-visual">
+           <div class="project-glow"></div>
+           <img src="/project/robot-fleet/featured.jpeg" alt="DroneX Aerostack" loading="lazy" />
+           </div>
+           <div class="project-content">
+           <span class="project-category">Robotics</span>
+           <h3>DroneX Aerostack</h3>
+           <p class="project-desc">Autonomous drone fleet management dashboard with live telemetry and camera feeds.</p>
+           <div class="project-tech">
+           <span>ROS</span><span>PX4</span><span>Telemetry</span><span>Computer Vision</span>
+           </div>
+           <div class="project-highlight">Real-time fleet tracking</div>
+           <a href="/project/robot-fleet/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           <article class="project-card" data-category="robotics">
+           <div class="project-visual">
+           <div class="project-glow"></div>
+           <img src="/project/sky-warriors/featured.jpeg" alt="Sky Warriors ROS" loading="lazy" />
+           </div>
+           <div class="project-content">
+           <span class="project-category">Robotics</span>
+           <h3>Sky Warriors ROS</h3>
+           <p class="project-desc">ROS 2 workspace for robotic arm control, perception pipelines, and Gazebo simulation.</p>
+           <div class="project-tech">
+           <span>ROS 2</span><span>Gazebo</span><span>PX4</span><span>Perception</span>
+           </div>
+           <div class="project-highlight">ROS 2 + PX4 autonomy</div>
+           <a href="/project/sky-warriors/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           <article class="project-card" data-category="infrastructure">
+           <div class="project-visual">
+           <div class="project-glow"></div>
+           <img src="/project/it-infrastructure/featured.jpeg" alt="Self-Hosted Communication" loading="lazy" />
+           </div>
+           <div class="project-content">
+           <span class="project-category">Infrastructure</span>
+           <h3>Self-Hosted Communication</h3>
+           <p class="project-desc">Distributed communication stack: Rocket.Chat federation, Asterisk PBX, Traefik SSL, Prometheus monitoring.</p>
+           <div class="project-tech">
+           <span>Docker</span><span>Rocket.Chat</span><span>Asterisk</span><span>Traefik</span><span>Prometheus</span>
+           </div>
+           <div class="project-highlight">Self-hosted distributed infrastructure</div>
+           <a href="/project/it-infrastructure/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           <article class="project-card" data-category="agentic-ai">
+           <div class="project-visual">
+           <div class="project-glow"></div>
+           <img src="/project/ai-meeting-assistant/featured.jpeg" alt="AI Meeting Assistant" loading="lazy" />
+           </div>
+           <div class="project-content">
+           <span class="project-category">Agentic AI</span>
+           <h3>AI Meeting Assistant</h3>
+           <p class="project-desc">Automatic meeting transcription, summaries, and action items using Whisper + Watsonx + LangChain.</p>
+           <div class="project-tech">
+           <span>Whisper</span><span>Watsonx</span><span>LangChain</span>
+           </div>
+           <div class="project-highlight">End-to-end meeting intelligence</div>
+           <a href="/project/ai-meeting-assistant/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           <article class="project-card" data-category="automation">
+           <div class="project-visual">
+           <div class="project-glow"></div>
+           <img src="/project/pyuploadmate/featured.jpeg" alt="PyUploadMate" loading="lazy" />
+           </div>
+           <div class="project-content">
+           <span class="project-category">Automation</span>
+           <h3>PyUploadMate</h3>
+           <p class="project-desc">Telegram bot for Believe.com audio uploads using Selenium automation and FFmpeg processing.</p>
+           <div class="project-tech">
+           <span>Selenium</span><span>FFmpeg</span><span>Telegram Bot API</span>
+           </div>
+           <div class="project-highlight">Automated audio distribution pipeline</div>
+           <a href="/project/pyuploadmate/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           <article class="project-card" data-category="ml-research">
+           <div class="project-visual">
+           <div class="project-glow"></div>
+           <img src="/project/house-price-prediction/featured.jpeg" alt="House Price Prediction" loading="lazy" />
+           </div>
+           <div class="project-content">
+           <span class="project-category">ML Research</span>
+           <h3>House Price Prediction</h3>
+           <p class="project-desc">Stacked ensemble of 6 regression models achieving R²=0.87 on Ames Housing dataset.</p>
+           <div class="project-tech">
+           <span>XGBoost</span><span>LightGBM</span><span>CatBoost</span><span>Stacking</span>
+           </div>
+           <div class="project-highlight">R² = 0.87 · 6-model ensemble</div>
+           <a href="/project/house-price-prediction/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           <article class="project-card" data-category="ml-research">
+           <div class="project-visual">
+           <div class="project-glow"></div>
+           <img src="/project/customer-segmentation/featured.jpeg" alt="Customer Segmentation" loading="lazy" />
+           </div>
+           <div class="project-content">
+           <span class="project-category">ML Research</span>
+           <h3>Customer Segmentation</h3>
+           <p class="project-desc">Customer personality analysis using PCA, UMAP, and Gaussian Mixture Models for targeted profiling.</p>
+           <div class="project-tech">
+           <span>PCA</span><span>UMAP</span><span>GMM</span><span>Scikit-learn</span>
+           </div>
+           <div class="project-highlight">Unsupervised customer profiling</div>
+           <a href="/project/customer-segmentation/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           </div>
 
      design:
        spacing:
@@ -329,225 +294,518 @@ sections:
      content:
        title: ""
        text: |
-          <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-          <script>
-          (function(){
-          const sections = [
-          { id: 'hero-canvas', type: 'particles', color: 0x6366f1, count: 800 },
-          { id: 'now-canvas', type: 'grid', color: 0x22d3ee, count: 200 },
-          { id: 'skills-canvas', type: 'particles', color: 0xa855f7, count: 400 },
-          { id: 'timeline-canvas', type: 'lines', color: 0xf59e0b, count: 150 },
-          { id: 'projects-canvas', type: 'particles', color: 0xec4899, count: 500 }
-          ];
-          
-          sections.forEach(function(section) {
-          initSectionCanvas(section);
-          });
-          
-          function initSectionCanvas(config) {
-          const container = document.getElementById(config.id);
-          if (!container) return;
-          
-          const width = container.offsetWidth || container.parentElement.offsetWidth;
-          const height = container.offsetHeight || 300;
-          
-          const scene = new THREE.Scene();
-          const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-          camera.position.z = 50;
-          
-          const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-          renderer.setSize(width, height);
-          renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-          container.appendChild(renderer.domElement);
-          
-          let objects = [];
-          
-          if (config.type === 'particles') {
-          const geometry = new THREE.BufferGeometry();
-          const positions = new Float32Array(config.count * 3);
-          const velocities = new Float32Array(config.count * 3);
-          const sizes = new Float32Array(config.count);
-          
-          for (let i = 0; i < config.count; i++) {
-          positions[i * 3] = (Math.random() - 0.5) * 100;
-          positions[i * 3 + 1] = (Math.random() - 0.5) * 100;
-          positions[i * 3 + 2] = (Math.random() - 0.5) * 100;
-          velocities[i * 3] = (Math.random() - 0.5) * 0.02;
-          velocities[i * 3 + 1] = (Math.random() - 0.5) * 0.02;
-          velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.02;
-          sizes[i] = Math.random() * 2 + 0.5;
-          }
-          
-          geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-          geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
-          
-          const material = new THREE.PointsMaterial({
-          color: config.color,
-          size: 2,
-          transparent: true,
-          opacity: 0.6,
-          sizeAttenuation: true
-          });
-          
-          const points = new THREE.Points(geometry, material);
-          scene.add(points);
-          objects.push({ points, velocities, positions });
-          } else if (config.type === 'grid') {
-          const gridSize = 20;
-          const gridDivisions = 20;
-          const gridHelper = new THREE.GridHelper(gridSize, gridDivisions, config.color, config.color);
-          gridHelper.material.opacity = 0.15;
-          gridHelper.material.transparent = true;
-          gridHelper.rotation.x = -Math.PI / 2;
-          scene.add(gridHelper);
-          objects.push({ grid: gridHelper });
-          } else if (config.type === 'lines') {
-          const lineCount = config.count;
-          const lines = new THREE.Group();
-          for (let i = 0; i < lineCount; i++) {
-          const geometry = new THREE.BufferGeometry();
-          const vertices = [];
-          const startX = (Math.random() - 0.5) * 80;
-          const startY = (Math.random() - 0.5) * 80;
-          const startZ = (Math.random() - 0.5) * 80;
-          for (let j = 0; j < 10; j++) {
-          vertices.push(
-          startX + (Math.random() - 0.5) * 10,
-          startY + (Math.random() - 0.5) * 10,
-          startZ + (Math.random() - 0.5) * 10
-          );
-          }
-          geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-          const material = new THREE.LineBasicMaterial({ color: config.color, opacity: 0.3, transparent: true });
-          const line = new THREE.Line(geometry, material);
-          lines.add(line);
-          }
-          scene.add(lines);
-          objects.push({ lines });
-          }
-          
-          let mouseX = 0, mouseY = 0;
-          document.addEventListener('mousemove', (e) => {
-          mouseX = (e.clientX / window.innerWidth) * 2 - 1;
-          mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
-          });
-          
-          function animate() {
-          requestAnimationFrame(animate);
-          
-          objects.forEach(obj => {
-          if (obj.points) {
-          const positions = obj.points.geometry.attributes.position.array;
-          const velocities = obj.velocities;
-          for (let i = 0; i < positions.length; i += 3) {
-          positions[i] += velocities[i];
-          positions[i + 1] += velocities[i + 1];
-          positions[i + 2] += velocities[i + 2];
-          
-          if (Math.abs(positions[i]) > 50) velocities[i] *= -1;
-          if (Math.abs(positions[i + 1]) > 50) velocities[i + 1] *= -1;
-          if (Math.abs(positions[i + 2]) > 50) velocities[i + 2] *= -1;
-          
-          positions[i] += mouseX * 0.01;
-          positions[i + 1] += mouseY * 0.01;
-          }
-          obj.points.geometry.attributes.position.needsUpdate = true;
-          obj.points.rotation.y += 0.0002;
-          obj.points.rotation.x += 0.0001;
-          }
-          if (obj.grid) {
-          obj.grid.rotation.z += 0.0001;
-          }
-          if (obj.lines) {
-          obj.lines.rotation.y += 0.0001;
-          obj.lines.rotation.x += 0.00005;
-          }
-          });
-          
-          renderer.render(scene, camera);
-          }
-          
-          animate();
-          
-          window.addEventListener('resize', () => {
-          const width = container.offsetWidth;
-          const height = container.offsetHeight || 300;
-          camera.aspect = width / height;
-          camera.updateProjectionMatrix();
-          renderer.setSize(width, height);
-          });
-          }
-          })();
-          
-          // Project filtering
-          (function(){
-          const filterBtns = document.querySelectorAll('.project-filter');
-          const cards = document.querySelectorAll('.project-card');
-          
-          filterBtns.forEach(btn => {
-          btn.addEventListener('click', () => {
-          const filter = btn.dataset.filter;
-          filterBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          
-          cards.forEach(card => {
-          if (filter === 'all' || card.dataset.category === filter) {
-          card.style.display = '';
-          card.style.opacity = '1';
-          card.style.transform = '';
-          } else {
-          card.style.display = 'none';
-          }
-          });
-          });
-          });
-          })();
-          
-          // Scroll reveal
-          (function(){
-          const targets = document.querySelectorAll('.cyber-section, .hero-block-container');
-          if (!targets.length) return;
-          
-          targets.forEach(el => {
-          el.style.opacity = '0';
-          el.style.transform = 'translateY(40px)';
-          el.style.transition = 'opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
-          });
-          
-          const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-          if (entry.isIntersecting) {
-          const delay = entry.target.dataset.revealDelay || 0;
-          setTimeout(() => {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          }, parseInt(delay));
-          observer.unobserve(entry.target);
-          }
-          });
-          }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-          
-          const sections = document.querySelectorAll('.cyber-section');
-          sections.forEach((s, i) => { s.dataset.revealDelay = i * 100; });
-          const hero = document.querySelector('.hero-block-container');
-          if (hero) hero.dataset.revealDelay = '0';
-          targets.forEach(el => observer.observe(el));
-          })();
-          
-          // Scroll to top
-          (function(){
-          const btn = document.createElement('button');
-          btn.setAttribute('aria-label', 'Scroll to top');
-          btn.innerHTML = '&#8593;';
-          btn.style.cssText = 'position:fixed;bottom:2rem;right:2rem;width:2.5rem;height:2.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:8px;background:rgba(255,255,255,0.04);backdrop-filter:blur(8px);color:rgba(255,255,255,0.5);font:600 1rem/1 sans-serif;cursor:pointer;display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:all 0.3s ease;z-index:9999;';
-          document.body.appendChild(btn);
-          window.addEventListener('scroll', () => {
-          if (window.scrollY > 400) { btn.style.opacity = '1'; btn.style.visibility = 'visible'; btn.style.transform = 'translateY(0)'; }
-          else { btn.style.opacity = '0'; btn.style.visibility = 'hidden'; btn.style.transform = 'translateY(10px)'; }
-          }, { passive: true });
-          btn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-          })();
-          </script>
+           <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+           <script>
+           (function(){
+           var mouseX = 0, mouseY = 0;
+           document.addEventListener('mousemove', function(e){
+           mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+           mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+           });
+
+           /* ======================== HERO: Neural Network ======================== */
+           (function(){
+           var c = document.getElementById('hero-canvas');
+           if (!c) return;
+           var w = c.offsetWidth || c.parentElement.offsetWidth;
+           var h = c.offsetHeight || 300;
+           var scene = new THREE.Scene();
+           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
+           cam.position.z = 60;
+           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
+           ren.setSize(w, h);
+           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+           c.appendChild(ren.domElement);
+
+           var N = 120, pos = [], vel = [];
+           for (var i = 0; i < N; i++){
+           pos.push((Math.random()-0.5)*80, (Math.random()-0.5)*80, (Math.random()-0.5)*40);
+           vel.push((Math.random()-0.5)*0.015, (Math.random()-0.5)*0.015, (Math.random()-0.5)*0.008);
+           }
+           var geo = new THREE.BufferGeometry();
+           geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+           var mat = new THREE.PointsMaterial({color:0x6366f1, size:2.5, transparent:true, opacity:0.8, sizeAttenuation:true});
+           var pts = new THREE.Points(geo, mat);
+           scene.add(pts);
+
+           var lineGeo = new THREE.BufferGeometry();
+           var lineMat = new THREE.LineBasicMaterial({color:0x6366f1, transparent:true, opacity:0.12});
+           var lineMesh = new THREE.LineSegments(lineGeo, lineMat);
+           scene.add(lineMesh);
+
+           function animate(){
+           requestAnimationFrame(animate);
+           var p = geo.attributes.position.array;
+           for (var i = 0; i < N*3; i += 3){
+           p[i] += vel[i]; p[i+1] += vel[i+1]; p[i+2] += vel[i+2];
+           if (Math.abs(p[i]) > 40) vel[i] *= -1;
+           if (Math.abs(p[i+1]) > 40) vel[i+1] *= -1;
+           if (Math.abs(p[i+2]) > 20) vel[i+2] *= -1;
+           p[i] += mouseX * 0.005;
+           p[i+1] += mouseY * 0.005;
+           }
+           geo.attributes.position.needsUpdate = true;
+
+           var verts = [];
+           var threshold = 18;
+           for (var i = 0; i < N*3; i += 3){
+           for (var j = i+3; j < N*3; j += 3){
+           var dx = p[i]-p[j], dy = p[i+1]-p[j+1], dz = p[i+2]-p[j+2];
+           var d = Math.sqrt(dx*dx + dy*dy + dz*dz);
+           if (d < threshold){
+           verts.push(p[i], p[i+1], p[i+2], p[j], p[j+1], p[j+2]);
+           }
+           }
+           }
+           lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+
+           pts.rotation.y += 0.0003;
+           lineMesh.rotation.y += 0.0003;
+           ren.render(scene, cam);
+           }
+           animate();
+           window.addEventListener('resize', function(){
+           w = c.offsetWidth; h = c.offsetHeight || 300;
+           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
+           });
+           })();
+
+           /* ======================== NOW: Code Rain ======================== */
+           (function(){
+           var c = document.getElementById('now-canvas');
+           if (!c) return;
+           var w = c.offsetWidth || c.parentElement.offsetWidth;
+           var h = c.offsetHeight || 300;
+           var scene = new THREE.Scene();
+           var cam = new THREE.PerspectiveCamera(60, w/h, 0.1, 1000);
+           cam.position.z = 30;
+           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
+           ren.setSize(w, h);
+           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+           c.appendChild(ren.domElement);
+
+           var cols = 30, rows = 15;
+           var glyphs = '01{}[]<>=/;:import def class async await return yield lambda yield True False None'.split('');
+           var chars = [];
+           for (var x = 0; x < cols; x++){
+           for (var y = 0; y < rows; y++){
+           var geo = new THREE.PlaneGeometry(0.6, 0.8);
+           var ch = glyphs[Math.floor(Math.random()*glyphs.length)];
+           var canvas2 = document.createElement('canvas');
+           canvas2.width = 32; canvas2.height = 40;
+           var ctx = canvas2.getContext('2d');
+           ctx.fillStyle = 'rgba(0,0,0,0)';
+           ctx.fillRect(0,0,32,40);
+           ctx.font = '18px monospace';
+           ctx.fillStyle = '#22d3ee';
+           ctx.textAlign = 'center';
+           ctx.fillText(ch, 16, 28);
+           var tex = new THREE.CanvasTexture(canvas2);
+           var mat2 = new THREE.MeshBasicMaterial({map: tex, transparent: true, opacity: 0.15 + Math.random()*0.15});
+           var mesh = new THREE.Mesh(geo, mat2);
+           mesh.position.set((x - cols/2) * 1.1, (y - rows/2) * 1.1, 0);
+           scene.add(mesh);
+           chars.push({mesh: mesh, baseY: mesh.position.y, speed: 0.02 + Math.random()*0.04, x: x});
+           }
+           }
+
+           function animate(){
+           requestAnimationFrame(animate);
+           for (var i = 0; i < chars.length; i++){
+           var ch = chars[i];
+           ch.mesh.position.y -= ch.speed;
+           if (ch.mesh.position.y < -rows/2 * 1.1){
+           ch.mesh.position.y = rows/2 * 1.1;
+           }
+           ch.mesh.material.opacity = 0.1 + Math.abs(Math.sin(Date.now()*0.001 + ch.x*0.3)) * 0.15;
+           }
+           ren.render(scene, cam);
+           }
+           animate();
+           window.addEventListener('resize', function(){
+           w = c.offsetWidth; h = c.offsetHeight || 300;
+           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
+           });
+           })();
+
+           /* ======================== SKILLS: Orbital Rings ======================== */
+           (function(){
+           var c = document.getElementById('skills-canvas');
+           if (!c) return;
+           var w = c.offsetWidth || c.parentElement.offsetWidth;
+           var h = c.offsetHeight || 300;
+           var scene = new THREE.Scene();
+           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
+           cam.position.z = 45;
+           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
+           ren.setSize(w, h);
+           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+           c.appendChild(ren.domElement);
+
+           var rings = [];
+           var ringConfigs = [
+           {radius: 18, count: 60, tilt: 0.3, speed: 0.008, color: 0xa855f7},
+           {radius: 24, count: 80, tilt: 0.8, speed: -0.005, color: 0x7c3aed},
+           {radius: 30, count: 100, tilt: 1.2, speed: 0.003, color: 0x6366f1}
+           ];
+           ringConfigs.forEach(function(cfg){
+           var geo = new THREE.BufferGeometry();
+           var pos = new Float32Array(cfg.count * 3);
+           for (var i = 0; i < cfg.count; i++){
+           var a = (i / cfg.count) * Math.PI * 2;
+           pos[i*3] = Math.cos(a) * cfg.radius;
+           pos[i*3+1] = Math.sin(a) * cfg.radius;
+           pos[i*3+2] = (Math.random()-0.5) * 2;
+           }
+           geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+           var mat = new THREE.PointsMaterial({color: cfg.color, size: 1.5, transparent: true, opacity: 0.5, sizeAttenuation: true});
+           var pts = new THREE.Points(geo, mat);
+           var grp = new THREE.Group();
+           grp.add(pts);
+           grp.rotation.x = cfg.tilt;
+           scene.add(grp);
+           rings.push({grp: grp, speed: cfg.speed});
+           });
+
+           var centerGeo = new THREE.IcosahedronGeometry(3, 1);
+           var centerMat = new THREE.MeshBasicMaterial({color: 0xa855f7, wireframe: true, transparent: true, opacity: 0.3});
+           var center = new THREE.Mesh(centerGeo, centerMat);
+           scene.add(center);
+
+           function animate(){
+           requestAnimationFrame(animate);
+           for (var i = 0; i < rings.length; i++){
+           rings[i].grp.rotation.z += rings[i].speed;
+           rings[i].grp.rotation.y += rings[i].speed * 0.3;
+           }
+           center.rotation.x += 0.003;
+           center.rotation.y += 0.005;
+           cam.position.x += (mouseX * 5 - cam.position.x) * 0.02;
+           cam.position.y += (mouseY * 3 - cam.position.y) * 0.02;
+           cam.lookAt(0,0,0);
+           ren.render(scene, cam);
+           }
+           animate();
+           window.addEventListener('resize', function(){
+           w = c.offsetWidth; h = c.offsetHeight || 300;
+           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
+           });
+           })();
+
+           /* ======================== TIMELINE: Constellation ======================== */
+           (function(){
+           var c = document.getElementById('timeline-canvas');
+           if (!c) return;
+           var w = c.offsetWidth || c.parentElement.offsetWidth;
+           var h = c.offsetHeight || 300;
+           var scene = new THREE.Scene();
+           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
+           cam.position.z = 50;
+           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
+           ren.setSize(w, h);
+           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+           c.appendChild(ren.domElement);
+
+           var stars = [], starCount = 80;
+           for (var i = 0; i < starCount; i++){
+           stars.push({
+           x: (Math.random()-0.5)*90, y: (Math.random()-0.5)*60, z: (Math.random()-0.5)*30,
+           vx: (Math.random()-0.5)*0.008, vy: (Math.random()-0.5)*0.008
+           });
+           }
+           var sGeo = new THREE.BufferGeometry();
+           var sPos = new Float32Array(starCount * 3);
+           for (var i = 0; i < starCount; i++){
+           sPos[i*3] = stars[i].x; sPos[i*3+1] = stars[i].y; sPos[i*3+2] = stars[i].z;
+           }
+           sGeo.setAttribute('position', new THREE.BufferAttribute(sPos, 3));
+           var sMat = new THREE.PointsMaterial({color: 0xf59e0b, size: 2, transparent: true, opacity: 0.7});
+           var sPts = new THREE.Points(sGeo, sMat);
+           scene.add(sPts);
+
+           var lGeo = new THREE.BufferGeometry();
+           var lMat = new THREE.LineBasicMaterial({color: 0xf59e0b, transparent: true, opacity: 0.08});
+           var lMesh = new THREE.LineSegments(lGeo, lMat);
+           scene.add(lMesh);
+
+           function animate(){
+           requestAnimationFrame(animate);
+           var p = sGeo.attributes.position.array;
+           for (var i = 0; i < starCount; i++){
+           stars[i].x += stars[i].vx;
+           stars[i].y += stars[i].vy;
+           if (Math.abs(stars[i].x) > 45) stars[i].vx *= -1;
+           if (Math.abs(stars[i].y) > 30) stars[i].vy *= -1;
+           p[i*3] = stars[i].x; p[i*3+1] = stars[i].y; p[i*3+2] = stars[i].z;
+           }
+           sGeo.attributes.position.needsUpdate = true;
+
+           var verts = [];
+           for (var i = 0; i < starCount; i++){
+           for (var j = i+1; j < starCount; j++){
+           var dx = stars[i].x-stars[j].x, dy = stars[i].y-stars[j].y;
+           var d = Math.sqrt(dx*dx+dy*dy);
+           if (d < 20){
+           verts.push(stars[i].x, stars[i].y, stars[i].z, stars[j].x, stars[j].y, stars[j].z);
+           }
+           }
+           }
+           lGeo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+           sPts.rotation.y += 0.0002;
+           lMesh.rotation.y += 0.0002;
+           ren.render(scene, cam);
+           }
+           animate();
+           window.addEventListener('resize', function(){
+           w = c.offsetWidth; h = c.offsetHeight || 300;
+           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
+           });
+           })();
+
+           /* ======================== PROJECTS: Circuit Traces ======================== */
+           (function(){
+           var c = document.getElementById('projects-canvas');
+           if (!c) return;
+           var w = c.offsetWidth || c.parentElement.offsetWidth;
+           var h = c.offsetHeight || 300;
+           var scene = new THREE.Scene();
+           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
+           cam.position.z = 40;
+           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
+           ren.setSize(w, h);
+           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+           c.appendChild(ren.domElement);
+
+           var nodes = [], nodeCount = 40;
+           for (var i = 0; i < nodeCount; i++){
+           nodes.push({
+           x: (Math.random()-0.5)*70, y: (Math.random()-0.5)*50, z: (Math.random()-0.5)*10,
+           pulse: Math.random() * Math.PI * 2
+           });
+           }
+           var nGeo = new THREE.BufferGeometry();
+           var nPos = new Float32Array(nodeCount * 3);
+           for (var i = 0; i < nodeCount; i++){
+           nPos[i*3] = nodes[i].x; nPos[i*3+1] = nodes[i].y; nPos[i*3+2] = nodes[i].z;
+           }
+           nGeo.setAttribute('position', new THREE.BufferAttribute(nPos, 3));
+           var nMat = new THREE.PointsMaterial({color: 0xec4899, size: 3, transparent: true, opacity: 0.6});
+           var nPts = new THREE.Points(nGeo, nMat);
+           scene.add(nPts);
+
+           var tGeo = new THREE.BufferGeometry();
+           var tMat = new THREE.LineBasicMaterial({color: 0xec4899, transparent: true, opacity: 0.1});
+           var tLines = new THREE.LineSegments(tGeo, tMat);
+           scene.add(tLines);
+
+           var dataParticles = [], dpCount = 25;
+           for (var i = 0; i < dpCount; i++){
+           var a = Math.floor(Math.random() * nodeCount);
+           var b = Math.floor(Math.random() * nodeCount);
+           dataParticles.push({a: a, b: b, t: Math.random(), speed: 0.003 + Math.random()*0.005});
+           }
+           var dpGeo = new THREE.BufferGeometry();
+           var dpPos = new Float32Array(dpCount * 3);
+           dpGeo.setAttribute('position', new THREE.BufferAttribute(dpPos, 3));
+           var dpMat = new THREE.PointsMaterial({color: 0xf472b6, size: 2, transparent: true, opacity: 0.9});
+           var dpPts = new THREE.Points(dpGeo, dpMat);
+           scene.add(dpPts);
+
+           function animate(){
+           requestAnimationFrame(animate);
+           var t = Date.now() * 0.001;
+           var p = nGeo.attributes.position.array;
+           for (var i = 0; i < nodeCount; i++){
+           p[i*3] = nodes[i].x + Math.sin(t * 0.3 + nodes[i].pulse) * 1.5;
+           p[i*3+1] = nodes[i].y + Math.cos(t * 0.2 + nodes[i].pulse) * 1.5;
+           }
+           nGeo.attributes.position.needsUpdate = true;
+
+           var verts = [];
+           for (var i = 0; i < nodeCount; i++){
+           for (var j = i+1; j < nodeCount; j++){
+           var dx = p[i*3]-p[j*3], dy = p[i*3+1]-p[j*3+1];
+           var d = Math.sqrt(dx*dx+dy*dy);
+           if (d < 25){
+           verts.push(p[i*3], p[i*3+1], p[i*3+2], p[j*3], p[j*3+1], p[j*3+2]);
+           }
+           }
+           }
+           tGeo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+
+           var dp = dpGeo.attributes.position.array;
+           for (var i = 0; i < dpCount; i++){
+           var s = dataParticles[i];
+           s.t += s.speed;
+           if (s.t > 1) { s.t = 0; s.a = Math.floor(Math.random()*nodeCount); s.b = Math.floor(Math.random()*nodeCount); }
+           dp[i*3] = p[s.a*3] + (p[s.b*3] - p[s.a*3]) * s.t;
+           dp[i*3+1] = p[s.a*3+1] + (p[s.b*3+1] - p[s.a*3+1]) * s.t;
+           dp[i*3+2] = 0;
+           }
+           dpGeo.attributes.position.needsUpdate = true;
+
+           nPts.rotation.y += 0.0002;
+           tLines.rotation.y += 0.0002;
+           dpPts.rotation.y += 0.0002;
+           ren.render(scene, cam);
+           }
+           animate();
+           window.addEventListener('resize', function(){
+           w = c.offsetWidth; h = c.offsetHeight || 300;
+           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
+           });
+           })();
+
+           /* ======================== TESTIMONIALS: Ambient ======================== */
+           (function(){
+           var c = document.getElementById('testimonials-canvas');
+           if (!c) return;
+           var w = c.offsetWidth || c.parentElement.offsetWidth;
+           var h = c.offsetHeight || 300;
+           var scene = new THREE.Scene();
+           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
+           cam.position.z = 40;
+           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
+           ren.setSize(w, h);
+           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+           c.appendChild(ren.domElement);
+           var N = 50, pos = [], vel = [];
+           for (var i = 0; i < N; i++){
+           pos.push((Math.random()-0.5)*60, (Math.random()-0.5)*40, (Math.random()-0.5)*20);
+           vel.push((Math.random()-0.5)*0.005, (Math.random()-0.5)*0.005, 0);
+           }
+           var geo = new THREE.BufferGeometry();
+           geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+           var mat = new THREE.PointsMaterial({color: 0x22d3ee, size: 1.5, transparent: true, opacity: 0.3});
+           var pts = new THREE.Points(geo, mat);
+           scene.add(pts);
+           function animate(){
+           requestAnimationFrame(animate);
+           var p = geo.attributes.position.array;
+           for (var i = 0; i < N*3; i+=3){
+           p[i]+=vel[i]; p[i+1]+=vel[i+1];
+           if(Math.abs(p[i])>30) vel[i]*=-1;
+           if(Math.abs(p[i+1])>20) vel[i+1]*=-1;
+           }
+           geo.attributes.position.needsUpdate = true;
+           pts.rotation.y += 0.0001;
+           ren.render(scene, cam);
+           }
+           animate();
+           window.addEventListener('resize', function(){
+           w = c.offsetWidth; h = c.offsetHeight || 300;
+           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
+           });
+           })();
+
+           /* ======================== CONTACT: Glow Particles ======================== */
+           (function(){
+           var c = document.getElementById('contact-canvas');
+           if (!c) return;
+           var w = c.offsetWidth || c.parentElement.offsetWidth;
+           var h = c.offsetHeight || 300;
+           var scene = new THREE.Scene();
+           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
+           cam.position.z = 40;
+           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
+           ren.setSize(w, h);
+           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+           c.appendChild(ren.domElement);
+           var N = 35, pos = [], vel = [];
+           for (var i = 0; i < N; i++){
+           pos.push((Math.random()-0.5)*50, (Math.random()-0.5)*30, (Math.random()-0.5)*15);
+           vel.push((Math.random()-0.5)*0.003, (Math.random()-0.5)*0.003, 0);
+           }
+           var geo = new THREE.BufferGeometry();
+           geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+           var mat = new THREE.PointsMaterial({color: 0xa855f7, size: 2, transparent: true, opacity: 0.25});
+           var pts = new THREE.Points(geo, mat);
+           scene.add(pts);
+           function animate(){
+           requestAnimationFrame(animate);
+           var p = geo.attributes.position.array;
+           for (var i = 0; i < N*3; i+=3){
+           p[i]+=vel[i]; p[i+1]+=vel[i+1];
+           if(Math.abs(p[i])>25) vel[i]*=-1;
+           if(Math.abs(p[i+1])>15) vel[i+1]*=-1;
+           }
+           geo.attributes.position.needsUpdate = true;
+           pts.rotation.y += 0.00015;
+           ren.render(scene, cam);
+           }
+           animate();
+           window.addEventListener('resize', function(){
+           w = c.offsetWidth; h = c.offsetHeight || 300;
+           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
+           });
+           })();
+
+           })();
+
+           // Project filtering
+           (function(){
+           var filterBtns = document.querySelectorAll('.project-filter');
+           var cards = document.querySelectorAll('.project-card');
+           filterBtns.forEach(function(btn){
+           btn.addEventListener('click', function(){
+           var filter = btn.dataset.filter;
+           filterBtns.forEach(function(b){ b.classList.remove('active'); });
+           btn.classList.add('active');
+           cards.forEach(function(card){
+           if (filter === 'all' || card.dataset.category === filter){
+           card.style.display = '';
+           card.style.opacity = '1';
+           card.style.transform = '';
+           } else {
+           card.style.display = 'none';
+           }
+           });
+           });
+           });
+           })();
+
+           // Scroll reveal
+           (function(){
+           var targets = document.querySelectorAll('.cyber-section, .hero-block-container');
+           if (!targets.length) return;
+           targets.forEach(function(el){
+           el.style.opacity = '0';
+           el.style.transform = 'translateY(40px)';
+           el.style.transition = 'opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+           });
+           var observer = new IntersectionObserver(function(entries){
+           entries.forEach(function(entry){
+           if (entry.isIntersecting){
+           var delay = entry.target.dataset.revealDelay || 0;
+           setTimeout(function(){
+           entry.target.style.opacity = '1';
+           entry.target.style.transform = 'translateY(0)';
+           }, parseInt(delay));
+           observer.unobserve(entry.target);
+           }
+           });
+           }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+           var sections = document.querySelectorAll('.cyber-section');
+           sections.forEach(function(s, i){ s.dataset.revealDelay = i * 100; });
+           var hero = document.querySelector('.hero-block-container');
+           if (hero) hero.dataset.revealDelay = '0';
+           targets.forEach(function(el){ observer.observe(el); });
+           })();
+
+           // Scroll to top
+           (function(){
+           var btn = document.createElement('button');
+           btn.setAttribute('aria-label', 'Scroll to top');
+           btn.innerHTML = '&#8593;';
+           btn.style.cssText = 'position:fixed;bottom:2rem;right:2rem;width:2.5rem;height:2.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:8px;background:rgba(255,255,255,0.04);backdrop-filter:blur(8px);color:rgba(255,255,255,0.5);font:600 1rem/1 sans-serif;cursor:pointer;display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:all 0.3s ease;z-index:9999;';
+           document.body.appendChild(btn);
+           window.addEventListener('scroll', function(){
+           if (window.scrollY > 400){ btn.style.opacity='1'; btn.style.visibility='visible'; btn.style.transform='translateY(0)'; }
+           else { btn.style.opacity='0'; btn.style.visibility='hidden'; btn.style.transform='translateY(10px)'; }
+           }, { passive: true });
+           btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+           })();
+           </script>
 
      design:
        spacing:

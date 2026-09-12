@@ -1,6 +1,7 @@
 ---
 title: "AI Meeting Assistant"
 summary: "Whisper + Watsonx.ai + LangChain for automatic meeting transcription, summaries, and action items."
+featured: featured.jpeg
 tags:
   - Speech-to-Text Technologies
   - Whisper

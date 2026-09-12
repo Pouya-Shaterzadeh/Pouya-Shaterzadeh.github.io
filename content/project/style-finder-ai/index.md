@@ -1,6 +1,7 @@
 ---
 title: "Style Finder AI v2.0"
 summary: "AI fashion search: Llama 4 Maverick analyzes outfits, Fashion-CLIP finds matching Trendyol products in ~5 seconds."
+featured: featured.jpeg
 tags:
   - Fashion-CLIP
   - AI

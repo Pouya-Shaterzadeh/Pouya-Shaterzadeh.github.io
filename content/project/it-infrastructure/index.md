@@ -1,6 +1,7 @@
 ---
 title: "Self-Hosted Communication Infrastructure"
 summary: "Self-hosted communication stack: Rocket.Chat federation, Asterisk PBX VoIP, Traefik SSL, containerized with Prometheus."
+featured: featured.jpeg
 tags:
   - Linux Servers
   - SysAdmin

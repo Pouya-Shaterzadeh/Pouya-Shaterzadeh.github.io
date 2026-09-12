@@ -1,6 +1,7 @@
 ---
 title: "Customer Segmentation (PCA/UMAP/GMM)"
 summary: "Customer personality analysis with PCA, UMAP, and Gaussian Mixture Models for targeted profiling."
+featured: featured.jpeg
 tags:
   - Unspervised Machine Learning
   - Clustering

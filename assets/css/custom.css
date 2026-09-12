@@ -702,6 +702,22 @@ body::after,
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
+  background: var(--card);
+}
+
+.project-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16,1,0.3,1), filter 0.4s ease;
+  filter: brightness(0.85) saturate(1.1);
+}
+
+.project-card:hover .project-visual img {
+  transform: scale(1.05);
+  filter: brightness(1) saturate(1.2);
 }
 
 .project-glow {
@@ -715,25 +731,6 @@ body::after,
 
 .project-card:hover .project-glow {
   opacity: 1;
-}
-
-.project-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 64px;
-  height: 64px;
-  stroke: var(--accent);
-  stroke-width: 1.5;
-  opacity: 0.15;
-  transition: all 0.4s ease;
-}
-
-.project-card:hover .project-icon {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.1);
-  stroke: var(--accent-light);
 }
 
 .project-content {

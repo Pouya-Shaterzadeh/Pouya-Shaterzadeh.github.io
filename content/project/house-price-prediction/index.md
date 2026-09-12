@@ -1,6 +1,7 @@
 ---
 title: "House Price Prediction"
 summary: "Stacked ensemble of 6 regression models with R²=0.87 on the Ames Housing dataset."
+featured: featured.jpeg
 tags:
   - Supervised Machine Learning
   - Regression

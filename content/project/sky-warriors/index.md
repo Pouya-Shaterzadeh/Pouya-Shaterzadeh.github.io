@@ -1,6 +1,7 @@
 ---
 title: "Sky Warriors — ROS Workspace"
 summary: "ROS workspace for robotic arm control, perception pipelines, and Gazebo simulation."
+featured: featured.jpeg
 tags:
   - ROS
   - Robotics
