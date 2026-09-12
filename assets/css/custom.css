@@ -331,308 +331,40 @@ body::after,
 }
 
 /* ============================================
-   MORE PROJECTS GRID
-   ============================================ */
-
-.more-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 2rem;
-}
-
-.more-project-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  padding: 1.2rem 1.5rem;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--card);
-  text-decoration: none;
-  color: var(--fg);
-  transition: all 0.3s ease;
-}
-
-.more-project-card:hover {
-  border-color: var(--border-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-.mp-category {
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--accent-light);
-}
-
-.mp-title {
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-/* ============================================
-   TESTIMONIAL — PREMIUM
-   ============================================ */
-
-.testimonial-card {
-  max-width: 560px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--card);
-  text-align: center;
-}
-
-.testimonial-text {
-  font-style: italic;
-  color: var(--fg);
-  line-height: 1.7;
-  margin-bottom: 1rem;
-}
-
-.testimonial-author {
-  font-weight: 600;
-  color: #fff;
-  font-size: 0.95rem;
-}
-
-.testimonial-role {
-  color: var(--muted);
-  font-size: 0.8rem;
-  margin-top: 0.3rem;
-}
-
-/* ============================================
-   CONTACT — PREMIUM
-   ============================================ */
-
-.contact-section {
-  text-align: center;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.contact-text {
-  color: var(--muted);
-  font-size: 1.05rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.contact-links {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ============================================
-   CAROUSEL (3D) — STYLES
-   ============================================ */
-
-.carousel-wrapper {
-  width: min(100%, 720px);
-  margin: 1rem auto 0;
-  overflow: visible;
-}
-
-.carousel-3d {
-  position: relative;
-  width: 100%;
-  min-height: 480px;
-  height: auto;
-  perspective: 1000px;
-  overflow: visible;
-  padding: 0;
-}
-
-.carousel-3d-card {
-  position: absolute !important;
-  top: 0; left: 50%;
-  width: min(65vw, 400px) !important;
-  max-width: min(65vw, 400px) !important;
-  margin-left: calc(min(65vw, 400px) / -2);
-  background: rgba(16, 16, 28, 0.85) !important;
-  backdrop-filter: blur(16px);
-  border-radius: 14px !important;
-  border: 1px solid var(--border) !important;
-  overflow: hidden;
-  transition: transform 0.65s cubic-bezier(0.23, 1, 0.32, 1),
-              opacity 0.65s ease,
-              filter 0.65s ease,
-              box-shadow 0.65s ease;
-  will-change: transform, opacity;
-  pointer-events: none;
-}
-
-.carousel-3d-card.active {
-  transform: translateX(0) translateZ(0) scale(1) rotateY(0deg);
-  opacity: 1;
-  z-index: 5;
-  pointer-events: auto;
-  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.2),
-              0 12px 48px rgba(0, 0, 0, 0.5),
-              0 0 60px var(--accent-glow);
-}
-
-.carousel-3d-card.prev {
-  transform: translateX(calc(-75% - 20px)) translateZ(-180px) scale(0.75) rotateY(12deg);
-  opacity: 0.4;
-  z-index: 3;
-  filter: brightness(0.5) saturate(0.6) blur(1px);
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-.carousel-3d-card.next {
-  transform: translateX(calc(75% + 20px)) translateZ(-180px) scale(0.75) rotateY(-12deg);
-  opacity: 0.4;
-  z-index: 3;
-  filter: brightness(0.5) saturate(0.6) blur(1px);
-  pointer-events: auto;
-  cursor: pointer;
-}
-
-.carousel-3d-card.far-prev,
-.carousel-3d-card.far-next {
-  opacity: 0;
-  z-index: 1;
-  filter: brightness(0.3) saturate(0.3) blur(3px);
-}
-
-.carousel-3d-card.active:hover {
-  transform: translateX(0) translateZ(0) scale(1) rotateY(0deg) !important;
-  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.3),
-              0 16px 56px rgba(0, 0, 0, 0.5),
-              0 0 80px var(--accent-glow);
-}
-
-.carousel-nav-arrows {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  font-family: -apple-system, sans-serif;
-}
-
-.carousel-arrow {
-  display: inline-grid;
-  place-items: center;
-  width: 1.8rem;
-  height: 1.8rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: transparent;
-  color: var(--muted);
-  cursor: pointer;
-  font: 600 1rem/1 sans-serif;
-  transition: all 0.3s ease;
-}
-
-.carousel-arrow:hover {
-  border-color: var(--accent);
-  color: var(--accent-light);
-  box-shadow: 0 0 8px var(--accent-glow);
-}
-
-.carousel-counter {
-  font-size: 0.65rem;
-  color: var(--muted);
-  letter-spacing: 2px;
-  min-width: 3rem;
-  text-align: center;
-}
+    RESPONSIVE
+    ============================================ */
 
 @media (max-width: 768px) {
-  .carousel-3d { min-height: 420px; }
-  .carousel-3d-card {
-    width: min(82vw, 320px) !important;
-    max-width: min(82vw, 320px) !important;
-    margin-left: calc(min(82vw, 320px) / -2);
+  .fp-row {
+    grid-template-columns: 1fr;
   }
-  .carousel-3d-card.prev {
-    transform: translateX(calc(-90% - 10px)) translateZ(-140px) scale(0.65) rotateY(10deg);
+  .fp-compact {
+    grid-template-columns: 1fr;
   }
-  .carousel-3d-card.next {
-    transform: translateX(calc(90% + 10px)) translateZ(-140px) scale(0.65) rotateY(-10deg);
+  .fp-arch-diagram,
+  .fp-flow-diag,
+  .fp-infra-diag {
+    flex-direction: column;
+    gap: 0.3rem;
   }
-}
-
-/* ============================================
-   STATS — HIDDEN (not needed for premium)
-   ============================================ */
-
-.cyber-stat {
-  display: none !important;
-}
-
-/* ============================================
-   NAVBAR
-   ============================================ */
-
-.dark .navbar {
-  background: rgba(10, 10, 15, 0.95) !important;
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  position: relative;
-  z-index: 99999;
-}
-
-.theme-toggle, button[class*="theme"] {
-  display: none !important;
-}
-
-/* ============================================
-   SCROLLBAR
-   ============================================ */
-
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.3); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(99, 102, 241, 0.5); }
-
-/* ============================================
-   FOCUS VISIBLE
-   ============================================ */
-
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* ============================================
-   REDUCED MOTION
-   ============================================ */
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+  .fp-arrow {
+    transform: rotate(90deg);
+  }
+  .featured-section {
+    padding: 1rem;
   }
 }
-
-/* ============================================
-   RESPONSIVE
-   ============================================ */
 
 @media (max-width: 640px) {
   .hero-premium { padding: 4rem 1.5rem 2rem; }
   .skills-grid { grid-template-columns: 1fr; }
-  .more-projects-grid { grid-template-columns: 1fr 1fr; }
   .timeline-premium::before { left: 16px; }
   .timeline-event, .timeline-year { padding-left: 1.5rem; }
 }
 
 /* ============================================
-   PRINT
-   ============================================ */
+    PRINT
+    ============================================ */
 
 @media print {
   body::before, body::after, .page-body::before, .page-body::after {
@@ -641,7 +373,7 @@ body::after,
 }
 
 /* ============================================
-   HIDE BLOX ATTRIBUTION
+    HIDE BLOX ATTRIBUTION
    ============================================ */
 
 [class*="powered-by"], .footer-powered {
