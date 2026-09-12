@@ -492,169 +492,186 @@ sections:
            });
            })();
 
-           /* ======================== TIMELINE: Constellation ======================== */
-           (function(){
-           var c = document.getElementById('timeline-canvas');
-           if (!c) return;
-           var w = c.offsetWidth || c.parentElement.offsetWidth;
-           var h = c.offsetHeight || 300;
-           var scene = new THREE.Scene();
-           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
-           cam.position.z = 50;
-           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
-           ren.setSize(w, h);
-           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-           c.appendChild(ren.domElement);
+            /* ======================== TIMELINE: Data Stream ======================== */
+            (function(){
+            var c = document.getElementById('timeline-canvas');
+            if (!c) return;
+            var w = c.offsetWidth || c.parentElement.offsetWidth;
+            var h = c.offsetHeight || 300;
+            var scene = new THREE.Scene();
+            var cam = new THREE.PerspectiveCamera(60, w/h, 0.1, 1000);
+            cam.position.z = 30;
+            var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
+            ren.setSize(w, h);
+            ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            c.appendChild(ren.domElement);
 
-           var stars = [], starCount = 80;
-           for (var i = 0; i < starCount; i++){
-           stars.push({
-           x: (Math.random()-0.5)*90, y: (Math.random()-0.5)*60, z: (Math.random()-0.5)*30,
-           vx: (Math.random()-0.5)*0.008, vy: (Math.random()-0.5)*0.008
-           });
-           }
-           var sGeo = new THREE.BufferGeometry();
-           var sPos = new Float32Array(starCount * 3);
-           for (var i = 0; i < starCount; i++){
-           sPos[i*3] = stars[i].x; sPos[i*3+1] = stars[i].y; sPos[i*3+2] = stars[i].z;
-           }
-           sGeo.setAttribute('position', new THREE.BufferAttribute(sPos, 3));
-           var sMat = new THREE.PointsMaterial({color: 0xf59e0b, size: 2, transparent: true, opacity: 0.7});
-           var sPts = new THREE.Points(sGeo, sMat);
-           scene.add(sPts);
+            var streams = 6, tokensPerStream = 12;
+            var allTokens = [];
+            for (var s = 0; s < streams; s++){
+            var y = (s - streams/2 + 0.5) * 3.5;
+            for (var t = 0; t < tokensPerStream; t++){
+            var geo = new THREE.PlaneGeometry(0.4, 0.5);
+            var canvas2 = document.createElement('canvas');
+            canvas2.width = 20; canvas2.height = 26;
+            var ctx = canvas2.getContext('2d');
+            var glyphs = '01{}[]=>:;#'.split('');
+            var ch = glyphs[Math.floor(Math.random()*glyphs.length)];
+            ctx.font = '14px monospace';
+            ctx.fillStyle = '#f59e0b';
+            ctx.textAlign = 'center';
+            ctx.fillText(ch, 10, 20);
+            var tex = new THREE.CanvasTexture(canvas2);
+            var mat = new THREE.MeshBasicMaterial({map: tex, transparent: true, opacity: 0.12});
+            var mesh = new THREE.Mesh(geo, mat);
+            var x = (t - tokensPerStream/2) * 2.2;
+            mesh.position.set(x, y, 0);
+            scene.add(mesh);
+            allTokens.push({mesh: mesh, baseX: x, speed: 0.015 + Math.random()*0.02, stream: s});
+            }
+            }
 
-           var lGeo = new THREE.BufferGeometry();
-           var lMat = new THREE.LineBasicMaterial({color: 0xf59e0b, transparent: true, opacity: 0.08});
-           var lMesh = new THREE.LineSegments(lGeo, lMat);
-           scene.add(lMesh);
+            var connGeo = new THREE.BufferGeometry();
+            var connMat = new THREE.LineBasicMaterial({color: 0xf59e0b, transparent: true, opacity: 0.06});
+            var connLines = new THREE.LineSegments(connGeo, connMat);
+            scene.add(connLines);
 
-           function animate(){
-           requestAnimationFrame(animate);
-           var p = sGeo.attributes.position.array;
-           for (var i = 0; i < starCount; i++){
-           stars[i].x += stars[i].vx;
-           stars[i].y += stars[i].vy;
-           if (Math.abs(stars[i].x) > 45) stars[i].vx *= -1;
-           if (Math.abs(stars[i].y) > 30) stars[i].vy *= -1;
-           p[i*3] = stars[i].x; p[i*3+1] = stars[i].y; p[i*3+2] = stars[i].z;
-           }
-           sGeo.attributes.position.needsUpdate = true;
+            function animate(){
+            requestAnimationFrame(animate);
+            for (var i = 0; i < allTokens.length; i++){
+            var tk = allTokens[i];
+            tk.mesh.position.x += tk.speed;
+            if (tk.mesh.position.x > tokensPerStream/2 * 2.2){
+            tk.mesh.position.x = -tokensPerStream/2 * 2.2;
+            }
+            tk.mesh.material.opacity = 0.06 + Math.abs(Math.sin(Date.now()*0.0008 + tk.baseX*0.2 + tk.stream)) * 0.12;
+            }
 
-           var verts = [];
-           for (var i = 0; i < starCount; i++){
-           for (var j = i+1; j < starCount; j++){
-           var dx = stars[i].x-stars[j].x, dy = stars[i].y-stars[j].y;
-           var d = Math.sqrt(dx*dx+dy*dy);
-           if (d < 20){
-           verts.push(stars[i].x, stars[i].y, stars[i].z, stars[j].x, stars[j].y, stars[j].z);
-           }
-           }
-           }
-           lGeo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
-           sPts.rotation.y += 0.0002;
-           lMesh.rotation.y += 0.0002;
-           ren.render(scene, cam);
-           }
-           animate();
-           window.addEventListener('resize', function(){
-           w = c.offsetWidth; h = c.offsetHeight || 300;
-           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
-           });
-           })();
+            var verts = [];
+            for (var i = 0; i < allTokens.length; i++){
+            for (var j = i+1; j < allTokens.length; j++){
+            if (allTokens[i].stream === allTokens[j].stream){
+            var dx = allTokens[i].mesh.position.x - allTokens[j].mesh.position.x;
+            if (Math.abs(dx) < 3){
+            var a = allTokens[i].mesh.position, b = allTokens[j].mesh.position;
+            verts.push(a.x, a.y, a.z, b.x, b.y, b.z);
+            }
+            }
+            }
+            }
+            connGeo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+            ren.render(scene, cam);
+            }
+            animate();
+            window.addEventListener('resize', function(){
+            w = c.offsetWidth; h = c.offsetHeight || 300;
+            cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
+            });
+            })();
 
-           /* ======================== PROJECTS: Circuit Traces ======================== */
-           (function(){
-           var c = document.getElementById('projects-canvas');
-           if (!c) return;
-           var w = c.offsetWidth || c.parentElement.offsetWidth;
-           var h = c.offsetHeight || 300;
-           var scene = new THREE.Scene();
-           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
-           cam.position.z = 40;
-           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
-           ren.setSize(w, h);
-           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-           c.appendChild(ren.domElement);
+            /* ======================== PROJECTS: Neural Inference ======================== */
+            (function(){
+            var c = document.getElementById('projects-canvas');
+            if (!c) return;
+            var w = c.offsetWidth || c.parentElement.offsetWidth;
+            var h = c.offsetHeight || 300;
+            var scene = new THREE.Scene();
+            var cam = new THREE.PerspectiveCamera(60, w/h, 0.1, 1000);
+            cam.position.z = 35;
+            var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
+            ren.setSize(w, h);
+            ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            c.appendChild(ren.domElement);
 
-           var nodes = [], nodeCount = 40;
-           for (var i = 0; i < nodeCount; i++){
-           nodes.push({
-           x: (Math.random()-0.5)*70, y: (Math.random()-0.5)*50, z: (Math.random()-0.5)*10,
-           pulse: Math.random() * Math.PI * 2
-           });
-           }
-           var nGeo = new THREE.BufferGeometry();
-           var nPos = new Float32Array(nodeCount * 3);
-           for (var i = 0; i < nodeCount; i++){
-           nPos[i*3] = nodes[i].x; nPos[i*3+1] = nodes[i].y; nPos[i*3+2] = nodes[i].z;
-           }
-           nGeo.setAttribute('position', new THREE.BufferAttribute(nPos, 3));
-           var nMat = new THREE.PointsMaterial({color: 0xec4899, size: 3, transparent: true, opacity: 0.6});
-           var nPts = new THREE.Points(nGeo, nMat);
-           scene.add(nPts);
+            var layers = [5, 7, 5, 3];
+            var layerX = [];
+            var allNodes = [];
+            var spacing = 8;
+            var startX = -(layers.length - 1) * spacing / 2;
+            for (var l = 0; l < layers.length; l++){
+            layerX.push(startX + l * spacing);
+            var n = layers[l];
+            for (var i = 0; i < n; i++){
+            var y = (i - (n-1)/2) * 3.5;
+            allNodes.push({x: startX + l * spacing, y: y, z: 0, layer: l, idx: i, pulse: Math.random() * Math.PI * 2});
+            }
+            }
 
-           var tGeo = new THREE.BufferGeometry();
-           var tMat = new THREE.LineBasicMaterial({color: 0xec4899, transparent: true, opacity: 0.1});
-           var tLines = new THREE.LineSegments(tGeo, tMat);
-           scene.add(tLines);
+            var nGeo = new THREE.BufferGeometry();
+            var nPos = new Float32Array(allNodes.length * 3);
+            for (var i = 0; i < allNodes.length; i++){
+            nPos[i*3] = allNodes[i].x; nPos[i*3+1] = allNodes[i].y; nPos[i*3+2] = allNodes[i].z;
+            }
+            nGeo.setAttribute('position', new THREE.BufferAttribute(nPos, 3));
+            var nMat = new THREE.PointsMaterial({color: 0xec4899, size: 2.5, transparent: true, opacity: 0.5});
+            var nPts = new THREE.Points(nGeo, nMat);
+            scene.add(nPts);
 
-           var dataParticles = [], dpCount = 25;
-           for (var i = 0; i < dpCount; i++){
-           var a = Math.floor(Math.random() * nodeCount);
-           var b = Math.floor(Math.random() * nodeCount);
-           dataParticles.push({a: a, b: b, t: Math.random(), speed: 0.003 + Math.random()*0.005});
-           }
-           var dpGeo = new THREE.BufferGeometry();
-           var dpPos = new Float32Array(dpCount * 3);
-           dpGeo.setAttribute('position', new THREE.BufferAttribute(dpPos, 3));
-           var dpMat = new THREE.PointsMaterial({color: 0xf472b6, size: 2, transparent: true, opacity: 0.9});
-           var dpPts = new THREE.Points(dpGeo, dpMat);
-           scene.add(dpPts);
+            var edges = [];
+            for (var i = 0; i < allNodes.length; i++){
+            for (var j = 0; j < allNodes.length; j++){
+            if (allNodes[i].layer === allNodes[j].layer - 1){
+            edges.push({a: i, b: j});
+            }
+            }
+            }
+            var eGeo = new THREE.BufferGeometry();
+            var eMat = new THREE.LineBasicMaterial({color: 0xec4899, transparent: true, opacity: 0.06});
+            var eLines = new THREE.LineSegments(eGeo, eMat);
+            scene.add(eLines);
 
-           function animate(){
-           requestAnimationFrame(animate);
-           var t = Date.now() * 0.001;
-           var p = nGeo.attributes.position.array;
-           for (var i = 0; i < nodeCount; i++){
-           p[i*3] = nodes[i].x + Math.sin(t * 0.3 + nodes[i].pulse) * 1.5;
-           p[i*3+1] = nodes[i].y + Math.cos(t * 0.2 + nodes[i].pulse) * 1.5;
-           }
-           nGeo.attributes.position.needsUpdate = true;
+            var pulses = [], pulseCount = 15;
+            for (var i = 0; i < pulseCount; i++){
+            var e = edges[Math.floor(Math.random() * edges.length)];
+            pulses.push({a: e.a, b: e.b, t: Math.random(), speed: 0.005 + Math.random()*0.008});
+            }
+            var pGeo = new THREE.BufferGeometry();
+            var pPos = new Float32Array(pulseCount * 3);
+            pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+            var pMat = new THREE.PointsMaterial({color: 0xf472b6, size: 1.5, transparent: true, opacity: 0.8});
+            var pPts = new THREE.Points(pGeo, pMat);
+            scene.add(pPts);
 
-           var verts = [];
-           for (var i = 0; i < nodeCount; i++){
-           for (var j = i+1; j < nodeCount; j++){
-           var dx = p[i*3]-p[j*3], dy = p[i*3+1]-p[j*3+1];
-           var d = Math.sqrt(dx*dx+dy*dy);
-           if (d < 25){
-           verts.push(p[i*3], p[i*3+1], p[i*3+2], p[j*3], p[j*3+1], p[j*3+2]);
-           }
-           }
-           }
-           tGeo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
+            function animate(){
+            requestAnimationFrame(animate);
+            var t = Date.now() * 0.001;
+            var np = nGeo.attributes.position.array;
+            for (var i = 0; i < allNodes.length; i++){
+            np[i*3+1] = allNodes[i].y + Math.sin(t * 0.5 + allNodes[i].pulse) * 0.3;
+            }
+            nGeo.attributes.position.needsUpdate = true;
 
-           var dp = dpGeo.attributes.position.array;
-           for (var i = 0; i < dpCount; i++){
-           var s = dataParticles[i];
-           s.t += s.speed;
-           if (s.t > 1) { s.t = 0; s.a = Math.floor(Math.random()*nodeCount); s.b = Math.floor(Math.random()*nodeCount); }
-           dp[i*3] = p[s.a*3] + (p[s.b*3] - p[s.a*3]) * s.t;
-           dp[i*3+1] = p[s.a*3+1] + (p[s.b*3+1] - p[s.a*3+1]) * s.t;
-           dp[i*3+2] = 0;
-           }
-           dpGeo.attributes.position.needsUpdate = true;
+            var ev = [];
+            for (var i = 0; i < edges.length; i++){
+            var a = allNodes[edges[i].a], b = allNodes[edges[i].b];
+            ev.push(a.x, a.y, a.z, b.x, b.y, b.z);
+            }
+            eGeo.setAttribute('position', new THREE.Float32BufferAttribute(ev, 3));
 
-           nPts.rotation.y += 0.0002;
-           tLines.rotation.y += 0.0002;
-           dpPts.rotation.y += 0.0002;
-           ren.render(scene, cam);
-           }
-           animate();
-           window.addEventListener('resize', function(){
-           w = c.offsetWidth; h = c.offsetHeight || 300;
-           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
-           });
-           })();
+            var pp = pGeo.attributes.position.array;
+            for (var i = 0; i < pulseCount; i++){
+            var pu = pulses[i];
+            pu.t += pu.speed;
+            if (pu.t > 1){
+            pu.t = 0;
+            var ne = edges[Math.floor(Math.random() * edges.length)];
+            pu.a = ne.a; pu.b = ne.b;
+            }
+            var na = allNodes[pu.a], nb = allNodes[pu.b];
+            pp[i*3] = na.x + (nb.x - na.x) * pu.t;
+            pp[i*3+1] = na.y + (nb.y - na.y) * pu.t;
+            pp[i*3+2] = 0;
+            }
+            pGeo.attributes.position.needsUpdate = true;
+
+            ren.render(scene, cam);
+            }
+            animate();
+            window.addEventListener('resize', function(){
+            w = c.offsetWidth; h = c.offsetHeight || 300;
+            cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
+            });
+            })();
 
            /* ======================== TESTIMONIALS: Ambient ======================== */
            (function(){
