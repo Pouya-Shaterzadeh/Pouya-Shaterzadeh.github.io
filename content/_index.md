@@ -6,9 +6,10 @@ design:
   spacing: "4rem"
 
 sections:
-   - block: hero
+   - block: markdown
+     id: hero
      content:
-       title: "Pouya Shaterzadeh"
+       title: ""
        text: |
           <div class="hero-premium">
           <canvas data-fx="lidar" data-count="900" data-trajectory="1" data-color="34,211,238" data-dim="110,130,145" data-spread="230" data-depth="210"></canvas>
@@ -33,9 +34,7 @@ sections:
      design:
        spacing:
          padding: ["4rem", 0, "2.5rem", 0]
-       css_class: ""
-       background:
-         color: "#05070a"
+       css_class: "cyber-section"
 
    - block: markdown
      id: about
