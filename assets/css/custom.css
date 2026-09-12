@@ -631,8 +631,254 @@ body::after,
 }
 
 /* ============================================
-   PRINT
-   ============================================ */
+    THREE.JS CANVAS CONTAINERS
+    ============================================ */
+
+#hero-canvas,
+#now-canvas,
+#skills-canvas,
+#timeline-canvas,
+#projects-canvas,
+#testimonials-canvas,
+#contact-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cyber-section,
+.hero-premium {
+  position: relative;
+}
+
+.cyber-section > div:not([id$="-canvas"]),
+.hero-premium > div:not([id$="-canvas"]) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+    PROJECTS GRID — BENTO/MASONRY LAYOUT
+    ============================================ */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 1px rgba(99, 102, 241, 0.15),
+    0 20px 48px rgba(0, 0, 0, 0.4),
+    0 0 80px var(--accent-glow);
+}
+
+.project-card.hero {
+  grid-column: span 2;
+}
+
+.project-visual {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.project-glow {
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle at center, var(--accent-glow), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-glow {
+  opacity: 1;
+}
+
+.project-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  opacity: 0.15;
+  transition: all 0.4s ease;
+}
+
+.project-card:hover .project-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+  stroke: var(--accent-light);
+}
+
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-category {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent-light);
+  font-weight: 500;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0.25rem 0;
+  line-height: 1.3;
+}
+
+.project-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0.25rem 0;
+  flex: 1;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+.project-tech span {
+  font-size: 0.65rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.2s ease;
+}
+
+.project-tech span:hover {
+  border-color: var(--accent);
+  color: var(--fg);
+}
+
+.project-highlight {
+  font-size: 0.7rem;
+  color: var(--accent-light);
+  font-weight: 500;
+  margin: 0.25rem 0;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-light);
+  text-decoration: none;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  gap: 0.7rem;
+  color: #fff;
+}
+
+/* Project Filters */
+.project-filters {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+.project-filter {
+  padding: 0.4rem 1rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.project-filter:hover {
+  border-color: var(--border-hover);
+  color: var(--fg);
+}
+
+.project-filter.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ============================================
+    RESPONSIVE — PROJECTS GRID
+    ============================================ */
+
+@media (max-width: 900px) {
+  .project-card.hero {
+    grid-column: span 1;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  .project-filters {
+    padding: 0 1rem;
+  }
+}
+
+/* ============================================
+    PRINT
+    ============================================ */
 
 @media print {
   body::before, body::after, .page-body::before, .page-body::after {
@@ -641,8 +887,8 @@ body::after,
 }
 
 /* ============================================
-   HIDE BLOX ATTRIBUTION
-   ============================================ */
+    HIDE BLOX ATTRIBUTION
+    ============================================ */
 
 [class*="powered-by"], .footer-powered {
   display: none !important;
