@@ -123,18 +123,17 @@ sections:
        title: '<span class="section-title-premium">Featured Projects</span>'
        subtitle: ''
        text: |
-          <div id="projects-canvas"></div>
-          <div class="project-filters">
-            <button class="project-filter active" data-filter="all">ALL</button>
-            <button class="project-filter" data-filter="agentic-ai">AGENTIC AI</button>
-            <button class="project-filter" data-filter="multimodal-ai">MULTIMODAL AI</button>
-            <button class="project-filter" data-filter="robotics">ROBOTICS</button>
-            <button class="project-filter" data-filter="infrastructure">INFRASTRUCTURE</button>
-            <button class="project-filter" data-filter="automation">AUTOMATION</button>
-            <button class="project-filter" data-filter="ml-research">ML RESEARCH</button>
-          </div>
-          <div class="projects-grid">
-           <!-- VeriShelf - Hero Project -->
+         <div id="projects-canvas"></div>
+         <div class="project-filters">
+           <button class="project-filter active" data-filter="all">ALL</button>
+           <button class="project-filter" data-filter="agentic-ai">AGENTIC AI</button>
+           <button class="project-filter" data-filter="multimodal-ai">MULTIMODAL AI</button>
+           <button class="project-filter" data-filter="robotics">ROBOTICS</button>
+           <button class="project-filter" data-filter="infrastructure">INFRASTRUCTURE</button>
+           <button class="project-filter" data-filter="automation">AUTOMATION</button>
+           <button class="project-filter" data-filter="ml-research">ML RESEARCH</button>
+         </div>
+         <div class="projects-grid">
            <article class="project-card hero" data-category="agentic-ai">
              <div class="project-visual">
                <div class="project-glow"></div>
@@ -155,7 +154,6 @@ sections:
              </div>
            </article>
 
-           <!-- Style Finder AI -->
            <article class="project-card" data-category="multimodal-ai">
              <div class="project-visual">
                <div class="project-glow"></div>
@@ -177,7 +175,6 @@ sections:
              </div>
            </article>
 
-           <!-- DroneX Aerostack -->
            <article class="project-card" data-category="robotics">
              <div class="project-visual">
                <div class="project-glow"></div>
@@ -197,7 +194,6 @@ sections:
              </div>
            </article>
 
-           <!-- Sky Warriors -->
            <article class="project-card" data-category="robotics">
              <div class="project-visual">
                <div class="project-glow"></div>
@@ -218,7 +214,6 @@ sections:
              </div>
            </article>
 
-           <!-- Infrastructure -->
            <article class="project-card" data-category="infrastructure">
              <div class="project-visual">
                <div class="project-glow"></div>
@@ -239,7 +234,6 @@ sections:
              </div>
            </article>
 
-           <!-- AI Meeting Assistant -->
            <article class="project-card" data-category="agentic-ai">
              <div class="project-visual">
                <div class="project-glow"></div>
@@ -260,7 +254,6 @@ sections:
              </div>
            </article>
 
-           <!-- PyUploadMate -->
            <article class="project-card" data-category="automation">
              <div class="project-visual">
                <div class="project-glow"></div>
@@ -280,7 +273,6 @@ sections:
              </div>
            </article>
 
-           <!-- House Price Prediction -->
            <article class="project-card" data-category="ml-research">
              <div class="project-visual">
                <div class="project-glow"></div>
@@ -301,7 +293,6 @@ sections:
              </div>
            </article>
 
-           <!-- Customer Segmentation -->
            <article class="project-card" data-category="ml-research">
              <div class="project-visual">
                <div class="project-glow"></div>
@@ -336,7 +327,6 @@ sections:
          <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
          <script>
          (function(){
-           // Three.js Background Animations for each section
            const sections = [
              { id: 'hero-canvas', type: 'particles', color: 0x6366f1, count: 800 },
              { id: 'now-canvas', type: 'grid', color: 0x22d3ee, count: 200 },
