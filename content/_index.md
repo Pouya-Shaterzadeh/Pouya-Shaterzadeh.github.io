@@ -120,9 +120,9 @@ sections:
    - block: markdown
      id: projects
      content:
-        title: '<span class="section-title-premium">Featured Projects</span>'
-        subtitle: ''
-        text: |
+       title: '<span class="section-title-premium">Featured Projects</span>'
+       subtitle: ''
+       text: |
           <div id="projects-canvas"></div>
           <div class="project-filters">
             <button class="project-filter active" data-filter="all">ALL</button>
@@ -584,7 +584,7 @@ sections:
          <div class="contact-section">
            <p class="contact-text">Interested in AI systems, robotics, agentic workflows, or ambitious software projects?</p>
            <div class="contact-links">
-             <a href="https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/" target="_blank" class="btn-premium">LinkedIn</span>
+             <a href="https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/" target="_blank" class="btn-premium">LinkedIn</a>
              <a href="https://github.com/Pouya-Shaterzadeh" target="_blank" class="btn-premium">GitHub</a>
              <a href="mailto:pouya.shaterzadeh@bahcesehir.edu.tr" class="btn-premium">Email</a>
            </div>
