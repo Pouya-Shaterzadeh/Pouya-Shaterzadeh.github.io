@@ -11,14 +11,18 @@ sections:
        title: "Pouya Shaterzadeh"
        text: |
           <div class="hero-premium">
-          <div id="hero-canvas"></div>
-          <p class="hero-tag">AI Engineer &middot; ML Engineer &middot; Robotics</p>
-          <h1 class="hero-headline">Building intelligent systems, agents & robotics.</h1>
-          <p class="hero-sub">AI Engineering student at Bahçeşehir University focused on machine learning, agentic AI, computer vision, robotics, and production-grade software systems.</p>
+          <canvas data-fx="lidar" data-count="900" data-trajectory="1" data-color="34,211,238" data-dim="110,130,145" data-spread="230" data-depth="210"></canvas>
+          <p class="hero-name">POUYA SHATERZADEH</p>
+          <p class="hero-tag">AI Engineering &times; Robotics &times; Systems</p>
+          <h1 class="hero-headline">Building intelligent systems across AI, robotics, computer vision, and Linux infrastructure.</h1>
+          <p class="hero-sub">AI Engineering student at Bahçeşehir University — working across perception, autonomy, and the infrastructure that runs them.</p>
+          <div class="term-block" data-term data-lines='["$ ./pouya --initialize","","&gt; loading perception systems...","ROS2 ............... ONLINE","CUDA ................ ONLINE","LINUX ............... ONLINE","AI ................... ACTIVE"]' data-final="SYSTEM ONLINE // BUILDING INTELLIGENT MACHINES">
+          <div class="term-titlebar"><span></span><span></span><span></span></div>
+          </div>
           <div class="hero-ctas">
           <a href="#projects" class="btn-premium primary">View Projects</a>
-          <a href="https://github.com/Pouya-Shaterzadeh" target="_blank" class="btn-premium">GitHub</a>
-          <a href="https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/" target="_blank" class="btn-premium">LinkedIn</a>
+          <a href="https://github.com/Pouya-Shaterzadeh" target="_blank" rel="noopener" class="btn-premium">GitHub</a>
+          <a href="https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/" target="_blank" rel="noopener" class="btn-premium">LinkedIn</a>
           </div>
           <div class="hero-meta">
           <span class="hero-meta-item">Bahçeşehir University</span>
@@ -28,21 +32,29 @@ sections:
 
      design:
        spacing:
-         padding: ["5rem", 0, "3rem", 0]
+         padding: ["4rem", 0, "2.5rem", 0]
        css_class: ""
        background:
-         color: "#0a0a0f"
+         color: "#05070a"
 
    - block: markdown
-     id: now
+     id: about
      content:
-       title: '<span class="section-title-premium">Now</span>'
+       title: '<span class="eyebrow"><span class="idx">01</span> / ABOUT</span>'
        subtitle: ''
        text: |
-          <div id="now-canvas"></div>
-          <div class="now-section">
-          <p class="now-label">Currently building</p>
-          <p>Agentic AI systems, multimodal applications, robotics infrastructure, and production-oriented AI software.</p>
+          <div class="about-wrap" data-observe>
+          <div class="about-roles">
+          <span>AI Engineering Student</span>
+          <span>Robotics <em>Builder</em></span>
+          <span>Linux / Systems Engineer</span>
+          </div>
+          <p class="about-bio">I work at the intersection of AI, computer vision, robotics, and the Linux infrastructure that keeps all of it running. My projects span agentic AI and RAG systems, ROS 2 / PX4 robotics with Gazebo simulation, and self-hosted infrastructure — Docker, Traefik, Prometheus — that I design, deploy, and operate myself.</p>
+          <div class="about-meta">
+          <div class="about-meta-item"><span class="k">Location</span><span class="v">Istanbul, Türkiye</span></div>
+          <div class="about-meta-item"><span class="k">Focus</span><span class="v">AI / Robotics / Systems</span></div>
+          <div class="about-meta-item"><span class="k">Stack</span><span class="v">Python · C++ · ROS 2 · PyTorch · OpenCV · Docker</span></div>
+          </div>
           </div>
 
      design:
@@ -51,242 +63,372 @@ sections:
        css_class: "cyber-section"
 
    - block: markdown
-     id: what-i-build
-     content:
-       title: '<span class="section-title-premium">What I Build</span>'
-       subtitle: ''
-       text: |
-          <div id="skills-canvas"></div>
-          <div class="skills-grid">
-          <div class="skill-category">
-          <h3>AI & Machine Learning</h3>
-          <div class="skill-tags">
-          <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>Computer Vision</span><span>NLP</span><span>Embeddings</span><span>Multimodal AI</span>
-          </div>
-          </div>
-          <div class="skill-category">
-          <h3>Agentic AI & RAG</h3>
-          <div class="skill-tags">
-          <span>LangGraph</span><span>LangChain</span><span>CrewAI</span><span>RAG</span><span>Hybrid Retrieval</span><span>FAISS</span><span>ChromaDB</span><span>Docling</span>
-          </div>
-          </div>
-          <div class="skill-category">
-          <h3>Robotics & Autonomous Systems</h3>
-          <div class="skill-tags">
-          <span>ROS 2</span><span>PX4</span><span>Gazebo</span><span>Computer Vision</span><span>UAV Systems</span><span>Telemetry</span>
-          </div>
-          </div>
-          <div class="skill-category">
-          <h3>Software & Infrastructure</h3>
-          <div class="skill-tags">
-          <span>Python</span><span>FastAPI</span><span>Docker</span><span>Linux</span><span>GitHub Actions</span><span>MongoDB</span><span>Prometheus</span><span>Traefik</span>
-          </div>
-          </div>
-          </div>
-
-     design:
-        spacing:
-          padding: ["3rem", 0, "3rem", 0]
-        css_class: "cyber-section"
-
-   - block: markdown
-     id: timeline
-     content:
-       title: '<span class="section-title-premium">Timeline</span>'
-       subtitle: ''
-       text: |
-          <div id="timeline-canvas"></div>
-          <div class="timeline-premium">
-          <div class="timeline-year">2024</div>
-          <div class="timeline-event prominent">Started AI Engineering @ Bahçeşehir University</div>
-          <div class="timeline-event">Completed ML Specialization by Andrew Ng</div>
-          <div class="timeline-event">Built PyUploadMate — audio distribution automation</div>
-          <div class="timeline-year">2025</div>
-          <div class="timeline-event prominent">Machine Learning → AI applications → DroneX</div>
-          <div class="timeline-event">Built DroneX Aerostack on open-source fleet management</div>
-          <div class="timeline-event">Created AI Meeting Assistant — Whisper + Watsonx + LangChain</div>
-          <div class="timeline-event">Launched Sky Warriors ROS workspace — Gazebo robotics</div>
-          <div class="timeline-event">Completed Customer Segmentation — PCA/UMAP/GMM</div>
-          <div class="timeline-year">2026</div>
-          <div class="timeline-event prominent">Agentic AI → RAG → robotics → infrastructure</div>
-          <div class="timeline-event">Co-founded AP Common Projects with CipherDriftX — built Nanograd & YouTube Research Pipeline</div>
-          <div class="timeline-event">Obtained RAG and Agentic AI Professional Certificate — IBM</div>
-          <div class="timeline-event">Launched Style Finder AI v2.0 — multimodal fashion search with Llama 4</div>
-          <div class="timeline-event">Launched VeriShelf — multi-agent RAG with fact verification</div>
-          <div class="timeline-event">Deployed Self-Hosted Infrastructure — multi-region Rocket.Chat + Asterisk</div>
-          </div>
-
-     design:
-        spacing:
-          padding: ["3rem", 0, "3rem", 0]
-        css_class: "cyber-section"
-
-   - block: markdown
      id: projects
      content:
-       title: '<span class="section-title-premium">Featured Projects</span>'
+       title: '<span class="eyebrow"><span class="idx">02</span> / PROJECTS</span>'
        subtitle: ''
        text: |
-           <div id="projects-canvas"></div>
+           <canvas data-fx="lidar" data-count="220" data-color="34,211,238" data-dim="70,80,90"></canvas>
            <div class="project-filters">
            <button class="project-filter active" data-filter="all">ALL</button>
-           <button class="project-filter" data-filter="agentic-ai">AGENTIC AI</button>
-           <button class="project-filter" data-filter="multimodal-ai">MULTIMODAL AI</button>
            <button class="project-filter" data-filter="robotics">ROBOTICS</button>
+           <button class="project-filter" data-filter="agents-rag">AGENTS / RAG</button>
+           <button class="project-filter" data-filter="computer-vision">COMPUTER VISION</button>
            <button class="project-filter" data-filter="infrastructure">INFRASTRUCTURE</button>
-           <button class="project-filter" data-filter="automation">AUTOMATION</button>
            <button class="project-filter" data-filter="ml-research">ML RESEARCH</button>
+           <button class="project-filter" data-filter="automation">AUTOMATION</button>
            </div>
+
+           <div class="domain-heading" data-category="robotics"><span class="idx">01</span><h3>Robotics / Autonomy</h3><span class="rule"></span></div>
            <div class="projects-grid">
-           <article class="project-card hero" data-category="agentic-ai">
+           <article class="project-card span-wide hud-frame" data-category="robotics" data-observe>
            <div class="project-visual">
-           <div class="project-glow"></div>
-           <img src="/project/verishelf/featured.jpeg" alt="VeriShelf" loading="lazy" />
+           <img src="/project/sky-warriors/featured.jpeg" alt="Sky Warriors ROS workspace" loading="lazy" />
+           <span class="project-scan"><span class="blip"></span>PERCEPTION_ACTIVE</span>
+           <span class="project-index">01</span>
            </div>
            <div class="project-content">
-           <span class="project-category">Agentic AI</span>
-           <h3>VeriShelf</h3>
-           <p class="project-desc">AI research system with multi-agent verification pipeline for evidence-backed answers.</p>
-           <div class="project-tech">
-           <span>LangGraph</span><span>Docling</span><span>Hybrid Retrieval</span><span>Multi-Agent</span>
-           </div>
-           <div class="project-highlight">Multi-agent verification pipeline</div>
-           <a href="/project/verishelf/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-           </div>
-           </article>
-           <article class="project-card" data-category="multimodal-ai">
-           <div class="project-visual">
-           <div class="project-glow"></div>
-           <img src="/project/style-finder-ai/featured.jpeg" alt="Style Finder AI" loading="lazy" />
-           </div>
-           <div class="project-content">
-           <span class="project-category">Multimodal AI</span>
-           <h3>Style Finder AI v2.0</h3>
-           <p class="project-desc">Multimodal fashion search pipeline using Llama 4 Maverick + Fashion-CLIP.</p>
-           <div class="project-tech">
-           <span>Llama 4</span><span>Fashion-CLIP</span><span>~5s inference</span>
-           </div>
-           <div class="project-highlight">Vision-language inference</div>
-           <a href="/project/style-finder-ai/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-           </div>
-           </article>
-           <article class="project-card" data-category="robotics">
-           <div class="project-visual">
-           <div class="project-glow"></div>
-           <img src="/project/robot-fleet/featured.jpeg" alt="DroneX Aerostack" loading="lazy" />
-           </div>
-           <div class="project-content">
-           <span class="project-category">Robotics</span>
-           <h3>DroneX Aerostack</h3>
-           <p class="project-desc">Autonomous drone fleet management dashboard with live telemetry and camera feeds.</p>
-           <div class="project-tech">
-           <span>ROS</span><span>PX4</span><span>Telemetry</span><span>Computer Vision</span>
-           </div>
-           <div class="project-highlight">Real-time fleet tracking</div>
-           <a href="/project/robot-fleet/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-           </div>
-           </article>
-           <article class="project-card" data-category="robotics">
-           <div class="project-visual">
-           <div class="project-glow"></div>
-           <img src="/project/sky-warriors/featured.jpeg" alt="Sky Warriors ROS" loading="lazy" />
-           </div>
-           <div class="project-content">
-           <span class="project-category">Robotics</span>
-           <h3>Sky Warriors ROS</h3>
+           <span class="project-category">Robotics / Autonomy</span>
+           <h3>Sky Warriors — ROS Workspace</h3>
            <p class="project-desc">ROS 2 workspace for robotic arm control, perception pipelines, and Gazebo simulation.</p>
-           <div class="project-tech">
-           <span>ROS 2</span><span>Gazebo</span><span>PX4</span><span>Perception</span>
-           </div>
-           <div class="project-highlight">ROS 2 + PX4 autonomy</div>
+           <div class="project-tech"><span>ROS 2</span><span>Gazebo</span><span>PX4</span><span>Computer Vision</span></div>
+           <div class="project-highlight">Perception pipelines + Gazebo simulation</div>
            <a href="/project/sky-warriors/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
            </div>
            </article>
-           <article class="project-card" data-category="infrastructure">
+           <article class="project-card span-narrow hud-frame" data-category="robotics" data-observe>
            <div class="project-visual">
-           <div class="project-glow"></div>
-           <img src="/project/it-infrastructure/featured.jpeg" alt="Self-Hosted Communication" loading="lazy" />
+           <img src="/project/robot-fleet/featured.jpeg" alt="DroneX Aerostack fleet dashboard" loading="lazy" />
+           <span class="project-scan"><span class="blip"></span>TELEMETRY_LIVE</span>
+           <span class="project-index">02</span>
            </div>
            <div class="project-content">
-           <span class="project-category">Infrastructure</span>
-           <h3>Self-Hosted Communication</h3>
-           <p class="project-desc">Distributed communication stack: Rocket.Chat federation, Asterisk PBX, Traefik SSL, Prometheus monitoring.</p>
-           <div class="project-tech">
-           <span>Docker</span><span>Rocket.Chat</span><span>Asterisk</span><span>Traefik</span><span>Prometheus</span>
-           </div>
-           <div class="project-highlight">Self-hosted distributed infrastructure</div>
-           <a href="/project/it-infrastructure/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           <span class="project-category">Robotics / Autonomy</span>
+           <h3>Aerostack · DroneX Delivery Solutions</h3>
+           <p class="project-desc">Drone fleet management dashboard with live camera feeds, telemetry, and warehouse ops monitoring.</p>
+           <div class="project-tech"><span>ROS</span><span>Drones</span><span>IoT</span></div>
+           <div class="project-highlight">Real-time fleet + camera telemetry</div>
+           <a href="/project/robot-fleet/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
            </div>
            </article>
-           <article class="project-card" data-category="agentic-ai">
+           </div>
+
+           <div class="domain-heading" data-category="agents-rag"><span class="idx">02</span><h3>Agents / RAG</h3><span class="rule"></span></div>
+           <div class="projects-grid">
+           <article class="project-card span-wide hud-frame" data-category="agents-rag" data-observe>
            <div class="project-visual">
-           <div class="project-glow"></div>
-           <img src="/project/ai-meeting-assistant/featured.jpeg" alt="AI Meeting Assistant" loading="lazy" />
+           <img src="/project/verishelf/featured.jpeg" alt="VeriShelf multi-agent RAG system" loading="lazy" />
+           <span class="project-scan"><span class="blip"></span>RETRIEVAL_ACTIVE</span>
+           <span class="project-index">03</span>
            </div>
            <div class="project-content">
-           <span class="project-category">Agentic AI</span>
-           <h3>AI Meeting Assistant</h3>
-           <p class="project-desc">Automatic meeting transcription, summaries, and action items using Whisper + Watsonx + LangChain.</p>
-           <div class="project-tech">
-           <span>Whisper</span><span>Watsonx</span><span>LangChain</span>
+           <span class="project-category">Agents / RAG</span>
+           <h3>VeriShelf</h3>
+           <p class="project-desc">Multi-agent RAG Q&amp;A with fact verification — a Research Agent drafts answers, a Verification Agent fact-checks against sources and self-corrects.</p>
+           <div class="project-tech"><span>LangGraph</span><span>Docling</span><span>Hybrid Retrieval</span><span>Multi-Agent</span></div>
+           <div class="project-highlight">Self-correcting verification pipeline</div>
+           <a href="/project/verishelf/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
            </div>
+           </article>
+           <article class="project-card span-narrow hud-frame" data-category="agents-rag" data-observe>
+           <div class="project-visual">
+           <img src="/project/ai-meeting-assistant/featured.jpeg" alt="AI Meeting Assistant" loading="lazy" />
+           <span class="project-scan"><span class="blip"></span>TRANSCRIBING</span>
+           <span class="project-index">04</span>
+           </div>
+           <div class="project-content">
+           <span class="project-category">Agents / RAG</span>
+           <h3>AI Meeting Assistant</h3>
+           <p class="project-desc">Automatic meeting transcription, summaries, and action items using Whisper, Watsonx.ai, and LangChain.</p>
+           <div class="project-tech"><span>Whisper</span><span>Watsonx</span><span>LangChain</span></div>
            <div class="project-highlight">End-to-end meeting intelligence</div>
            <a href="/project/ai-meeting-assistant/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
            </div>
            </article>
-           <article class="project-card" data-category="automation">
+           </div>
+
+           <div class="domain-heading" data-category="computer-vision"><span class="idx">03</span><h3>Computer Vision / Multimodal AI</h3><span class="rule"></span></div>
+           <div class="projects-grid">
+           <article class="project-card span-wide hud-frame" data-category="computer-vision" data-observe>
            <div class="project-visual">
-           <div class="project-glow"></div>
-           <img src="/project/pyuploadmate/featured.jpeg" alt="PyUploadMate" loading="lazy" />
+           <img src="/project/style-finder-ai/featured.jpeg" alt="Style Finder AI v2.0" loading="lazy" />
+           <span class="project-scan"><span class="blip"></span>VISION_ONLINE</span>
+           <span class="project-index">05</span>
+           </div>
+           <div class="project-content">
+           <span class="project-category">Computer Vision / Multimodal AI</span>
+           <h3>Style Finder AI v2.0</h3>
+           <p class="project-desc">Llama 4 Maverick analyzes outfit photos, Fashion-CLIP re-ranks for visual similarity, matching products from a real product catalog in ~5 seconds end-to-end.</p>
+           <div class="project-tech"><span>Llama 4</span><span>Fashion-CLIP</span><span>~5s inference</span></div>
+           <div class="project-highlight">Vision-language matching pipeline</div>
+           <a href="/project/style-finder-ai/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           </div>
+
+           <div class="domain-heading" data-category="infrastructure"><span class="idx">04</span><h3>Linux / Infrastructure</h3><span class="rule"></span></div>
+           <div class="projects-grid">
+           <article class="project-card span-wide hud-frame" data-category="infrastructure" data-observe>
+           <div class="project-visual">
+           <img src="/project/it-infrastructure/featured.jpeg" alt="Self-hosted communication infrastructure" loading="lazy" />
+           <span class="project-scan"><span class="blip"></span>SERVICES_ONLINE</span>
+           <span class="project-index">06</span>
+           </div>
+           <div class="project-content">
+           <span class="project-category">Linux / Infrastructure</span>
+           <h3>Self-Hosted Communication Infrastructure</h3>
+           <p class="project-desc">A self-owned communication stack: Rocket.Chat with federation, Asterisk PBX VoIP, and Traefik with auto-SSL, all containerized and monitored with Prometheus.</p>
+           <div class="project-tech"><span>Docker</span><span>Rocket.Chat</span><span>Asterisk</span><span>Traefik</span><span>Prometheus</span></div>
+           <div class="project-highlight">Self-hosted, self-operated infrastructure</div>
+           <a href="/project/it-infrastructure/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           </div>
+
+           <div class="domain-heading" data-category="ml-research"><span class="idx">05</span><h3>Machine Learning Research</h3><span class="rule"></span></div>
+           <div class="projects-grid">
+           <article class="project-card span-wide hud-frame" data-category="ml-research" data-observe>
+           <div class="project-visual">
+           <img src="/project/house-price-prediction/featured.jpeg" alt="House Price Prediction ensemble model" loading="lazy" />
+           <span class="project-scan"><span class="blip"></span>MODEL_TRAINED</span>
+           <span class="project-index">07</span>
+           </div>
+           <div class="project-content">
+           <span class="project-category">Machine Learning</span>
+           <h3>House Price Prediction</h3>
+           <p class="project-desc">Stacked ensemble of six regression models — Lasso, Ridge, SVR, Kernel Ridge, Elastic Net, Bayesian Regression — achieving R² = 0.87 on the Ames Housing dataset.</p>
+           <div class="project-tech"><span>Ensemble</span><span>Scikit-learn</span><span>R² = 0.87</span></div>
+           <div class="project-highlight">Six-model stacked ensemble</div>
+           <a href="/project/house-price-prediction/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           <article class="project-card span-narrow hud-frame" data-category="ml-research" data-observe>
+           <div class="project-visual">
+           <img src="/project/customer-segmentation/featured.jpeg" alt="Customer segmentation clustering" loading="lazy" />
+           <span class="project-scan"><span class="blip"></span>CLUSTERING</span>
+           <span class="project-index">08</span>
+           </div>
+           <div class="project-content">
+           <span class="project-category">Machine Learning</span>
+           <h3>Customer Segmentation</h3>
+           <p class="project-desc">Customer personality analysis using PCA, UMAP, and Gaussian Mixture Models for targeted audience profiling.</p>
+           <div class="project-tech"><span>PCA</span><span>UMAP</span><span>GMM</span></div>
+           <div class="project-highlight">Unsupervised persona extraction</div>
+           <a href="/project/customer-segmentation/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
+           </div>
+           </article>
+           </div>
+
+           <div class="domain-heading" data-category="automation"><span class="idx">06</span><h3>Automation</h3><span class="rule"></span></div>
+           <div class="projects-grid">
+           <article class="project-card span-wide hud-frame" data-category="automation" data-observe>
+           <div class="project-visual">
+           <img src="/project/pyuploadmate/featured.jpeg" alt="PyUploadMate Telegram automation bot" loading="lazy" />
+           <span class="project-scan"><span class="blip"></span>PIPELINE_ACTIVE</span>
+           <span class="project-index">09</span>
            </div>
            <div class="project-content">
            <span class="project-category">Automation</span>
            <h3>PyUploadMate</h3>
-           <p class="project-desc">Telegram bot for Believe.com audio uploads using Selenium automation and FFmpeg processing.</p>
-           <div class="project-tech">
-           <span>Selenium</span><span>FFmpeg</span><span>Telegram Bot API</span>
-           </div>
+           <p class="project-desc">Telegram bot that automates audio uploads to Believe.com using Selenium for browser automation and FFmpeg for audio processing.</p>
+           <div class="project-tech"><span>Selenium</span><span>FFmpeg</span><span>Telegram Bot API</span></div>
            <div class="project-highlight">Automated audio distribution pipeline</div>
            <a href="/project/pyuploadmate/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-           </div>
-           </article>
-           <article class="project-card" data-category="ml-research">
-           <div class="project-visual">
-           <div class="project-glow"></div>
-           <img src="/project/house-price-prediction/featured.jpeg" alt="House Price Prediction" loading="lazy" />
-           </div>
-           <div class="project-content">
-           <span class="project-category">ML Research</span>
-           <h3>House Price Prediction</h3>
-           <p class="project-desc">Stacked ensemble of 6 regression models achieving R²=0.87 on Ames Housing dataset.</p>
-           <div class="project-tech">
-           <span>XGBoost</span><span>LightGBM</span><span>CatBoost</span><span>Stacking</span>
-           </div>
-           <div class="project-highlight">R² = 0.87 · 6-model ensemble</div>
-           <a href="/project/house-price-prediction/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
-           </div>
-           </article>
-           <article class="project-card" data-category="ml-research">
-           <div class="project-visual">
-           <div class="project-glow"></div>
-           <img src="/project/customer-segmentation/featured.jpeg" alt="Customer Segmentation" loading="lazy" />
-           </div>
-           <div class="project-content">
-           <span class="project-category">ML Research</span>
-           <h3>Customer Segmentation</h3>
-           <p class="project-desc">Customer personality analysis using PCA, UMAP, and Gaussian Mixture Models for targeted profiling.</p>
-           <div class="project-tech">
-           <span>PCA</span><span>UMAP</span><span>GMM</span><span>Scikit-learn</span>
-           </div>
-           <div class="project-highlight">Unsupervised customer profiling</div>
-           <a href="/project/customer-segmentation/" class="project-link">Explore Project <span aria-hidden="true">→</span></a>
            </div>
            </article>
            </div>
 
      design:
        spacing:
-         padding: ["4rem", 0, "5rem", 0]
+         padding: ["4rem", 0, "3rem", 0]
+       css_class: "cyber-section"
+
+   - block: markdown
+     id: systems
+     content:
+       title: '<span class="eyebrow"><span class="idx">03</span> / SYSTEMS</span>'
+       subtitle: ''
+       text: |
+          <div class="systems-intro" data-observe>
+          <p class="section-lede">Three layers of the same idea: sense the environment, reason over it, and run the infrastructure that keeps the whole system alive.</p>
+          </div>
+
+          <div class="tech-panel" data-observe>
+          <div class="tech-panel-copy">
+          <p class="panel-kicker" style="color:var(--cyan)">Robotics / Autonomy</p>
+          <h3>Perception, simulation, navigation.</h3>
+          <p>ROS 2 workspaces for robotic arm control and perception pipelines, PX4 flight stacks, and Gazebo simulation environments — building toward autonomous navigation that senses, plans, and avoids obstacles in real time.</p>
+          <div class="tag-row"><span>ROS2</span><span>PX4</span><span>Gazebo</span><span>Navigation</span><span>Perception</span><span>Simulation</span></div>
+          </div>
+          <div class="tech-panel-visual hud-frame" data-observe>
+          <svg viewBox="0 0 400 220" role="img" aria-label="Simulated autonomous navigation path avoiding an obstacle">
+          <defs><pattern id="navgrid" width="22" height="22" patternUnits="userSpaceOnUse"><circle class="navpath-grid" cx="1" cy="1" r="1"></circle></pattern></defs>
+          <rect width="400" height="220" fill="url(#navgrid)"></rect>
+          <circle class="navpath-pulse a" cx="30" cy="178" r="4"></circle>
+          <circle class="navpath-pulse b" cx="30" cy="178" r="4"></circle>
+          <path class="navpath-route" d="M30,178 C80,163 108,120 140,140 C170,158 195,112 230,110 C258,110 268,128 300,100 C330,72 350,60 372,50"></path>
+          <circle class="navpath-obstacle" cx="230" cy="150" r="20"></circle>
+          <circle class="navpath-node start" cx="30" cy="178" r="5"></circle>
+          <circle class="navpath-node" cx="140" cy="140" r="4"></circle>
+          <circle class="navpath-node dest" cx="372" cy="50" r="5"></circle>
+          <polygon class="navpath-marker" points="-4,-3 6,0 -4,3"></polygon>
+          <text class="navpath-label hot" x="12" y="198">START</text>
+          <text class="navpath-label" x="118" y="128">WAYPOINT_01</text>
+          <text class="navpath-label" x="185" y="188">OBSTACLE_AVOID</text>
+          <text class="navpath-label hot" x="372" y="36" text-anchor="end">DESTINATION</text>
+          </svg>
+          </div>
+          </div>
+
+          <div class="tech-panel reverse" data-observe>
+          <div class="tech-panel-copy">
+          <p class="panel-kicker" style="color:var(--violet)">AI / Intelligence</p>
+          <h3>Data becomes a decision.</h3>
+          <p>A signal moves through perception, a model, and reasoning before it becomes an action. Agentic pipelines built with LangGraph and LangChain, retrieval with FAISS and ChromaDB, and models trained with PyTorch and scikit-learn sit at each stage of that path.</p>
+          <div class="tag-row"><span>PyTorch</span><span>LangGraph</span><span>LangChain</span><span>FAISS</span><span>Whisper</span><span>Hugging Face</span></div>
+          </div>
+          <div class="tech-panel-visual hud-frame" data-observe>
+          <svg viewBox="0 0 640 200" role="img" aria-label="Signal flow from data through perception, model, reasoning, to action">
+          <text class="neural-col-label" x="50" y="18">DATA</text>
+          <text class="neural-col-label" x="210" y="18">PERCEPTION</text>
+          <text class="neural-col-label" x="350" y="18">MODEL</text>
+          <text class="neural-col-label" x="490" y="18">REASONING</text>
+          <text class="neural-col-label" x="590" y="18">ACTION</text>
+
+          <path class="neural-edge" d="M50,70 L210,45"></path>
+          <path class="neural-edge" d="M50,70 L210,100"></path>
+          <path class="neural-edge" d="M50,130 L210,100"></path>
+          <path class="neural-edge" d="M50,130 L210,155"></path>
+          <path class="neural-edge" d="M210,45 L350,75"></path>
+          <path class="neural-edge" d="M210,100 L350,75"></path>
+          <path class="neural-edge" d="M210,100 L350,125"></path>
+          <path class="neural-edge" d="M210,155 L350,125"></path>
+          <path class="neural-edge" d="M350,75 L490,45"></path>
+          <path class="neural-edge" d="M350,75 L490,100"></path>
+          <path class="neural-edge" d="M350,125 L490,100"></path>
+          <path class="neural-edge" d="M350,125 L490,155"></path>
+          <path class="neural-edge" d="M490,45 L590,100"></path>
+          <path class="neural-edge" d="M490,100 L590,100"></path>
+          <path class="neural-edge" d="M490,155 L590,100"></path>
+
+          <circle class="neural-pulse" r="3" style="offset-path:path('M50,70 L210,45');animation-delay:0s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M50,70 L210,100');animation-delay:0s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M50,130 L210,100');animation-delay:0s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M50,130 L210,155');animation-delay:0s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M210,45 L350,75');animation-delay:0.5s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M210,100 L350,75');animation-delay:0.5s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M210,100 L350,125');animation-delay:0.5s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M210,155 L350,125');animation-delay:0.5s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M350,75 L490,45');animation-delay:1s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M350,75 L490,100');animation-delay:1s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M350,125 L490,100');animation-delay:1s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M350,125 L490,155');animation-delay:1s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M490,45 L590,100');animation-delay:1.5s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M490,100 L590,100');animation-delay:1.5s"></circle>
+          <circle class="neural-pulse" r="3" style="offset-path:path('M490,155 L590,100');animation-delay:1.5s"></circle>
+
+          <circle class="neural-node" cx="50" cy="70" r="5"></circle>
+          <circle class="neural-node" cx="50" cy="130" r="5"></circle>
+          <circle class="neural-node lit" style="animation-delay:0s" cx="210" cy="45" r="5"></circle>
+          <circle class="neural-node lit" style="animation-delay:0s" cx="210" cy="100" r="5"></circle>
+          <circle class="neural-node lit" style="animation-delay:0s" cx="210" cy="155" r="5"></circle>
+          <circle class="neural-node lit" style="animation-delay:0.5s" cx="350" cy="75" r="5"></circle>
+          <circle class="neural-node lit" style="animation-delay:0.5s" cx="350" cy="125" r="5"></circle>
+          <circle class="neural-node lit" style="animation-delay:1s" cx="490" cy="45" r="5"></circle>
+          <circle class="neural-node lit" style="animation-delay:1s" cx="490" cy="100" r="5"></circle>
+          <circle class="neural-node lit" style="animation-delay:1s" cx="490" cy="155" r="5"></circle>
+          <circle class="neural-node lit" style="animation-delay:1.5s" cx="590" cy="100" r="6"></circle>
+          </svg>
+          </div>
+          </div>
+
+          <div class="tech-panel" data-observe>
+          <div class="tech-panel-copy">
+          <p class="panel-kicker" style="color:var(--green)">Systems / Linux</p>
+          <h3>I don't only train models. I run what they live on.</h3>
+          <p>A self-hosted, containerized stack: Rocket.Chat with federation, Asterisk PBX for VoIP, Traefik for SSL termination, and Prometheus watching all of it — deployed and operated on Linux, not a managed platform.</p>
+          <div class="tag-row"><span>Linux</span><span>Docker</span><span>Traefik</span><span>Prometheus</span><span>Asterisk</span><span>Rocket.Chat</span><span>GitHub Actions</span></div>
+          </div>
+          <div class="tech-panel-visual hud-frame" data-observe>
+          <svg viewBox="0 0 640 260" role="img" aria-label="Infrastructure topology with Docker at the hub of connected services">
+          <path class="infra-edge" d="M320,140 L60,60"></path>
+          <path class="infra-edge" d="M320,140 L60,220"></path>
+          <path class="infra-edge" d="M320,140 L320,30"></path>
+          <path class="infra-edge" d="M320,140 L580,60"></path>
+          <path class="infra-edge" d="M320,140 L580,220"></path>
+          <path class="infra-edge" d="M320,140 L320,250"></path>
+
+          <circle class="infra-packet" r="3" style="offset-path:path('M320,140 L60,60');animation-delay:0s"></circle>
+          <circle class="infra-packet" r="3" style="offset-path:path('M320,140 L60,220');animation-delay:0.45s"></circle>
+          <circle class="infra-packet" r="3" style="offset-path:path('M320,140 L320,30');animation-delay:0.9s"></circle>
+          <circle class="infra-packet" r="3" style="offset-path:path('M320,140 L580,60');animation-delay:1.35s"></circle>
+          <circle class="infra-packet" r="3" style="offset-path:path('M320,140 L580,220');animation-delay:1.8s"></circle>
+          <circle class="infra-packet" r="3" style="offset-path:path('M320,140 L320,250');animation-delay:2.25s"></circle>
+
+          <rect class="infra-node-box" x="5" y="42" width="110" height="36" rx="4"></rect>
+          <circle class="infra-status" cx="15" cy="60" r="3"></circle>
+          <text class="infra-label" x="65" y="64">SERVER</text>
+
+          <rect class="infra-node-box" x="5" y="202" width="132" height="36" rx="4"></rect>
+          <circle class="infra-status" cx="15" cy="220" r="3"></circle>
+          <text class="infra-label" x="76" y="224">GITHUB ACTIONS</text>
+
+          <rect class="infra-node-box" x="265" y="12" width="110" height="36" rx="4"></rect>
+          <circle class="infra-status" cx="275" cy="30" r="3"></circle>
+          <text class="infra-label" x="325" y="34">TRAEFIK</text>
+
+          <rect class="infra-node-box" x="525" y="42" width="110" height="36" rx="4"></rect>
+          <circle class="infra-status" cx="535" cy="60" r="3"></circle>
+          <text class="infra-label" x="585" y="64">PROMETHEUS</text>
+
+          <rect class="infra-node-box" x="513" y="202" width="122" height="36" rx="4"></rect>
+          <circle class="infra-status" cx="523" cy="220" r="3"></circle>
+          <text class="infra-label" x="580" y="224">ROCKET.CHAT</text>
+
+          <rect class="infra-node-box" x="265" y="232" width="110" height="36" rx="4"></rect>
+          <circle class="infra-status" cx="275" cy="250" r="3"></circle>
+          <text class="infra-label" x="325" y="254">ASTERISK</text>
+
+          <rect class="infra-node-box hub" x="262" y="122" width="116" height="36" rx="4"></rect>
+          <circle class="infra-status" cx="272" cy="140" r="3"></circle>
+          <text class="infra-label" x="325" y="144">DOCKER</text>
+          </svg>
+          </div>
+          </div>
+
+     design:
+       spacing:
+         padding: ["4rem", 0, "1rem", 0]
+       css_class: "cyber-section"
+
+   - block: markdown
+     id: armory
+     content:
+       title: '<span class="eyebrow">// ARMORY</span>'
+       subtitle: ''
+       text: |
+          <div class="armory-wrap" data-observe>
+          <div class="armory-group open">
+          <button class="armory-head" aria-expanded="true"><span class="label"><span class="dot"></span>AI</span><span class="count">7 tools</span><span class="chevron">▸</span></button>
+          <div class="armory-body"><div class="armory-list"><span>PyTorch</span><span>TensorFlow</span><span>OpenCV</span><span>Scikit-learn</span><span>LangGraph</span><span>LangChain</span><span>Hugging Face</span></div></div>
+          </div>
+          <div class="armory-group">
+          <button class="armory-head" aria-expanded="false"><span class="label"><span class="dot"></span>ROBOTICS</span><span class="count">4 tools</span><span class="chevron">▸</span></button>
+          <div class="armory-body"><div class="armory-list"><span>ROS 2</span><span>Gazebo</span><span>PX4</span><span>Isaac Sim / IsaacLab</span></div></div>
+          </div>
+          <div class="armory-group">
+          <button class="armory-head" aria-expanded="false"><span class="label"><span class="dot"></span>SYSTEMS</span><span class="count">6 tools</span><span class="chevron">▸</span></button>
+          <div class="armory-body"><div class="armory-list"><span>Linux</span><span>Docker</span><span>Traefik</span><span>Prometheus</span><span>Asterisk</span><span>GitHub Actions</span></div></div>
+          </div>
+          <div class="armory-group">
+          <button class="armory-head" aria-expanded="false"><span class="label"><span class="dot"></span>LANGUAGES</span><span class="count">4 tools</span><span class="chevron">▸</span></button>
+          <div class="armory-body"><div class="armory-list"><span>Python</span><span>C++</span><span>TypeScript</span><span>Bash</span></div></div>
+          </div>
+          </div>
+
+     design:
+       spacing:
+         padding: ["1rem", 0, "3.5rem", 0]
        css_class: "cyber-section"
 
    - block: markdown
@@ -294,601 +436,105 @@ sections:
      content:
        title: ""
        text: |
-           <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-           <script>
-           (function(){
-           var mouseX = 0, mouseY = 0;
-           document.addEventListener('mousemove', function(e){
-           mouseX = (e.clientX / window.innerWidth) * 2 - 1;
-           mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
-           });
-
-           /* ======================== HERO: Neural Network ======================== */
-           (function(){
-           var c = document.getElementById('hero-canvas');
-           if (!c) return;
-           var w = c.offsetWidth || c.parentElement.offsetWidth;
-           var h = c.offsetHeight || 300;
-           var scene = new THREE.Scene();
-           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
-           cam.position.z = 60;
-           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
-           ren.setSize(w, h);
-           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-           c.appendChild(ren.domElement);
-
-           var N = 120, pos = [], vel = [];
-           for (var i = 0; i < N; i++){
-           pos.push((Math.random()-0.5)*80, (Math.random()-0.5)*80, (Math.random()-0.5)*40);
-           vel.push((Math.random()-0.5)*0.015, (Math.random()-0.5)*0.015, (Math.random()-0.5)*0.008);
-           }
-           var geo = new THREE.BufferGeometry();
-           geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
-           var mat = new THREE.PointsMaterial({color:0x6366f1, size:2.5, transparent:true, opacity:0.8, sizeAttenuation:true});
-           var pts = new THREE.Points(geo, mat);
-           scene.add(pts);
-
-           var lineGeo = new THREE.BufferGeometry();
-           var lineMat = new THREE.LineBasicMaterial({color:0x6366f1, transparent:true, opacity:0.12});
-           var lineMesh = new THREE.LineSegments(lineGeo, lineMat);
-           scene.add(lineMesh);
-
-           function animate(){
-           requestAnimationFrame(animate);
-           var p = geo.attributes.position.array;
-           for (var i = 0; i < N*3; i += 3){
-           p[i] += vel[i]; p[i+1] += vel[i+1]; p[i+2] += vel[i+2];
-           if (Math.abs(p[i]) > 40) vel[i] *= -1;
-           if (Math.abs(p[i+1]) > 40) vel[i+1] *= -1;
-           if (Math.abs(p[i+2]) > 20) vel[i+2] *= -1;
-           p[i] += mouseX * 0.005;
-           p[i+1] += mouseY * 0.005;
-           }
-           geo.attributes.position.needsUpdate = true;
-
-           var verts = [];
-           var threshold = 18;
-           for (var i = 0; i < N*3; i += 3){
-           for (var j = i+3; j < N*3; j += 3){
-           var dx = p[i]-p[j], dy = p[i+1]-p[j+1], dz = p[i+2]-p[j+2];
-           var d = Math.sqrt(dx*dx + dy*dy + dz*dz);
-           if (d < threshold){
-           verts.push(p[i], p[i+1], p[i+2], p[j], p[j+1], p[j+2]);
-           }
-           }
-           }
-           lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
-
-           pts.rotation.y += 0.0003;
-           lineMesh.rotation.y += 0.0003;
-           ren.render(scene, cam);
-           }
-           animate();
-           window.addEventListener('resize', function(){
-           w = c.offsetWidth; h = c.offsetHeight || 300;
-           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
-           });
-           })();
-
-           /* ======================== NOW: Code Rain ======================== */
-           (function(){
-           var c = document.getElementById('now-canvas');
-           if (!c) return;
-           var w = c.offsetWidth || c.parentElement.offsetWidth;
-           var h = c.offsetHeight || 300;
-           var scene = new THREE.Scene();
-           var cam = new THREE.PerspectiveCamera(60, w/h, 0.1, 1000);
-           cam.position.z = 30;
-           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
-           ren.setSize(w, h);
-           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-           c.appendChild(ren.domElement);
-
-           var cols = 30, rows = 15;
-           var glyphs = '01{}[]<>=/;:import def class async await return yield lambda yield True False None'.split('');
-           var chars = [];
-           for (var x = 0; x < cols; x++){
-           for (var y = 0; y < rows; y++){
-           var geo = new THREE.PlaneGeometry(0.6, 0.8);
-           var ch = glyphs[Math.floor(Math.random()*glyphs.length)];
-           var canvas2 = document.createElement('canvas');
-           canvas2.width = 32; canvas2.height = 40;
-           var ctx = canvas2.getContext('2d');
-           ctx.fillStyle = 'rgba(0,0,0,0)';
-           ctx.fillRect(0,0,32,40);
-           ctx.font = '18px monospace';
-           ctx.fillStyle = '#22d3ee';
-           ctx.textAlign = 'center';
-           ctx.fillText(ch, 16, 28);
-           var tex = new THREE.CanvasTexture(canvas2);
-           var mat2 = new THREE.MeshBasicMaterial({map: tex, transparent: true, opacity: 0.15 + Math.random()*0.15});
-           var mesh = new THREE.Mesh(geo, mat2);
-           mesh.position.set((x - cols/2) * 1.1, (y - rows/2) * 1.1, 0);
-           scene.add(mesh);
-           chars.push({mesh: mesh, baseY: mesh.position.y, speed: 0.02 + Math.random()*0.04, x: x});
-           }
-           }
-
-           function animate(){
-           requestAnimationFrame(animate);
-           for (var i = 0; i < chars.length; i++){
-           var ch = chars[i];
-           ch.mesh.position.y -= ch.speed;
-           if (ch.mesh.position.y < -rows/2 * 1.1){
-           ch.mesh.position.y = rows/2 * 1.1;
-           }
-           ch.mesh.material.opacity = 0.1 + Math.abs(Math.sin(Date.now()*0.001 + ch.x*0.3)) * 0.15;
-           }
-           ren.render(scene, cam);
-           }
-           animate();
-           window.addEventListener('resize', function(){
-           w = c.offsetWidth; h = c.offsetHeight || 300;
-           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
-           });
-           })();
-
-           /* ======================== SKILLS: Orbital Rings ======================== */
-           (function(){
-           var c = document.getElementById('skills-canvas');
-           if (!c) return;
-           var w = c.offsetWidth || c.parentElement.offsetWidth;
-           var h = c.offsetHeight || 300;
-           var scene = new THREE.Scene();
-           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
-           cam.position.z = 45;
-           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
-           ren.setSize(w, h);
-           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-           c.appendChild(ren.domElement);
-
-           var rings = [];
-           var ringConfigs = [
-           {radius: 18, count: 60, tilt: 0.3, speed: 0.008, color: 0xa855f7},
-           {radius: 24, count: 80, tilt: 0.8, speed: -0.005, color: 0x7c3aed},
-           {radius: 30, count: 100, tilt: 1.2, speed: 0.003, color: 0x6366f1}
-           ];
-           ringConfigs.forEach(function(cfg){
-           var geo = new THREE.BufferGeometry();
-           var pos = new Float32Array(cfg.count * 3);
-           for (var i = 0; i < cfg.count; i++){
-           var a = (i / cfg.count) * Math.PI * 2;
-           pos[i*3] = Math.cos(a) * cfg.radius;
-           pos[i*3+1] = Math.sin(a) * cfg.radius;
-           pos[i*3+2] = (Math.random()-0.5) * 2;
-           }
-           geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-           var mat = new THREE.PointsMaterial({color: cfg.color, size: 1.5, transparent: true, opacity: 0.5, sizeAttenuation: true});
-           var pts = new THREE.Points(geo, mat);
-           var grp = new THREE.Group();
-           grp.add(pts);
-           grp.rotation.x = cfg.tilt;
-           scene.add(grp);
-           rings.push({grp: grp, speed: cfg.speed});
-           });
-
-           var centerGeo = new THREE.IcosahedronGeometry(3, 1);
-           var centerMat = new THREE.MeshBasicMaterial({color: 0xa855f7, wireframe: true, transparent: true, opacity: 0.3});
-           var center = new THREE.Mesh(centerGeo, centerMat);
-           scene.add(center);
-
-           function animate(){
-           requestAnimationFrame(animate);
-           for (var i = 0; i < rings.length; i++){
-           rings[i].grp.rotation.z += rings[i].speed;
-           rings[i].grp.rotation.y += rings[i].speed * 0.3;
-           }
-           center.rotation.x += 0.003;
-           center.rotation.y += 0.005;
-           cam.position.x += (mouseX * 5 - cam.position.x) * 0.02;
-           cam.position.y += (mouseY * 3 - cam.position.y) * 0.02;
-           cam.lookAt(0,0,0);
-           ren.render(scene, cam);
-           }
-           animate();
-           window.addEventListener('resize', function(){
-           w = c.offsetWidth; h = c.offsetHeight || 300;
-           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
-           });
-           })();
-
-            /* ======================== TIMELINE: Data Stream ======================== */
-            (function(){
-            var c = document.getElementById('timeline-canvas');
-            if (!c) return;
-            var w = c.offsetWidth || c.parentElement.offsetWidth;
-            var h = c.offsetHeight || 300;
-            var scene = new THREE.Scene();
-            var cam = new THREE.PerspectiveCamera(60, w/h, 0.1, 1000);
-            cam.position.z = 30;
-            var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
-            ren.setSize(w, h);
-            ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-            c.appendChild(ren.domElement);
-
-            var streams = 6, tokensPerStream = 12;
-            var allTokens = [];
-            for (var s = 0; s < streams; s++){
-            var y = (s - streams/2 + 0.5) * 3.5;
-            for (var t = 0; t < tokensPerStream; t++){
-            var geo = new THREE.PlaneGeometry(0.4, 0.5);
-            var canvas2 = document.createElement('canvas');
-            canvas2.width = 20; canvas2.height = 26;
-            var ctx = canvas2.getContext('2d');
-            var glyphs = '01{}[]=>:;#'.split('');
-            var ch = glyphs[Math.floor(Math.random()*glyphs.length)];
-            ctx.font = '14px monospace';
-            ctx.fillStyle = '#f59e0b';
-            ctx.textAlign = 'center';
-            ctx.fillText(ch, 10, 20);
-            var tex = new THREE.CanvasTexture(canvas2);
-            var mat = new THREE.MeshBasicMaterial({map: tex, transparent: true, opacity: 0.18});
-            var mesh = new THREE.Mesh(geo, mat);
-            var x = (t - tokensPerStream/2) * 2.2;
-            mesh.position.set(x, y, 0);
-            scene.add(mesh);
-            allTokens.push({mesh: mesh, baseX: x, speed: 0.015 + Math.random()*0.02, stream: s});
-            }
-            }
-
-            var connGeo = new THREE.BufferGeometry();
-            var connMat = new THREE.LineBasicMaterial({color: 0xf59e0b, transparent: true, opacity: 0.1});
-            var connLines = new THREE.LineSegments(connGeo, connMat);
-            scene.add(connLines);
-
-            function animate(){
-            requestAnimationFrame(animate);
-            for (var i = 0; i < allTokens.length; i++){
-            var tk = allTokens[i];
-            tk.mesh.position.x += tk.speed;
-            if (tk.mesh.position.x > tokensPerStream/2 * 2.2){
-            tk.mesh.position.x = -tokensPerStream/2 * 2.2;
-            }
-            tk.mesh.material.opacity = 0.06 + Math.abs(Math.sin(Date.now()*0.0008 + tk.baseX*0.2 + tk.stream)) * 0.12;
-            }
-
-            var verts = [];
-            for (var i = 0; i < allTokens.length; i++){
-            for (var j = i+1; j < allTokens.length; j++){
-            if (allTokens[i].stream === allTokens[j].stream){
-            var dx = allTokens[i].mesh.position.x - allTokens[j].mesh.position.x;
-            if (Math.abs(dx) < 3){
-            var a = allTokens[i].mesh.position, b = allTokens[j].mesh.position;
-            verts.push(a.x, a.y, a.z, b.x, b.y, b.z);
-            }
-            }
-            }
-            }
-            connGeo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
-            ren.render(scene, cam);
-            }
-            animate();
-            window.addEventListener('resize', function(){
-            w = c.offsetWidth; h = c.offsetHeight || 300;
-            cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
-            });
-            })();
-
-            /* ======================== PROJECTS: Knowledge Graph ======================== */
-            (function(){
-            var c = document.getElementById('projects-canvas');
-            if (!c) return;
-            var w = c.offsetWidth || c.parentElement.offsetWidth;
-            var h = c.offsetHeight || 300;
-            var scene = new THREE.Scene();
-            var cam = new THREE.PerspectiveCamera(60, w/h, 0.1, 1000);
-            cam.position.z = 45;
-            var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
-            ren.setSize(w, h);
-            ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-            c.appendChild(ren.domElement);
-
-            var clusters = 4, nodesPerCluster = 8;
-            var allNodes = [];
-            for (var cl = 0; cl < clusters; cl++){
-            var cx = (cl - (clusters-1)/2) * 14;
-            var cy = (Math.random()-0.5) * 8;
-            for (var n = 0; n < nodesPerCluster; n++){
-            var a = (n / nodesPerCluster) * Math.PI * 2;
-            var r = 3 + Math.random() * 3;
-            allNodes.push({
-            x: cx + Math.cos(a) * r,
-            y: cy + Math.sin(a) * r,
-            z: (Math.random()-0.5) * 4,
-            cx: cx, cy: cy,
-            angle: a, radius: r,
-            speed: 0.002 + Math.random() * 0.003,
-            cluster: cl
-            });
-            }
-            }
-
-            var nGeo = new THREE.BufferGeometry();
-            var nPos = new Float32Array(allNodes.length * 3);
-            for (var i = 0; i < allNodes.length; i++){
-            nPos[i*3] = allNodes[i].x; nPos[i*3+1] = allNodes[i].y; nPos[i*3+2] = allNodes[i].z;
-            }
-            nGeo.setAttribute('position', new THREE.BufferAttribute(nPos, 3));
-            var nMat = new THREE.PointsMaterial({color: 0xec4899, size: 2, transparent: true, opacity: 0.6});
-            var nPts = new THREE.Points(nGeo, nMat);
-            scene.add(nPts);
-
-            var eGeo = new THREE.BufferGeometry();
-            var eMat = new THREE.LineBasicMaterial({color: 0xec4899, transparent: true, opacity: 0.08});
-            var eLines = new THREE.LineSegments(eGeo, eMat);
-            scene.add(eLines);
-
-            var links = [];
-            for (var i = 0; i < allNodes.length; i++){
-            for (var j = i+1; j < allNodes.length; j++){
-            if (allNodes[i].cluster === allNodes[j].cluster){
-            links.push({a: i, b: j});
-            } else if (Math.random() < 0.08){
-            links.push({a: i, b: j});
-            }
-            }
-            }
-
-            var flowCount = 20, flows = [];
-            for (var i = 0; i < flowCount; i++){
-            var l = links[Math.floor(Math.random() * links.length)];
-            flows.push({a: l.a, b: l.b, t: Math.random(), speed: 0.004 + Math.random()*0.006});
-            }
-            var fGeo = new THREE.BufferGeometry();
-            var fPos = new Float32Array(flowCount * 3);
-            fGeo.setAttribute('position', new THREE.BufferAttribute(fPos, 3));
-            var fMat = new THREE.PointsMaterial({color: 0xf472b6, size: 1.5, transparent: true, opacity: 0.9});
-            var fPts = new THREE.Points(fGeo, fMat);
-            scene.add(fPts);
-
-            function animate(){
-            requestAnimationFrame(animate);
-            var t = Date.now() * 0.001;
-            var np = nGeo.attributes.position.array;
-            for (var i = 0; i < allNodes.length; i++){
-            var nd = allNodes[i];
-            nd.angle += nd.speed;
-            np[i*3] = nd.cx + Math.cos(nd.angle) * nd.radius;
-            np[i*3+1] = nd.cy + Math.sin(nd.angle) * nd.radius;
-            np[i*3+2] = nd.z + Math.sin(t * 0.3 + i) * 0.5;
-            }
-            nGeo.attributes.position.needsUpdate = true;
-
-            var ev = [];
-            for (var i = 0; i < links.length; i++){
-            var a = allNodes[links[i].a], b = allNodes[links[i].b];
-            ev.push(np[links[i].a*3], np[links[i].a*3+1], np[links[i].a*3+2],
-                    np[links[i].b*3], np[links[i].b*3+1], np[links[i].b*3+2]);
-            }
-            eGeo.setAttribute('position', new THREE.Float32BufferAttribute(ev, 3));
-
-            var fp = fGeo.attributes.position.array;
-            for (var i = 0; i < flowCount; i++){
-            var fl = flows[i];
-            fl.t += fl.speed;
-            if (fl.t > 1){
-            fl.t = 0;
-            var nl = links[Math.floor(Math.random() * links.length)];
-            fl.a = nl.a; fl.b = nl.b;
-            }
-            fp[i*3] = np[fl.a*3] + (np[fl.b*3] - np[fl.a*3]) * fl.t;
-            fp[i*3+1] = np[fl.a*3+1] + (np[fl.b*3+1] - np[fl.a*3+1]) * fl.t;
-            fp[i*3+2] = np[fl.a*3+2] + (np[fl.b*3+2] - np[fl.a*3+2]) * fl.t;
-            }
-            fGeo.attributes.position.needsUpdate = true;
-
-            nPts.rotation.y += 0.0001;
-            eLines.rotation.y += 0.0001;
-            fPts.rotation.y += 0.0001;
-            ren.render(scene, cam);
-            }
-            animate();
-            window.addEventListener('resize', function(){
-            w = c.offsetWidth; h = c.offsetHeight || 300;
-            cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
-            });
-            })();
-
-           /* ======================== TESTIMONIALS: Ambient ======================== */
-           (function(){
-           var c = document.getElementById('testimonials-canvas');
-           if (!c) return;
-           var w = c.offsetWidth || c.parentElement.offsetWidth;
-           var h = c.offsetHeight || 300;
-           var scene = new THREE.Scene();
-           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
-           cam.position.z = 40;
-           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
-           ren.setSize(w, h);
-           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-           c.appendChild(ren.domElement);
-            var N = 60, pos = [], vel = [];
-            for (var i = 0; i < N; i++){
-            pos.push((Math.random()-0.5)*60, (Math.random()-0.5)*40, (Math.random()-0.5)*20);
-            vel.push((Math.random()-0.5)*0.008, (Math.random()-0.5)*0.008, 0);
-            }
-            var geo = new THREE.BufferGeometry();
-            geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
-            var mat = new THREE.PointsMaterial({color: 0x22d3ee, size: 2, transparent: true, opacity: 0.4});
-           var pts = new THREE.Points(geo, mat);
-           scene.add(pts);
-           function animate(){
-           requestAnimationFrame(animate);
-           var p = geo.attributes.position.array;
-           for (var i = 0; i < N*3; i+=3){
-           p[i]+=vel[i]; p[i+1]+=vel[i+1];
-           if(Math.abs(p[i])>30) vel[i]*=-1;
-           if(Math.abs(p[i+1])>20) vel[i+1]*=-1;
-           }
-           geo.attributes.position.needsUpdate = true;
-           pts.rotation.y += 0.0001;
-           ren.render(scene, cam);
-           }
-           animate();
-           window.addEventListener('resize', function(){
-           w = c.offsetWidth; h = c.offsetHeight || 300;
-           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
-           });
-           })();
-
-           /* ======================== CONTACT: Glow Particles ======================== */
-           (function(){
-           var c = document.getElementById('contact-canvas');
-           if (!c) return;
-           var w = c.offsetWidth || c.parentElement.offsetWidth;
-           var h = c.offsetHeight || 300;
-           var scene = new THREE.Scene();
-           var cam = new THREE.PerspectiveCamera(75, w/h, 0.1, 1000);
-           cam.position.z = 40;
-           var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
-           ren.setSize(w, h);
-           ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-           c.appendChild(ren.domElement);
-            var N = 45, pos = [], vel = [];
-            for (var i = 0; i < N; i++){
-            pos.push((Math.random()-0.5)*50, (Math.random()-0.5)*30, (Math.random()-0.5)*15);
-            vel.push((Math.random()-0.5)*0.005, (Math.random()-0.5)*0.005, 0);
-            }
-            var geo = new THREE.BufferGeometry();
-            geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
-            var mat = new THREE.PointsMaterial({color: 0xa855f7, size: 2, transparent: true, opacity: 0.4});
-           var pts = new THREE.Points(geo, mat);
-           scene.add(pts);
-           function animate(){
-           requestAnimationFrame(animate);
-           var p = geo.attributes.position.array;
-           for (var i = 0; i < N*3; i+=3){
-           p[i]+=vel[i]; p[i+1]+=vel[i+1];
-           if(Math.abs(p[i])>25) vel[i]*=-1;
-           if(Math.abs(p[i+1])>15) vel[i+1]*=-1;
-           }
-           geo.attributes.position.needsUpdate = true;
-           pts.rotation.y += 0.00015;
-           ren.render(scene, cam);
-           }
-           animate();
-           window.addEventListener('resize', function(){
-           w = c.offsetWidth; h = c.offsetHeight || 300;
-           cam.aspect = w/h; cam.updateProjectionMatrix(); ren.setSize(w,h);
-           });
-           })();
-
-           })();
-
-           // Project filtering
-           (function(){
-           var filterBtns = document.querySelectorAll('.project-filter');
-           var cards = document.querySelectorAll('.project-card');
-           filterBtns.forEach(function(btn){
-           btn.addEventListener('click', function(){
-           var filter = btn.dataset.filter;
-           filterBtns.forEach(function(b){ b.classList.remove('active'); });
-           btn.classList.add('active');
-           cards.forEach(function(card){
-           if (filter === 'all' || card.dataset.category === filter){
-           card.style.display = '';
-           card.style.opacity = '1';
-           card.style.transform = '';
-           } else {
-           card.style.display = 'none';
-           }
-           });
-           });
-           });
-           })();
-
-           // Scroll reveal
-           (function(){
-           var targets = document.querySelectorAll('.cyber-section, .hero-block-container');
-           if (!targets.length) return;
-           targets.forEach(function(el){
-           el.style.opacity = '0';
-           el.style.transform = 'translateY(40px)';
-           el.style.transition = 'opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
-           });
-           var observer = new IntersectionObserver(function(entries){
-           entries.forEach(function(entry){
-           if (entry.isIntersecting){
-           var delay = entry.target.dataset.revealDelay || 0;
-           setTimeout(function(){
-           entry.target.style.opacity = '1';
-           entry.target.style.transform = 'translateY(0)';
-           }, parseInt(delay));
-           observer.unobserve(entry.target);
-           }
-           });
-           }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-           var sections = document.querySelectorAll('.cyber-section');
-           sections.forEach(function(s, i){ s.dataset.revealDelay = i * 100; });
-           var hero = document.querySelector('.hero-block-container');
-           if (hero) hero.dataset.revealDelay = '0';
-           targets.forEach(function(el){ observer.observe(el); });
-           })();
-
-           // Scroll to top
-           (function(){
-           var btn = document.createElement('button');
-           btn.setAttribute('aria-label', 'Scroll to top');
-           btn.innerHTML = '&#8593;';
-           btn.style.cssText = 'position:fixed;bottom:2rem;right:2rem;width:2.5rem;height:2.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:8px;background:rgba(255,255,255,0.04);backdrop-filter:blur(8px);color:rgba(255,255,255,0.5);font:600 1rem/1 sans-serif;cursor:pointer;display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:all 0.3s ease;z-index:9999;';
-           document.body.appendChild(btn);
-           window.addEventListener('scroll', function(){
-           if (window.scrollY > 400){ btn.style.opacity='1'; btn.style.visibility='visible'; btn.style.transform='translateY(0)'; }
-           else { btn.style.opacity='0'; btn.style.visibility='hidden'; btn.style.transform='translateY(10px)'; }
-           }, { passive: true });
-           btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
-           })();
-           </script>
+           <script src="/js/engine.js" defer></script>
 
      design:
        spacing:
          padding: ["0", 0, "0", 0]
 
    - block: markdown
-     id: testimonials
+     id: timeline
      content:
-       title: '<span class="section-title-premium">Endorsements</span>'
+       title: '<span class="eyebrow"><span class="idx">04</span> / EXPERIENCE</span>'
        subtitle: ''
        text: |
-          <div id="testimonials-canvas"></div>
-          <div class="testimonial-card">
-          <p class="testimonial-text">"Thank you Pouya, you are valuable fellow! Thanks for your efforts in ML and AI."</p>
-          <div class="testimonial-author">Anil B.</div>
-          <div class="testimonial-role">Founder @ <a href="https://catalpinar.solutions/" target="_blank" style="color:var(--cyber-accent);">Catalpinar IT Solutions</a></div>
+          <div class="timeline-premium" data-observe>
+          <div class="log-line prominent"><span class="log-stamp">2024</span><span class="log-msg"><span class="log-tag">[START]</span>Started AI Engineering @ Bahçeşehir University</span></div>
+          <div class="log-line"><span class="log-stamp">2024</span><span class="log-msg">Completed the Machine Learning Specialization — Andrew Ng</span></div>
+          <div class="log-line"><span class="log-stamp">2024</span><span class="log-msg">Built PyUploadMate — audio distribution automation</span></div>
+          <div class="log-line prominent"><span class="log-stamp">2025</span><span class="log-msg"><span class="log-tag">[SHIFT]</span>Machine learning → AI applications → DroneX</span></div>
+          <div class="log-line"><span class="log-stamp">2025</span><span class="log-msg">Built the DroneX Aerostack fleet-management dashboard</span></div>
+          <div class="log-line"><span class="log-stamp">2025</span><span class="log-msg">Created AI Meeting Assistant — Whisper + Watsonx + LangChain</span></div>
+          <div class="log-line"><span class="log-stamp">2025</span><span class="log-msg">Launched Sky Warriors — ROS 2 / Gazebo robotics workspace</span></div>
+          <div class="log-line"><span class="log-stamp">2025</span><span class="log-msg">Completed Customer Segmentation — PCA / UMAP / GMM</span></div>
+          <div class="log-line prominent"><span class="log-stamp">2026</span><span class="log-msg"><span class="log-tag">[SHIFT]</span>Agentic AI → RAG → robotics → infrastructure</span></div>
+          <div class="log-line"><span class="log-stamp">2026</span><span class="log-msg">Co-founded AP Common Projects with CipherDriftX — built Nanograd &amp; a YouTube research pipeline</span></div>
+          <div class="log-line"><span class="log-stamp">2026</span><span class="log-msg">RAG and Agentic AI Professional Certificate — IBM</span></div>
+          <div class="log-line"><span class="log-stamp">2026</span><span class="log-msg">Launched Style Finder AI v2.0 — multimodal fashion search with Llama 4</span></div>
+          <div class="log-line"><span class="log-stamp">2026</span><span class="log-msg">Launched VeriShelf — multi-agent RAG with fact verification</span></div>
+          <div class="log-line"><span class="log-stamp">2026</span><span class="log-msg">Deployed self-hosted infrastructure — multi-region Rocket.Chat + Asterisk</span></div>
           </div>
 
      design:
        spacing:
-         padding: ["2rem", 0, "3rem", 0]
+         padding: ["3rem", 0, "3rem", 0]
+       css_class: "cyber-section"
+
+   - block: markdown
+     id: documentation
+     content:
+       title: '<span class="eyebrow"><span class="idx">05</span> / DOCUMENTATION</span>'
+       subtitle: ''
+       text: |
+          <div class="doc-grid" data-observe>
+          <a class="doc-card" href="/docs/ur_reach_migration/">
+          <span class="doc-tag">ROS2 · ISAACLAB</span>
+          <span class="doc-title">Humble → Jazzy Migration for IsaacLab UR Reach</span>
+          <span class="doc-desc">Migrating the IsaacLab UR Reach Sim2Real codebase across ROS 2 distros, with a working URSim setup guide.</span>
+          </a>
+          <a class="doc-card" href="/docs/opencv_migration/">
+          <span class="doc-tag">ROS1 → ROS2</span>
+          <span class="doc-title">OpenCV + Gazebo ROS 1 to ROS 2 Migration</span>
+          <span class="doc-desc">Porting a ROS 1 OpenCV/Gazebo tutorial package to ROS 2 — package manifests, ament_cmake, and Python launch files.</span>
+          </a>
+          <a class="doc-card" href="/docs/jitsi_rocket_chat_integration/">
+          <span class="doc-tag">SELF-HOSTED</span>
+          <span class="doc-title">Self-Hosted Jitsi + Rocket.Chat Integration</span>
+          <span class="doc-desc">Wiring a self-hosted Jitsi Meet instance into Rocket.Chat for one-click calls with no third-party login.</span>
+          </a>
+          </div>
+          <a class="doc-more" href="/docs/">→ Full documentation hub</a>
+
+     design:
+       spacing:
+         padding: ["3rem", 0, "3rem", 0]
+       css_class: "cyber-section"
+
+   - block: markdown
+     id: testimonials
+     content:
+       title: '<span class="eyebrow">// ENDORSEMENT</span>'
+       subtitle: ''
+       text: |
+          <div class="testimonial-card" data-observe>
+          <p class="testimonial-text">"Thank you Pouya, you are valuable fellow! Thanks for your efforts in ML and AI."</p>
+          <div class="testimonial-author">Anil B.</div>
+          <div class="testimonial-role">Founder @ <a href="https://catalpinar.solutions/" target="_blank" rel="noopener" style="color:var(--cyan);">Catalpinar IT Solutions</a></div>
+          </div>
+
+     design:
+       spacing:
+         padding: ["2rem", 0, "2.5rem", 0]
        css_class: "cyber-section"
 
    - block: markdown
      id: contact
      content:
-       title: "<span class=\"section-title-premium\">Let's connect</span>"
+       title: "<span class=\"eyebrow\"><span class=\"idx\">06</span> / CONTACT</span>"
        subtitle: ''
        text: |
-          <div id="contact-canvas"></div>
-          <div class="contact-section">
-          <p class="contact-text">Interested in AI systems, robotics, agentic workflows, or ambitious software projects?</p>
+          <div class="contact-section" data-observe>
+          <p class="contact-echo"><span class="prompt">$</span> echo <span class="str">"Let's build something together."</span></p>
           <div class="contact-links">
-          <a href="https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/" target="_blank" class="btn-premium">LinkedIn</a>
-          <a href="https://github.com/Pouya-Shaterzadeh" target="_blank" class="btn-premium">GitHub</a>
+          <a href="https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/" target="_blank" rel="noopener" class="btn-premium">LinkedIn</a>
+          <a href="https://github.com/Pouya-Shaterzadeh" target="_blank" rel="noopener" class="btn-premium">GitHub</a>
           <a href="mailto:pouya.shaterzadeh@bahcesehir.edu.tr" class="btn-premium">Email</a>
           </div>
+          <div class="status-line"><span class="dot"></span>System Status: Available</div>
           </div>
 
      design:
        spacing:
          padding: ["3rem", 0, "4rem", 0]
        css_class: "cyber-section"
-
-   - block: markdown
-     id: matrix-rain
-     content:
-       title: ""
-       text: ""
-     design:
-       spacing:
-         padding: ["0", 0, "0", 0]
 ---

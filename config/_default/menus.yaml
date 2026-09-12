@@ -2,21 +2,35 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Home
-    url: /
+  - name: "01 · About"
+    url: /#about
     weight: 10
-  - name: Projects
+  - name: "02 · Projects"
     url: /#projects
     weight: 20
-  - name: Docs
-    url: docs/
+  - name: "03 · Systems"
+    url: /#systems
     weight: 30
-  - name: LinkedIn
-    url: https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/
+  - name: "04 · Experience"
+    url: /#timeline
     weight: 40
+  - name: "05 · Documentation"
+    url: docs/
+    weight: 50
+  - name: "06 · Contact"
+    url: /#contact
+    weight: 60
+
+footer:
   - name: GitHub
     url: https://github.com/Pouya-Shaterzadeh/
-    weight: 50
+    weight: 10
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/pouya-shaterzadeh-b88426284/
+    weight: 20
+  - name: Email
+    url: mailto:pouya.shaterzadeh@bahcesehir.edu.tr
+    weight: 30
 
 sidebar:
   - identifier: more
