@@ -574,7 +574,7 @@ sections:
    - block: markdown
      id: contact
      content:
-       title: '<span class="section-title-premium">Let\'s connect</span>'
+       title: "<span class=\"section-title-premium\">Let's connect</span>"
        subtitle: ''
        text: |
           <div id="contact-canvas"></div>
