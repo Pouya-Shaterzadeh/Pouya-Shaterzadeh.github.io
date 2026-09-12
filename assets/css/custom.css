@@ -211,6 +211,12 @@ html.has-cursor-fx, html.has-cursor-fx * { cursor: none !important; }
 
 .cyber-section, .hero-premium { position: relative; isolation: isolate; min-height: 200px; }
 
+/* The theme wraps every block's content in Tailwind's .prose / .max-w-prose
+   (hard-capped at 65ch). A child with the default width:auto fills that
+   parent rather than growing past it, so it silently overrides every
+   max-width set below unless neutralized here. */
+.cyber-section .prose, .cyber-section .max-w-prose { max-width: none; }
+
 [data-fx="lidar"] {
   position: absolute;
   inset: 0;
@@ -954,7 +960,12 @@ circle.navpath-grid { fill: rgba(255,255,255,0.06); }
    FOOTER / NAVBAR
    ============================================ */
 
-.dark .navbar {
+.header {
+  background-color: var(--bg-0) !important;
+  color: var(--fg) !important;
+}
+
+.dark .navbar, .navbar {
   background: rgba(5, 7, 10, 0.92) !important;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
