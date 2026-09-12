@@ -4,8 +4,8 @@ date: 2026-03-10
 type: landing
 design:
   spacing: "4rem"
----
 
+sections:
    - block: hero
      content:
        title: "Pouya Shaterzadeh"
@@ -335,7 +335,7 @@ design:
    - block: markdown
      id: contact
      content:
-       title: '<span class="section-title-premium">Let's connect</span>'
+       title: '<span class="section-title-premium">Lets connect</span>'
        subtitle: ''
        text: |
          <div class="contact-section">
