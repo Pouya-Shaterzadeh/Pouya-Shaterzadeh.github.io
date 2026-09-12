@@ -113,261 +113,208 @@ sections:
          padding: ["1rem", 0, "2rem", 0]
        css_class: "cyber-section"
 
-   - block: markdown
-     id: featured-projects
+   - block: collection
+     id: projects
      content:
-       title: '<span class="section-title-premium">01 / 02</span>'
+       title: '<span class="section-title-premium">Featured Projects</span>'
        subtitle: ''
-       text: |
-         <section class="featured-section" id="projects">
-           <div class="fp-header">
-             <span class="fp-eyebrow">SELECTED WORK</span>
-             <h2>Systems I've built.<br>Problems I've solved.</h2>
-             <p class="fp-subtitle">Selected projects spanning agentic AI, multimodal systems, robotics, and production infrastructure.</p>
-             <div class="fp-filters">
-               <button class="fp-filter active" data-filter="all">ALL</button>
-               <button class="fp-filter" data-filter="ai">AI / ML</button>
-               <button class="fp-filter" data-filter="agentic">AGENTIC AI</button>
-               <button class="fp-filter" data-filter="cv">COMPUTER VISION</button>
-               <button class="fp-filter" data-filter="robotics">ROBOTICS</button>
-               <button class="fp-filter" data-filter="infra">INFRASTRUCTURE</button>
-               <button class="fp-filter" data-filter="software">SOFTWARE</button>
-             </div>
-           </div>
-           <div class="fp-grid" id="fpGrid">
-             <div class="fp-project fp-hero" data-category="agentic" data-index="01">
-               <a href="/project/verishelf/" class="fp-card fp-hero-card">
-                 <div class="fp-visual">
-                   <div class="fp-arch-diagram">
-                     <div class="fp-node fp-input">Docs</div>
-                     <div class="fp-arrow"></div>
-                     <div class="fp-node fp-rag">RAG</div>
-                     <div class="fp-arrow"></div>
-                     <div class="fp-node fp-agent">Agents</div>
-                     <div class="fp-arrow"></div>
-                     <div class="fp-node fp-verify">Verify</div>
-                     <div class="fp-arrow"></div>
-                     <div class="fp-node fp-output">Answer</div>
-                   </div>
-                 </div>
-                 <div class="fp-info">
-                   <span class="fp-category">AGENTIC AI</span>
-                   <h3>VeriShelf</h3>
-                   <p class="fp-desc">AI research system for evidence-backed answers.</p>
-                   <div class="fp-tech">
-                     <span>LangGraph</span><span>Docling</span><span>Hybrid Retrieval</span><span>Multi-Agent</span>
-                   </div>
-                   <div class="fp-highlight">Multi-agent verification pipeline</div>
-                   <span class="fp-cta">Explore project →</span>
-                 </div>
-               </a>
-             </div>
-             <div class="fp-row">
-               <div class="fp-project fp-medium" data-category="ai" data-index="02">
-                 <a href="/project/style-finder-ai/" class="fp-card">
-                   <div class="fp-visual">
-                     <div class="fp-flow-diag">
-                       <div class="fp-node fp-img">Image</div>
-                       <div class="fp-arrow"></div>
-                       <div class="fp-node fp-vision">Llama 4</div>
-                       <div class="fp-arrow"></div>
-                       <div class="fp-node fp-embed">Embedding</div>
-                       <div class="fp-arrow"></div>
-                       <div class="fp-node fp-result">Results</div>
-                     </div>
-                   </div>
-                   <div class="fp-info">
-                     <span class="fp-category">MULTIMODAL AI</span>
-                     <h3>Style Finder AI v2.0</h3>
-                     <p class="fp-desc">Multimodal fashion search pipeline.</p>
-                     <div class="fp-tech">
-                       <span>Llama 4</span><span>Fashion-CLIP</span><span>~5s inference</span>
-                     </div>
-                     <div class="fp-highlight">Vision-language inference</div>
-                     <span class="fp-cta">Explore project →</span>
-                   </div>
-                 </a>
-               </div>
-               <div class="fp-project fp-medium" data-category="robotics" data-index="03">
-                 <a href="/project/robot-fleet/" class="fp-card">
-                   <div class="fp-visual">
-                     <div class="fp-flow-diag">
-                       <div class="fp-node fp-drone">Drone</div>
-                       <div class="fp-arrow"></div>
-                       <div class="fp-node fp-telemetry">Telemetry</div>
-                       <div class="fp-arrow"></div>
-                       <div class="fp-node fp-cam">Camera</div>
-                       <div class="fp-arrow"></div>
-                       <div class="fp-node fp-fleet">Fleet</div>
-                     </div>
-                   </div>
-                   <div class="fp-info">
-                     <span class="fp-category">ROBOTICS</span>
-                     <h3>DroneX Aerostack</h3>
-                     <p class="fp-desc">Autonomous drone fleet management dashboard.</p>
-                     <div class="fp-tech">
-                       <span>ROS</span><span>PX4</span><span>Telemetry</span><span>CV</span>
-                     </div>
-                     <div class="fp-highlight">Real-time fleet tracking</div>
-                     <span class="fp-cta">Explore project →</span>
-                   </div>
-                 </a>
-               </div>
-             </div>
-             <div class="fp-project fp-wide" data-category="robotics" data-index="04">
-               <a href="/project/sky-warriors/" class="fp-card">
-                 <div class="fp-visual">
-                   <div class="fp-flow-diag">
-                     <div class="fp-node fp-sim">Gazebo</div>
-                     <div class="fp-arrow"></div>
-                     <div class="fp-node fp-px4">PX4</div>
-                     <div class="fp-arrow"></div>
-                     <div class="fp-node fp-perception">Perception</div>
-                     <div class="fp-arrow"></div>
-                     <div class="fp-node fp-auto">Autonomy</div>
-                   </div>
-                 </div>
-                 <div class="fp-info">
-                   <span class="fp-category">AUTONOMOUS SYSTEMS</span>
-                   <h3>Sky Warriors ROS</h3>
-                   <p class="fp-desc">UAV workspace for robotic arm control and Gazebo simulation.</p>
-                   <div class="fp-tech">
-                     <span>ROS 2</span><span>Gazebo</span><span>PX4</span><span>Perception</span>
-                   </div>
-                   <div class="fp-highlight">ROS 2 + PX4 autonomy</div>
-                   <span class="fp-cta">Explore project →</span>
-                 </div>
-               </a>
-             </div>
-             <div class="fp-project fp-wide" data-category="infra" data-index="05">
-               <a href="/project/it-infrastructure/" class="fp-card">
-                 <div class="fp-visual">
-                   <div class="fp-infra-diag">
-                     <div class="fp-server">Rocket.Chat</div>
-                     <div class="fp-arrow"></div>
-                     <div class="fp-server">Asterisk</div>
-                     <div class="fp-arrow"></div>
-                     <div class="fp-server">Traefik</div>
-                     <div class="fp-arrow"></div>
-                     <div class="fp-server">Prometheus</div>
-                   </div>
-                 </div>
-                 <div class="fp-info">
-                   <span class="fp-category">INFRASTRUCTURE</span>
-                   <h3>Self-Hosted Communication</h3>
-                   <p class="fp-desc">Distributed communication stack across multiple regions.</p>
-                   <div class="fp-tech">
-                     <span>Docker</span><span>Rocket.Chat</span><span>Asterisk</span><span>Traefik</span><span>Prometheus</span>
-                   </div>
-                   <div class="fp-highlight">Self-hosted distributed infrastructure</div>
-                   <span class="fp-cta">Explore project →</span>
-                 </div>
-               </a>
-             </div>
-             <div class="fp-row fp-compact">
-               <div class="fp-project fp-small" data-category="agentic" data-index="06">
-                 <a href="/project/ai-meeting-assistant/" class="fp-card">
-                   <div class="fp-info">
-                     <span class="fp-category">AGENTIC AI</span>
-                     <h4>AI Meeting Assistant</h4>
-                     <p class="fp-desc-short">Whisper + Watsonx + LangChain</p>
-                     <span class="fp-cta">→</span>
-                   </div>
-                 </a>
-               </div>
-               <div class="fp-project fp-small" data-category="software" data-index="07">
-                 <a href="/project/pyuploadmate/" class="fp-card">
-                   <div class="fp-info">
-                     <span class="fp-category">AUTOMATION</span>
-                     <h4>PyUploadMate</h4>
-                     <p class="fp-desc-short">Selenium + FFmpeg automation</p>
-                     <span class="fp-cta">→</span>
-                   </div>
-                 </a>
-               </div>
-               <div class="fp-project fp-small" data-category="ai" data-index="08">
-                 <a href="/project/house-price-prediction/" class="fp-card">
-                   <div class="fp-info">
-                     <span class="fp-category">ML RESEARCH</span>
-                     <h4>House Price Prediction</h4>
-                     <p class="fp-desc-short">R² = 0.87 · 6-model ensemble</p>
-                     <span class="fp-cta">→</span>
-                   </div>
-                 </a>
-               </div>
-             </div>
-             <div class="fp-project fp-small" data-category="ai" data-index="09">
-               <a href="/project/customer-segmentation/" class="fp-card">
-                 <div class="fp-info">
-                   <span class="fp-category">ML RESEARCH</span>
-                   <h4>Customer Segmentation</h4>
-                   <p class="fp-desc-short">PCA · UMAP · GMM profiling</p>
-                   <span class="fp-cta">→</span>
-                 </div>
-               </a>
-             </div>
-             <div class="fp-project fp-small" data-category="agentic" data-index="10">
-               <a href="/project/langgraph-agents/" class="fp-card">
-                 <div class="fp-info">
-                   <span class="fp-category">AGENTIC AI</span>
-                   <h4>LangGraph Agents</h4>
-                   <p class="fp-desc-short">Multi-agent orchestration</p>
-                   <span class="fp-cta">→</span>
-                 </div>
-               </a>
-             </div>
-           </div>
-           <div class="fp-footer">
-             <a href="/docs/" class="fp-view-all">View all projects →</a>
-           </div>
-         </section>
+       text: ""
+       page_type: project
+       count: 10
+       filters:
+         folders:
+           - project
+       sort_by: 'Weight'
+       sort_ascending: true
      design:
-       spacing:
-         padding: ["4rem", 0, "5rem", 0]
+       view: showcase
+       columns: 1
        css_class: "cyber-section"
+       show_date: false
+       show_read_time: false
+       show_read_more: true
 
    - block: markdown
-     id: fp-slider
+     id: project-slider
      content:
        title: ""
        text: |
          <script>
          (function(){
-           var filters=document.querySelectorAll('.fp-filter');
-           var projects=document.querySelectorAll('#fpGrid .fp-project');
-           filters.forEach(function(btn){
-             btn.addEventListener('click',function(){
-               var f=btn.dataset.filter;
-               filters.forEach(function(b){b.classList.remove('active')});
-               btn.classList.add('active');
-               projects.forEach(function(p){
-                 if(f==='all'||p.dataset.category===f){
-                   p.style.display='';
-                   p.style.opacity='1';
-                   p.style.transform='';
-                 } else {
-                   p.style.display='none';
+           function initProjectSlider(){
+             var section=document.querySelector('.cyber-section-projects');
+             if(!section||section.dataset.sliderReady==='true')return;
+             var cards=Array.prototype.slice.call(section.querySelectorAll('.project-card, [role="article"], article'));
+             if(cards.length<2)return;
+             var track=cards[0].parentElement;
+             while(track&&track!==section&&!cards.every(function(card){return track.contains(card);})){
+               track=track.parentElement;
+             }
+             if(!track||track===section)return;
+             section.dataset.sliderReady='true';
+             track.style.display='none';
+             var wrapper=document.createElement('div');
+             wrapper.className='carousel-wrapper';
+             track.parentNode.insertBefore(wrapper,track);
+             var controls=document.createElement('div');
+             controls.className='carousel-nav-arrows';
+             controls.innerHTML='<button class="carousel-arrow" type="button" aria-label="Previous project">&#8249;</button><span class="carousel-counter">1 / '+cards.length+'</span><button class="carousel-arrow" type="button" aria-label="Next project">&#8250;</button>';
+             wrapper.appendChild(controls);
+             var shell=document.createElement('div');
+             shell.className='carousel-3d';
+             wrapper.appendChild(shell);
+             cards.forEach(function(card){
+               card.classList.add('carousel-3d-card');
+               shell.appendChild(card);
+             });
+             var arrowBtns=controls.querySelectorAll('.carousel-arrow');
+             var counter=controls.querySelector('.carousel-counter');
+             var current=0;
+             var total=cards.length;
+             var autoTimer=null;
+             function updateUI(){
+               counter.textContent=(current+1)+' / '+total;
+               cards.forEach(function(card,i){
+                 card.classList.remove('active','prev','next','far-prev','far-next');
+                 var diff=i-current;
+                 if(diff>total/2)diff-=total;
+                 if(diff<-total/2)diff+=total;
+                 if(diff===0)card.classList.add('active');
+                 else if(diff===-1)card.classList.add('prev');
+                 else if(diff===1)card.classList.add('next');
+                 else if(diff<-1)card.classList.add('far-prev');
+                 else card.classList.add('far-next');
+               });
+             }
+             function goTo(index){
+               current=((index%total)+total)%total;
+               updateUI();
+             }
+             function step(dir){goTo(current+dir);}
+             function startAuto(){stopAuto();autoTimer=setInterval(function(){step(1);},4000);}
+             function stopAuto(){if(autoTimer){clearInterval(autoTimer);autoTimer=null;}}
+             arrowBtns[0].addEventListener('click',function(){stopAuto();step(-1);startAuto();});
+             arrowBtns[1].addEventListener('click',function(){stopAuto();step(1);startAuto();});
+             cards.forEach(function(card,i){
+               card.style.cursor='pointer';
+               card.addEventListener('click',function(e){
+                 if(card.classList.contains('prev')||card.classList.contains('next')){
+                   e.preventDefault();e.stopPropagation();
+                   stopAuto();goTo(i);startAuto();
                  }
                });
              });
-           });
+             wrapper.addEventListener('mouseenter',stopAuto);
+             wrapper.addEventListener('mouseleave',startAuto);
+             document.addEventListener('keydown',function(e){
+               if(e.key==='ArrowLeft'){stopAuto();step(-1);startAuto();}
+               else if(e.key==='ArrowRight'){stopAuto();step(1);startAuto();}
+             });
+             var touchStartX=0;
+             shell.addEventListener('touchstart',function(e){touchStartX=e.touches[0].clientX;stopAuto();},{passive:true});
+             shell.addEventListener('touchend',function(e){
+               var diff=e.changedTouches[0].clientX-touchStartX;
+               if(Math.abs(diff)>50){step(diff>0?-1:1);}
+               startAuto();
+             },{passive:true});
+             updateUI();startAuto();
+           }
+           if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initProjectSlider);
+           else initProjectSlider();
+           window.setTimeout(initProjectSlider,250);
+           window.setTimeout(initProjectSlider,1000);
+         })();
+         </script>
+         <script>
+         (function(){
+           function initScrollReveal(){
+             var targets=document.querySelectorAll('.cyber-section, .hero-block-container, .now-section');
+             if(!targets.length)return;
+             targets.forEach(function(el){
+               el.style.opacity='0';el.style.transform='translateY(40px)';
+               el.style.transition='opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+             });
+             var observer=new IntersectionObserver(function(entries){
+               entries.forEach(function(entry){
+                 if(entry.isIntersecting){
+                   var delay=entry.target.dataset.revealDelay||0;
+                   setTimeout(function(){
+                     entry.target.style.opacity='1';entry.target.style.transform='translateY(0)';
+                   },parseInt(delay));
+                   observer.unobserve(entry.target);
+                 }
+               });
+             },{threshold:0.1,rootMargin:'0px 0px -60px 0px'});
+             var sections=document.querySelectorAll('.cyber-section');
+             sections.forEach(function(s,i){s.dataset.revealDelay=i*100;});
+             var hero=document.querySelector('.hero-block-container');
+             if(hero)hero.dataset.revealDelay='0';
+             targets.forEach(function(el){observer.observe(el);});
+           }
+           if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initScrollReveal);
+           else initScrollReveal();
+         })();
+         </script>
+         <script>
+         (function(){
            var btn=document.createElement('button');
            btn.setAttribute('aria-label','Scroll to top');
            btn.innerHTML='&#8593;';
-           btn.style.cssText='position:fixed;bottom:2rem;right:2rem;width:2.5rem;height:2.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:8px;background:rgba(255,255,255,0.04);backdrop-filter:blur(8px);color:rgba(255,255,255,0.5);font:600 1rem/1 sans-serif;cursor:pointer;display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:all 0.3s ease;z-index:9999;';
+           btn.style.cssText='position:fixed;bottom:2rem;right:2rem;width:2.5rem;height:2.5rem;border:1px solid rgba(255,255,255,0.15);border-radius:8px;background:rgba(255,255,255,0.05);backdrop-filter:blur(8px);color:rgba(255,255,255,0.6);font:600 1rem/1 sans-serif;cursor:pointer;display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:all 0.3s ease;z-index:9999;';
            document.body.appendChild(btn);
            window.addEventListener('scroll',function(){
              if(window.scrollY>400){btn.style.opacity='1';btn.style.visibility='visible';btn.style.transform='translateY(0)';}
              else{btn.style.opacity='0';btn.style.visibility='hidden';btn.style.transform='translateY(10px)';}
            },{passive:true});
-           btn.addEventListener('mouseenter',function(){btn.style.borderColor='rgba(255,255,255,0.35)';btn.style.color='rgba(255,255,255,0.8)';btn.style.background='rgba(255,255,255,0.08)';});
-           btn.addEventListener('mouseleave',function(){btn.style.borderColor='rgba(255,255,255,0.12)';btn.style.color='rgba(255,255,255,0.5)';btn.style.background='rgba(255,255,255,0.04)';});
+           btn.addEventListener('mouseenter',function(){btn.style.borderColor='rgba(255,255,255,0.4)';btn.style.color='rgba(255,255,255,0.9)';btn.style.background='rgba(255,255,255,0.1)';});
+           btn.addEventListener('mouseleave',function(){btn.style.borderColor='rgba(255,255,255,0.15)';btn.style.color='rgba(255,255,255,0.6)';btn.style.background='rgba(255,255,255,0.05)';});
            btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
          })();
          </script>
      design:
        spacing:
          padding: ["0", 0, "0", 0]
+
+   - block: markdown
+     id: more-projects
+     content:
+       title: '<span class="section-title-premium">More Projects</span>'
+       subtitle: ''
+       text: |
+         <div class="more-projects-grid">
+           <a href="/project/it-infrastructure/" class="more-project-card">
+             <span class="mp-category">Infrastructure</span>
+             <span class="mp-title">Self-Hosted Communication</span>
+           </a>
+           <a href="/project/ai-meeting-assistant/" class="more-project-card">
+             <span class="mp-category">Agentic AI</span>
+             <span class="mp-title">AI Meeting Assistant</span>
+           </a>
+           <a href="/project/style-finder-ai/" class="more-project-card">
+             <span class="mp-category">Multimodal AI</span>
+             <span class="mp-title">Style Finder AI v2.0</span>
+           </a>
+           <a href="/project/pyuploadmate/" class="more-project-card">
+             <span class="mp-category">Automation</span>
+             <span class="mp-title">PyUploadMate</span>
+           </a>
+           <a href="/project/house-price-prediction/" class="more-project-card">
+             <span class="mp-category">ML Research</span>
+             <span class="mp-title">House Price Prediction</span>
+           </a>
+           <a href="/project/customer-segmentation/" class="more-project-card">
+             <span class="mp-category">ML Research</span>
+             <span class="mp-title">Customer Segmentation</span>
+           </a>
+           <a href="/project/sky-warriors/" class="more-project-card">
+             <span class="mp-category">Robotics</span>
+             <span class="mp-title">Sky Warriors ROS</span>
+           </a>
+         </div>
+     design:
+       spacing:
+         padding: ["2rem", 0, "3rem", 0]
+       css_class: "cyber-section"
 
    - block: markdown
      id: testimonials
