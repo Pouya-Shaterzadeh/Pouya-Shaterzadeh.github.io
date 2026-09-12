@@ -21,7 +21,7 @@ hugoblox:
     # Short tagline displayed on your site
     tagline: "AI Engineer · Agentic AI · Robotics"
     # Site meta description for search engines and social sharing
-    description: "Pouya Shaterzadeh — AI Engineering student at Bahçeşir University. Building intelligent systems, agents, and robotics."
+    description: "Pouya Shaterzadeh, an AI Engineering student at Bahçeşir University. Building intelligent systems, agents, and robotics."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "MakeOwnable"              # Twitter/X handle for Twitter Cards (without @)

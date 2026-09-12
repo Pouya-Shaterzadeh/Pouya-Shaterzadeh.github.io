@@ -468,18 +468,14 @@ html.has-cursor-fx, html.has-cursor-fx * { cursor: none !important; }
 }
 
 .tech-panel {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 3.25rem auto 0;
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
   gap: 2.5rem;
   align-items: center;
 }
-
-.tech-panel.reverse { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); }
-.tech-panel.reverse .tech-panel-visual { order: 2; }
-.tech-panel.reverse .tech-panel-copy { order: 1; }
 
 .tech-panel-copy .panel-kicker {
   font-family: var(--mono);
@@ -532,17 +528,17 @@ html.has-cursor-fx, html.has-cursor-fx * { cursor: none !important; }
 
 /* Robotics nav path */
 
-.navpath-label { font-family: var(--mono); font-size: 8px; letter-spacing: 0.5px; fill: var(--muted); text-transform: uppercase; }
+.navpath-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px; fill: var(--muted); text-transform: uppercase; }
 .navpath-label.hot { fill: var(--cyan); }
-circle.navpath-grid { fill: rgba(255,255,255,0.05); }
+circle.navpath-grid { fill: rgba(255,255,255,0.06); }
 .navpath-route {
   fill: none;
   stroke: var(--cyan);
-  stroke-width: 1.4;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-dasharray: 640;
   stroke-dashoffset: 640;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 [data-observe].in-view .navpath-route { animation: draw-path 2.4s cubic-bezier(0.65,0,0.35,1) 0.2s forwards; }
 @keyframes draw-path { to { stroke-dashoffset: 0; } }
@@ -559,62 +555,69 @@ circle.navpath-grid { fill: rgba(255,255,255,0.05); }
 .navpath-obstacle {
   fill: none;
   stroke: var(--amber);
-  stroke-width: 1;
+  stroke-width: 1.5;
   stroke-dasharray: 3 3;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
-.navpath-node { fill: var(--bg-1); stroke: var(--border); stroke-width: 1; }
+.navpath-node { fill: var(--bg-1); stroke: var(--border); stroke-width: 1.5; r: 6px; }
 .navpath-node.start { stroke: var(--green); }
 .navpath-node.dest { stroke: var(--cyan); }
 
-.navpath-pulse { fill: none; stroke: var(--green); stroke-width: 1; opacity: 0; }
+.navpath-pulse { fill: none; stroke: var(--green); stroke-width: 1.5; opacity: 0; }
 [data-observe].in-view .navpath-pulse.a { animation: ping 2.6s ease-out 0.1s infinite; }
 [data-observe].in-view .navpath-pulse.b { animation: ping 2.6s ease-out 1.3s infinite; }
-@keyframes ping { 0% { r: 4; opacity: 0.9; } 100% { r: 16; opacity: 0; } }
+@keyframes ping { 0% { r: 5; opacity: 0.9; } 100% { r: 20; opacity: 0; } }
 
 /* AI neural flow */
 
-.neural-col-label { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; fill: var(--muted); text-transform: uppercase; text-anchor: middle; }
-.neural-node { fill: var(--bg-2); stroke: rgba(255,255,255,0.18); stroke-width: 1; }
-.neural-edge { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 1; }
-.neural-pulse {
-  fill: var(--cyan);
+.neural-col-label { font-family: var(--mono); font-size: 13px; letter-spacing: 1.5px; fill: var(--muted); text-transform: uppercase; text-anchor: middle; }
+.neural-node { fill: var(--bg-2); stroke: rgba(255,255,255,0.3); stroke-width: 1.5; r: 7px; }
+.neural-edge { fill: none; stroke: rgba(255,255,255,0.14); stroke-width: 1.5; }
+.neural-flow {
+  fill: none;
+  stroke: var(--cyan);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 18 300;
+  stroke-dashoffset: 318;
   opacity: 0;
 }
-[data-observe].in-view .neural-pulse { animation: neural-flow 3.6s ease-in-out infinite; }
-@keyframes neural-flow {
-  0% { offset-distance: 0%; opacity: 0; }
+[data-observe].in-view .neural-flow { animation: neural-run 3.6s ease-in-out infinite; }
+@keyframes neural-run {
+  0% { stroke-dashoffset: 318; opacity: 0; }
   6% { opacity: 1; }
-  32% { offset-distance: 100%; opacity: 1; }
+  32% { stroke-dashoffset: -18; opacity: 1; }
   38% { opacity: 0; }
-  100% { opacity: 0; offset-distance: 100%; }
+  100% { opacity: 0; stroke-dashoffset: -18; }
 }
 .neural-node.lit { animation: none; }
 [data-observe].in-view .neural-node.lit { animation: node-lit 3.6s ease-in-out infinite; }
 @keyframes node-lit {
-  0%, 30% { stroke: rgba(255,255,255,0.18); }
-  36% { stroke: var(--cyan); filter: drop-shadow(0 0 3px rgba(34,211,238,0.7)); }
-  55%, 100% { stroke: rgba(255,255,255,0.18); filter: none; }
+  0%, 30% { stroke: rgba(255,255,255,0.3); }
+  36% { stroke: var(--cyan); filter: drop-shadow(0 0 4px rgba(34,211,238,0.8)); }
+  55%, 100% { stroke: rgba(255,255,255,0.3); filter: none; }
 }
 
 /* Systems / Linux topology */
 
-.infra-edge { fill: none; stroke: rgba(255,255,255,0.1); stroke-width: 1; }
-.infra-node-box { fill: var(--bg-2); stroke: var(--border); stroke-width: 1; }
+.infra-edge { fill: none; stroke: rgba(255,255,255,0.16); stroke-width: 1.5; }
+.infra-node-box { fill: var(--bg-2); stroke: var(--border); stroke-width: 1.5; }
 .infra-node-box.hub { stroke: var(--green); }
-.infra-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.5px; fill: var(--fg); text-anchor: middle; }
-.infra-status { fill: var(--green); }
+.infra-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.5px; fill: var(--fg); text-anchor: middle; }
+.infra-status { fill: var(--green); r: 4px; }
 [data-observe].in-view .infra-status { animation: status-blink 2.4s ease-in-out infinite; }
 @keyframes status-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
-.infra-packet { fill: var(--green); opacity: 0; }
-[data-observe].in-view .infra-packet { animation: infra-flow 2.8s linear infinite; }
-@keyframes infra-flow {
-  0% { offset-distance: 0%; opacity: 0; }
-  8% { opacity: 1; }
-  92% { opacity: 1; }
-  100% { offset-distance: 100%; opacity: 0; }
+.infra-flow {
+  fill: none;
+  stroke: var(--green);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 16 300;
+  opacity: 0.95;
 }
+[data-observe].in-view .infra-flow { animation: infra-run 2.4s linear infinite; }
+@keyframes infra-run { to { stroke-dashoffset: -316; } }
 
 /* ============================================
    ARMORY — technology matrix
@@ -809,8 +812,7 @@ circle.navpath-grid { fill: rgba(255,255,255,0.05); }
   transition: border-color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.project-card.span-wide { grid-column: span 8; }
-.project-card.span-narrow { grid-column: span 4; }
+.project-card.span-solo { grid-column: span 12; }
 
 .project-card:hover {
   border-color: var(--border-hover);
@@ -956,9 +958,8 @@ circle.navpath-grid { fill: rgba(255,255,255,0.05); }
 .project-link:hover { gap: 0.7rem; color: #fff; }
 
 @media (max-width: 900px) {
-  .project-card, .project-card.span-wide, .project-card.span-narrow { grid-column: span 12; }
-  .tech-panel, .tech-panel.reverse { grid-template-columns: 1fr; }
-  .tech-panel.reverse .tech-panel-visual, .tech-panel.reverse .tech-panel-copy { order: initial; }
+  .project-card { grid-column: span 12; }
+  .tech-panel { grid-template-columns: 1fr; }
   .about-meta { grid-template-columns: 1fr; }
 }
 
