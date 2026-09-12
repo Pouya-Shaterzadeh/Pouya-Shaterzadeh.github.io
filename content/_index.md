@@ -13,7 +13,6 @@ sections:
        text: |
           <div class="hero-premium">
           <canvas data-fx="lidar" data-count="900" data-trajectory="1" data-color="34,211,238" data-dim="110,130,145" data-spread="230" data-depth="210"></canvas>
-          <p class="hero-name">POUYA SHATERZADEH</p>
           <p class="hero-tag">AI Engineering &times; Robotics &times; Systems</p>
           <h1 class="hero-headline">Building intelligent systems across AI, robotics, computer vision, and Linux infrastructure.</h1>
           <p class="hero-sub">AI Engineering student at Bahçeşehir University, working across perception, autonomy, and the infrastructure that runs them.</p>

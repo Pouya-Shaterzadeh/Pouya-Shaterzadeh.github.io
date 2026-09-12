@@ -232,18 +232,10 @@ html.has-cursor-fx, html.has-cursor-fx * { cursor: none !important; }
 
 .hero-premium {
   min-height: 560px;
-  max-width: 980px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 3.5rem 2rem 2rem;
   text-align: center;
-}
-
-.hero-name {
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  letter-spacing: 6px;
-  color: var(--muted);
-  margin-bottom: 0.6rem;
 }
 
 .hero-tag {
@@ -394,7 +386,7 @@ html.has-cursor-fx, html.has-cursor-fx * { cursor: none !important; }
    ============================================ */
 
 .about-wrap {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -462,13 +454,13 @@ html.has-cursor-fx, html.has-cursor-fx * { cursor: none !important; }
    ============================================ */
 
 .systems-intro {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto 1rem;
   padding: 0 2rem;
 }
 
 .tech-panel {
-  max-width: 1200px;
+  max-width: 1360px;
   margin: 3.25rem auto 0;
   padding: 0 2rem;
   display: grid;
@@ -657,7 +649,7 @@ circle.navpath-grid { fill: rgba(255,255,255,0.06); }
 }
 
 .domain-heading {
-  max-width: 1180px;
+  max-width: 1360px;
   margin: 3rem auto 1.1rem;
   padding: 0 2rem;
   display: flex;
@@ -682,7 +674,7 @@ circle.navpath-grid { fill: rgba(255,255,255,0.06); }
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.25rem;
-  max-width: 1180px;
+  max-width: 1360px;
   margin: 0 auto 1rem;
   padding: 0 2rem;
 }
@@ -864,7 +856,7 @@ circle.navpath-grid { fill: rgba(255,255,255,0.06); }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.1rem;
-  max-width: 1000px;
+  max-width: 1160px;
   margin: 0 auto;
   padding: 0 2rem;
 }
