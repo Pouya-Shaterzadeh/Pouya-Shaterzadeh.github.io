@@ -117,9 +117,9 @@ sections:
          padding: ["1rem", 0, "2rem", 0]
        css_class: "cyber-section"
 
-- block: markdown
-      id: projects
-      content:
+   - block: markdown
+     id: projects
+     content:
         title: '<span class="section-title-premium">Featured Projects</span>'
         subtitle: ''
         text: |
