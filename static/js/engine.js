@@ -338,7 +338,7 @@
       requestAnimationFrame(loop);
     }
     loop();
-    var hoverables = 'a, button, .project-card, .doc-card, .armory-node, [data-cursor-hover]';
+    var hoverables = 'a, button, .project-card, .doc-card, [data-cursor-hover]';
     document.addEventListener('mouseover', function (e) {
       if (e.target.closest && e.target.closest(hoverables)) ring.classList.add('cx-hover');
     });
@@ -391,21 +391,6 @@
   }
 
   /* ---------------------------------------------------------------------
-     Armory — progressive category disclosure
-  --------------------------------------------------------------------- */
-  function initArmory() {
-    var groups = document.querySelectorAll('.armory-group');
-    groups.forEach(function (g) {
-      var head = g.querySelector('.armory-head');
-      if (!head) return;
-      head.addEventListener('click', function () {
-        var open = g.classList.toggle('open');
-        head.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    });
-  }
-
-  /* ---------------------------------------------------------------------
      Scan + init. Some blocks (the hero) are hydrated client-side by the
      theme after first paint, so a single DOMContentLoaded pass can miss
      them — a MutationObserver keeps scanning until nothing new appears.
@@ -435,7 +420,6 @@
     initCursor();
     initProjectFilters();
     initScrollTop();
-    initArmory();
 
     if ('MutationObserver' in window) {
       var pending = false;

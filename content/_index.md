@@ -391,36 +391,6 @@ sections:
        css_class: "cyber-section"
 
    - block: markdown
-     id: armory
-     content:
-       title: '<span class="eyebrow">// ARMORY</span>'
-       subtitle: ''
-       text: |
-          <div class="armory-wrap" data-observe>
-          <div class="armory-group open">
-          <button class="armory-head" aria-expanded="true"><span class="label"><span class="dot"></span>AI</span><span class="count">7 tools</span><span class="chevron">▸</span></button>
-          <div class="armory-body"><div class="armory-list"><span>PyTorch</span><span>TensorFlow</span><span>OpenCV</span><span>Scikit-learn</span><span>LangGraph</span><span>LangChain</span><span>Hugging Face</span></div></div>
-          </div>
-          <div class="armory-group">
-          <button class="armory-head" aria-expanded="false"><span class="label"><span class="dot"></span>ROBOTICS</span><span class="count">4 tools</span><span class="chevron">▸</span></button>
-          <div class="armory-body"><div class="armory-list"><span>ROS 2</span><span>Gazebo</span><span>PX4</span><span>Isaac Sim / IsaacLab</span></div></div>
-          </div>
-          <div class="armory-group">
-          <button class="armory-head" aria-expanded="false"><span class="label"><span class="dot"></span>SYSTEMS</span><span class="count">6 tools</span><span class="chevron">▸</span></button>
-          <div class="armory-body"><div class="armory-list"><span>Linux</span><span>Docker</span><span>Traefik</span><span>Prometheus</span><span>Asterisk</span><span>GitHub Actions</span></div></div>
-          </div>
-          <div class="armory-group">
-          <button class="armory-head" aria-expanded="false"><span class="label"><span class="dot"></span>LANGUAGES</span><span class="count">4 tools</span><span class="chevron">▸</span></button>
-          <div class="armory-body"><div class="armory-list"><span>Python</span><span>C++</span><span>TypeScript</span><span>Bash</span></div></div>
-          </div>
-          </div>
-
-     design:
-       spacing:
-         padding: ["1rem", 0, "3.5rem", 0]
-       css_class: "cyber-section"
-
-   - block: markdown
      id: project-scripts
      content:
        title: ""
@@ -432,37 +402,9 @@ sections:
          padding: ["0", 0, "0", 0]
 
    - block: markdown
-     id: timeline
-     content:
-       title: '<span class="eyebrow"><span class="idx">04</span> / EXPERIENCE</span>'
-       subtitle: ''
-       text: |
-          <div class="timeline-premium" data-observe>
-          <div class="log-line prominent"><span class="log-stamp">2024</span><span class="log-msg"><span class="log-tag">[START]</span>Started AI Engineering @ Bahçeşehir University</span></div>
-          <div class="log-line"><span class="log-stamp">2024</span><span class="log-msg">Completed the Machine Learning Specialization (Andrew Ng)</span></div>
-          <div class="log-line"><span class="log-stamp">2024</span><span class="log-msg">Built PyUploadMate, an audio distribution automation tool</span></div>
-          <div class="log-line prominent"><span class="log-stamp">2025</span><span class="log-msg"><span class="log-tag">[SHIFT]</span>Machine learning → AI applications → DroneX</span></div>
-          <div class="log-line"><span class="log-stamp">2025</span><span class="log-msg">Built the DroneX Aerostack fleet-management dashboard</span></div>
-          <div class="log-line"><span class="log-stamp">2025</span><span class="log-msg">Created AI Meeting Assistant with Whisper, Watsonx, and LangChain</span></div>
-          <div class="log-line"><span class="log-stamp">2025</span><span class="log-msg">Launched Sky Warriors, a ROS 2 / Gazebo robotics workspace</span></div>
-          <div class="log-line"><span class="log-stamp">2025</span><span class="log-msg">Completed Customer Segmentation (PCA / UMAP / GMM)</span></div>
-          <div class="log-line prominent"><span class="log-stamp">2026</span><span class="log-msg"><span class="log-tag">[SHIFT]</span>Agentic AI → RAG → robotics → infrastructure</span></div>
-          <div class="log-line"><span class="log-stamp">2026</span><span class="log-msg">Co-founded AP Common Projects with CipherDriftX, building Nanograd &amp; a YouTube research pipeline</span></div>
-          <div class="log-line"><span class="log-stamp">2026</span><span class="log-msg">RAG and Agentic AI Professional Certificate (IBM)</span></div>
-          <div class="log-line"><span class="log-stamp">2026</span><span class="log-msg">Launched Style Finder AI v2.0, multimodal fashion search with Llama 4</span></div>
-          <div class="log-line"><span class="log-stamp">2026</span><span class="log-msg">Launched VeriShelf, multi-agent RAG with fact verification</span></div>
-          <div class="log-line"><span class="log-stamp">2026</span><span class="log-msg">Deployed self-hosted infrastructure: multi-region Rocket.Chat + Asterisk</span></div>
-          </div>
-
-     design:
-       spacing:
-         padding: ["3rem", 0, "3rem", 0]
-       css_class: "cyber-section"
-
-   - block: markdown
      id: documentation
      content:
-       title: '<span class="eyebrow"><span class="idx">05</span> / DOCUMENTATION</span>'
+       title: '<span class="eyebrow"><span class="idx">04</span> / DOCUMENTATION</span>'
        subtitle: ''
        text: |
           <div class="doc-grid" data-observe>
@@ -509,7 +451,7 @@ sections:
    - block: markdown
      id: contact
      content:
-       title: "<span class=\"eyebrow\"><span class=\"idx\">06</span> / CONTACT</span>"
+       title: "<span class=\"eyebrow\"><span class=\"idx\">05</span> / CONTACT</span>"
        subtitle: ''
        text: |
           <div class="contact-section" data-observe>

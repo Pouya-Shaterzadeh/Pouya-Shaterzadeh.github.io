@@ -11,15 +11,12 @@ main:
   - name: "03 · Systems"
     url: /#systems
     weight: 30
-  - name: "04 · Experience"
-    url: /#timeline
-    weight: 40
-  - name: "05 · Documentation"
+  - name: "04 · Documentation"
     url: docs/
-    weight: 50
-  - name: "06 · Contact"
+    weight: 40
+  - name: "05 · Contact"
     url: /#contact
-    weight: 60
+    weight: 50
 
 footer:
   - name: GitHub

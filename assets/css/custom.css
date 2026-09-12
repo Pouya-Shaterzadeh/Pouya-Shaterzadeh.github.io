@@ -620,119 +620,6 @@ circle.navpath-grid { fill: rgba(255,255,255,0.06); }
 @keyframes infra-run { to { stroke-dashoffset: -316; } }
 
 /* ============================================
-   ARMORY — technology matrix
-   ============================================ */
-
-.armory-wrap {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.armory-group {
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--card);
-  overflow: hidden;
-}
-
-.armory-head {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.95rem 1.25rem;
-  background: transparent;
-  border: none;
-  color: var(--fg);
-  cursor: pointer;
-  font-family: var(--mono);
-  text-align: left;
-}
-
-.armory-head .label {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.armory-head .label .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); }
-.armory-group:nth-child(2) .label .dot { background: var(--green); }
-.armory-group:nth-child(3) .label .dot { background: var(--violet); }
-.armory-group:nth-child(4) .label .dot { background: var(--amber); }
-
-.armory-head .count { color: var(--muted); font-size: 0.72rem; }
-.armory-head .chevron { color: var(--muted); transition: transform 0.3s ease; font-size: 0.8rem; }
-.armory-group.open .armory-head .chevron { transform: rotate(90deg); color: var(--cyan); }
-
-.armory-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.armory-group.open .armory-body { max-height: 320px; }
-
-.armory-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0 1.25rem 1.1rem;
-}
-
-.armory-list span {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  padding: 0.35rem 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  color: var(--muted);
-}
-
-.armory-list span::before { content: '// '; color: var(--dim); }
-
-/* ============================================
-   TIMELINE — system log
-   ============================================ */
-
-.timeline-premium {
-  max-width: 680px;
-  margin: 1rem auto 0;
-  padding: 0 2rem;
-  font-family: var(--mono);
-}
-
-.log-line {
-  display: grid;
-  grid-template-columns: 6.5rem 1fr;
-  gap: 1rem;
-  padding: 0.55rem 0;
-  border-bottom: 1px dashed var(--border);
-  font-size: 0.84rem;
-}
-
-.log-line:last-child { border-bottom: none; }
-
-.log-stamp { color: var(--dim); }
-.log-stamp::before { content: '['; }
-.log-stamp::after { content: ']'; }
-
-.log-msg { color: var(--muted); }
-.log-line.prominent .log-msg { color: var(--fg); font-weight: 500; }
-.log-line.prominent .log-stamp { color: var(--cyan); }
-.log-tag {
-  color: var(--green);
-  margin-right: 0.5rem;
-}
-
-/* ============================================
    PROJECTS — editorial, grouped by domain
    ============================================ */
 
@@ -967,7 +854,6 @@ circle.navpath-grid { fill: rgba(255,255,255,0.06); }
   .projects-grid { padding: 0 1.25rem; gap: 1rem; }
   .project-filters { padding: 0 1.25rem; }
   .domain-heading { padding: 0 1.25rem; }
-  .log-line { grid-template-columns: 5.5rem 1fr; }
 }
 
 /* ============================================
@@ -1144,7 +1030,7 @@ circle.navpath-grid { fill: rgba(255,255,255,0.06); }
 
 @media (max-width: 640px) {
   .hero-premium { padding: 2.75rem 1.25rem 1.5rem; min-height: 460px; }
-  .about-wrap, .systems-intro, .armory-wrap, .doc-grid, .contact-section { padding: 0 1.25rem; }
+  .about-wrap, .systems-intro, .doc-grid, .contact-section { padding: 0 1.25rem; }
   .tech-panel { padding: 0 1.25rem; margin-top: 2.25rem; }
 }
 
