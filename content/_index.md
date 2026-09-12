@@ -47,7 +47,7 @@ sections:
 
      design:
        spacing:
-         padding: ["1rem", 0, "1rem", 0]
+         padding: ["3rem", 0, "3rem", 0]
        css_class: "cyber-section"
 
    - block: markdown
@@ -85,9 +85,9 @@ sections:
           </div>
 
      design:
-       spacing:
-         padding: ["2rem", 0, "1rem", 0]
-       css_class: "cyber-section"
+        spacing:
+          padding: ["3rem", 0, "3rem", 0]
+        css_class: "cyber-section"
 
    - block: markdown
      id: timeline
@@ -117,9 +117,9 @@ sections:
           </div>
 
      design:
-       spacing:
-         padding: ["1rem", 0, "2rem", 0]
-       css_class: "cyber-section"
+        spacing:
+          padding: ["3rem", 0, "3rem", 0]
+        css_class: "cyber-section"
 
    - block: markdown
      id: projects
@@ -522,7 +522,7 @@ sections:
             ctx.textAlign = 'center';
             ctx.fillText(ch, 10, 20);
             var tex = new THREE.CanvasTexture(canvas2);
-            var mat = new THREE.MeshBasicMaterial({map: tex, transparent: true, opacity: 0.12});
+            var mat = new THREE.MeshBasicMaterial({map: tex, transparent: true, opacity: 0.18});
             var mesh = new THREE.Mesh(geo, mat);
             var x = (t - tokensPerStream/2) * 2.2;
             mesh.position.set(x, y, 0);
@@ -532,7 +532,7 @@ sections:
             }
 
             var connGeo = new THREE.BufferGeometry();
-            var connMat = new THREE.LineBasicMaterial({color: 0xf59e0b, transparent: true, opacity: 0.06});
+            var connMat = new THREE.LineBasicMaterial({color: 0xf59e0b, transparent: true, opacity: 0.1});
             var connLines = new THREE.LineSegments(connGeo, connMat);
             scene.add(connLines);
 
@@ -569,7 +569,7 @@ sections:
             });
             })();
 
-            /* ======================== PROJECTS: Neural Inference ======================== */
+            /* ======================== PROJECTS: Knowledge Graph ======================== */
             (function(){
             var c = document.getElementById('projects-canvas');
             if (!c) return;
@@ -577,23 +577,29 @@ sections:
             var h = c.offsetHeight || 300;
             var scene = new THREE.Scene();
             var cam = new THREE.PerspectiveCamera(60, w/h, 0.1, 1000);
-            cam.position.z = 35;
+            cam.position.z = 45;
             var ren = new THREE.WebGLRenderer({alpha:true, antialias:true});
             ren.setSize(w, h);
             ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
             c.appendChild(ren.domElement);
 
-            var layers = [5, 7, 5, 3];
-            var layerX = [];
+            var clusters = 4, nodesPerCluster = 8;
             var allNodes = [];
-            var spacing = 8;
-            var startX = -(layers.length - 1) * spacing / 2;
-            for (var l = 0; l < layers.length; l++){
-            layerX.push(startX + l * spacing);
-            var n = layers[l];
-            for (var i = 0; i < n; i++){
-            var y = (i - (n-1)/2) * 3.5;
-            allNodes.push({x: startX + l * spacing, y: y, z: 0, layer: l, idx: i, pulse: Math.random() * Math.PI * 2});
+            for (var cl = 0; cl < clusters; cl++){
+            var cx = (cl - (clusters-1)/2) * 14;
+            var cy = (Math.random()-0.5) * 8;
+            for (var n = 0; n < nodesPerCluster; n++){
+            var a = (n / nodesPerCluster) * Math.PI * 2;
+            var r = 3 + Math.random() * 3;
+            allNodes.push({
+            x: cx + Math.cos(a) * r,
+            y: cy + Math.sin(a) * r,
+            z: (Math.random()-0.5) * 4,
+            cx: cx, cy: cy,
+            angle: a, radius: r,
+            speed: 0.002 + Math.random() * 0.003,
+            cluster: cl
+            });
             }
             }
 
@@ -603,67 +609,77 @@ sections:
             nPos[i*3] = allNodes[i].x; nPos[i*3+1] = allNodes[i].y; nPos[i*3+2] = allNodes[i].z;
             }
             nGeo.setAttribute('position', new THREE.BufferAttribute(nPos, 3));
-            var nMat = new THREE.PointsMaterial({color: 0xec4899, size: 2.5, transparent: true, opacity: 0.5});
+            var nMat = new THREE.PointsMaterial({color: 0xec4899, size: 2, transparent: true, opacity: 0.6});
             var nPts = new THREE.Points(nGeo, nMat);
             scene.add(nPts);
 
-            var edges = [];
-            for (var i = 0; i < allNodes.length; i++){
-            for (var j = 0; j < allNodes.length; j++){
-            if (allNodes[i].layer === allNodes[j].layer - 1){
-            edges.push({a: i, b: j});
-            }
-            }
-            }
             var eGeo = new THREE.BufferGeometry();
-            var eMat = new THREE.LineBasicMaterial({color: 0xec4899, transparent: true, opacity: 0.06});
+            var eMat = new THREE.LineBasicMaterial({color: 0xec4899, transparent: true, opacity: 0.08});
             var eLines = new THREE.LineSegments(eGeo, eMat);
             scene.add(eLines);
 
-            var pulses = [], pulseCount = 15;
-            for (var i = 0; i < pulseCount; i++){
-            var e = edges[Math.floor(Math.random() * edges.length)];
-            pulses.push({a: e.a, b: e.b, t: Math.random(), speed: 0.005 + Math.random()*0.008});
+            var links = [];
+            for (var i = 0; i < allNodes.length; i++){
+            for (var j = i+1; j < allNodes.length; j++){
+            if (allNodes[i].cluster === allNodes[j].cluster){
+            links.push({a: i, b: j});
+            } else if (Math.random() < 0.08){
+            links.push({a: i, b: j});
             }
-            var pGeo = new THREE.BufferGeometry();
-            var pPos = new Float32Array(pulseCount * 3);
-            pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
-            var pMat = new THREE.PointsMaterial({color: 0xf472b6, size: 1.5, transparent: true, opacity: 0.8});
-            var pPts = new THREE.Points(pGeo, pMat);
-            scene.add(pPts);
+            }
+            }
+
+            var flowCount = 20, flows = [];
+            for (var i = 0; i < flowCount; i++){
+            var l = links[Math.floor(Math.random() * links.length)];
+            flows.push({a: l.a, b: l.b, t: Math.random(), speed: 0.004 + Math.random()*0.006});
+            }
+            var fGeo = new THREE.BufferGeometry();
+            var fPos = new Float32Array(flowCount * 3);
+            fGeo.setAttribute('position', new THREE.BufferAttribute(fPos, 3));
+            var fMat = new THREE.PointsMaterial({color: 0xf472b6, size: 1.5, transparent: true, opacity: 0.9});
+            var fPts = new THREE.Points(fGeo, fMat);
+            scene.add(fPts);
 
             function animate(){
             requestAnimationFrame(animate);
             var t = Date.now() * 0.001;
             var np = nGeo.attributes.position.array;
             for (var i = 0; i < allNodes.length; i++){
-            np[i*3+1] = allNodes[i].y + Math.sin(t * 0.5 + allNodes[i].pulse) * 0.3;
+            var nd = allNodes[i];
+            nd.angle += nd.speed;
+            np[i*3] = nd.cx + Math.cos(nd.angle) * nd.radius;
+            np[i*3+1] = nd.cy + Math.sin(nd.angle) * nd.radius;
+            np[i*3+2] = nd.z + Math.sin(t * 0.3 + i) * 0.5;
             }
             nGeo.attributes.position.needsUpdate = true;
 
             var ev = [];
-            for (var i = 0; i < edges.length; i++){
-            var a = allNodes[edges[i].a], b = allNodes[edges[i].b];
-            ev.push(a.x, a.y, a.z, b.x, b.y, b.z);
+            for (var i = 0; i < links.length; i++){
+            var a = allNodes[links[i].a], b = allNodes[links[i].b];
+            ev.push(np[links[i].a*3], np[links[i].a*3+1], np[links[i].a*3+2],
+                    np[links[i].b*3], np[links[i].b*3+1], np[links[i].b*3+2]);
             }
             eGeo.setAttribute('position', new THREE.Float32BufferAttribute(ev, 3));
 
-            var pp = pGeo.attributes.position.array;
-            for (var i = 0; i < pulseCount; i++){
-            var pu = pulses[i];
-            pu.t += pu.speed;
-            if (pu.t > 1){
-            pu.t = 0;
-            var ne = edges[Math.floor(Math.random() * edges.length)];
-            pu.a = ne.a; pu.b = ne.b;
+            var fp = fGeo.attributes.position.array;
+            for (var i = 0; i < flowCount; i++){
+            var fl = flows[i];
+            fl.t += fl.speed;
+            if (fl.t > 1){
+            fl.t = 0;
+            var nl = links[Math.floor(Math.random() * links.length)];
+            fl.a = nl.a; fl.b = nl.b;
             }
-            var na = allNodes[pu.a], nb = allNodes[pu.b];
-            pp[i*3] = na.x + (nb.x - na.x) * pu.t;
-            pp[i*3+1] = na.y + (nb.y - na.y) * pu.t;
-            pp[i*3+2] = 0;
+            fp[i*3] = np[fl.a*3] + (np[fl.b*3] - np[fl.a*3]) * fl.t;
+            fp[i*3+1] = np[fl.a*3+1] + (np[fl.b*3+1] - np[fl.a*3+1]) * fl.t;
+            fp[i*3+2] = np[fl.a*3+2] + (np[fl.b*3+2] - np[fl.a*3+2]) * fl.t;
             }
-            pGeo.attributes.position.needsUpdate = true;
+            fGeo.attributes.position.needsUpdate = true;
 
+            nPts.rotation.y += 0.0001;
+            eLines.rotation.y += 0.0001;
+            fPts.rotation.y += 0.0001;
             ren.render(scene, cam);
             }
             animate();
@@ -686,14 +702,14 @@ sections:
            ren.setSize(w, h);
            ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
            c.appendChild(ren.domElement);
-           var N = 50, pos = [], vel = [];
-           for (var i = 0; i < N; i++){
-           pos.push((Math.random()-0.5)*60, (Math.random()-0.5)*40, (Math.random()-0.5)*20);
-           vel.push((Math.random()-0.5)*0.005, (Math.random()-0.5)*0.005, 0);
-           }
-           var geo = new THREE.BufferGeometry();
-           geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
-           var mat = new THREE.PointsMaterial({color: 0x22d3ee, size: 1.5, transparent: true, opacity: 0.3});
+            var N = 60, pos = [], vel = [];
+            for (var i = 0; i < N; i++){
+            pos.push((Math.random()-0.5)*60, (Math.random()-0.5)*40, (Math.random()-0.5)*20);
+            vel.push((Math.random()-0.5)*0.008, (Math.random()-0.5)*0.008, 0);
+            }
+            var geo = new THREE.BufferGeometry();
+            geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+            var mat = new THREE.PointsMaterial({color: 0x22d3ee, size: 2, transparent: true, opacity: 0.4});
            var pts = new THREE.Points(geo, mat);
            scene.add(pts);
            function animate(){
@@ -728,14 +744,14 @@ sections:
            ren.setSize(w, h);
            ren.setPixelRatio(Math.min(window.devicePixelRatio, 2));
            c.appendChild(ren.domElement);
-           var N = 35, pos = [], vel = [];
-           for (var i = 0; i < N; i++){
-           pos.push((Math.random()-0.5)*50, (Math.random()-0.5)*30, (Math.random()-0.5)*15);
-           vel.push((Math.random()-0.5)*0.003, (Math.random()-0.5)*0.003, 0);
-           }
-           var geo = new THREE.BufferGeometry();
-           geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
-           var mat = new THREE.PointsMaterial({color: 0xa855f7, size: 2, transparent: true, opacity: 0.25});
+            var N = 45, pos = [], vel = [];
+            for (var i = 0; i < N; i++){
+            pos.push((Math.random()-0.5)*50, (Math.random()-0.5)*30, (Math.random()-0.5)*15);
+            vel.push((Math.random()-0.5)*0.005, (Math.random()-0.5)*0.005, 0);
+            }
+            var geo = new THREE.BufferGeometry();
+            geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+            var mat = new THREE.PointsMaterial({color: 0xa855f7, size: 2, transparent: true, opacity: 0.4});
            var pts = new THREE.Points(geo, mat);
            scene.add(pts);
            function animate(){

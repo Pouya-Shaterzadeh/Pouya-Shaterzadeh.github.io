@@ -647,11 +647,17 @@ body::after,
   height: 100%;
   pointer-events: none;
   z-index: 0;
+  overflow: hidden;
 }
 
 .cyber-section,
 .hero-premium {
   position: relative;
+  min-height: 200px;
+}
+
+.hero-premium {
+  min-height: 500px;
 }
 
 .cyber-section > div:not([id$="-canvas"]),
